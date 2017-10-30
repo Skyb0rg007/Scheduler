@@ -7,6 +7,13 @@
   (major1) == 0 && (major2) <  1 || \
   (major1) == 0 && (major2) == 1 && (minor) <= 0)
 
+/* package aeson-1.2.2.0 */
+#define VERSION_aeson "1.2.2.0"
+#define MIN_VERSION_aeson(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  2 || \
+  (major1) == 1 && (major2) == 2 && (minor) <= 2)
+
 /* package base-4.9.1.0 */
 #define VERSION_base "4.9.1.0"
 #define MIN_VERSION_base(major1,major2,minor) (\
@@ -91,7 +98,7 @@
   (major1) == 2 && (major2) <  25 || \
   (major1) == 2 && (major2) == 25 && (minor) <= 0)
 
-#define CURRENT_COMPONENT_ID "Scheduler-0.1.0.0-1e7NPLXwS28Gg3mFfUuLXf"
+#define CURRENT_COMPONENT_ID "Scheduler-0.1.0.0-HPpQCzZwq28EoF5x4td5dw"
 
-#define CURRENT_PACKAGE_KEY "Scheduler-0.1.0.0-1e7NPLXwS28Gg3mFfUuLXf"
+#define CURRENT_PACKAGE_KEY "Scheduler-0.1.0.0-HPpQCzZwq28EoF5x4td5dw"
 
