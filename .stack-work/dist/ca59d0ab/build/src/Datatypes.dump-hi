@@ -1,0 +1,1831 @@
+
+==================== FINAL INTERFACE ====================
+2017-10-30 17:20:08.3503108 UTC
+
+interface Scheduler-0.1.0.0-AWz6UrLP5DrLXG0NLtv6y2:Datatypes 8002
+  interface hash: c88df9dd9451d7d678914b22ce0cb3f2
+  ABI hash: fb1b1559f6894463d7b04d3ec7adb309
+  export-list hash: a447f7d56b8dbf00f2d18eb61441a7ff
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 266a15e5dfac57c6393b0481d94e8688
+  sig of: Nothing
+  used TH splices: True
+  where
+exports:
+  Datatypes.day
+  Datatypes.endTime
+  Datatypes.name
+  Datatypes.oCname
+  Datatypes.oCtimes
+  Datatypes.oneClass
+  Datatypes.sameClass
+  Datatypes.siphonClass
+  Datatypes.sortClass
+  Datatypes.startTime
+  Datatypes.times
+  Datatypes.Class{Datatypes.Class _name _times}
+  Datatypes.Day{Datatypes.Fr Datatypes.Mo Datatypes.NA Datatypes.Th Datatypes.Tu Datatypes.We}
+  Datatypes.OneClass{Datatypes.OC _oCname _oCtimes}
+  Datatypes.Schedule{Datatypes.Schedule _day _endTime _startTime}
+module dependencies:
+package dependencies: StateVar-1.1.0.4@StateVar-1.1.0.4-5dJbnTVECtEAhfJXPZKdbO
+                      adjunctions-4.3@adjunctions-4.3-A5jfd1yrmaY4DRMJuiquBp
+                      array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
+                      base-orphans-0.6@base-orphans-0.6-AbJ3lKVXygDCG0eeQEv8Iu
+                      bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw
+                      binary-0.8.3.0@binary-0.8.3.0
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      call-stack-0.1.0@call-stack-0.1.0-FYVrCPXGP9EGAuTW32963O
+                      comonad-5.0.2@comonad-5.0.2-Fq9Xy9jdx6uIyJZn00E6Yc
+                      containers-0.5.7.1@containers-0.5.7.1
+                      contravariant-1.4@contravariant-1.4-29zF0Im431177ovfbHYCGv
+                      deepseq-1.4.2.0@deepseq-1.4.2.0
+                      distributive-0.5.3@distributive-0.5.3-IX4kyVcHAyoH4uFYrsjY1R
+                      exceptions-0.8.3@exceptions-0.8.3-ADEDRATtUrMK1JW4zMQ9U
+                      free-4.12.4@free-4.12.4-C2gBQV0m8J42HxqSLTFyVx
+                      ghc-boot-th-8.0.2@ghc-boot-th-8.0.2 ghc-prim-0.5.0.0
+                      hashable-1.2.6.1@hashable-1.2.6.1-2ZLNuHq395GGIHwEHuqZol
+                      integer-gmp-1.0.0.1
+                      kan-extensions-5.0.2@kan-extensions-5.0.2-8LTJJ1zQJWB7SfewWXUuqX
+                      lens-4.15.4@lens-4.15.4-Km66e7WFRbEC7HnDdV2JDW
+                      mtl-2.2.1@mtl-2.2.1-BLKBelFsPB3BoFeSWSOYj6
+                      prelude-extras-0.4.0.3@prelude-extras-0.4.0.3-BhL9U5k7NtGJn1itwIHt2Y
+                      pretty-1.1.3.3@pretty-1.1.3.3
+                      primitive-0.6.2.0@primitive-0.6.2.0-4578caNkWQ54Gt1mxLF2Yh
+                      profunctors-5.2.1@profunctors-5.2.1-Ga89Nyw0d7LBEIoX4AZ6gT
+                      reflection-2.1.2@reflection-2.1.2-Bem12O1xFGSHr4C2Hyu1c4
+                      semigroupoids-5.2.1@semigroupoids-5.2.1-Db8txM8kTsI6Y49CY6g5Jn
+                      stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve
+                      tagged-0.8.5@tagged-0.8.5-1mTloBSoUxv8dqUr8XBGBt
+                      template-haskell-2.11.1.0
+                      text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00
+                      th-abstraction-0.2.6.0@th-abstraction-0.2.6.0-HRFJgpoqs5HJ5LgHnjmMhQ
+                      transformers-0.5.2.0@transformers-0.5.2.0
+                      transformers-compat-0.5.1.4@transformers-compat-0.5.1.4-IuFogs8HAVUJBWVNMhtssu
+                      unordered-containers-0.2.8.0@unordered-containers-0.2.8.0-Bp9XgxjuHxcI4tFehVMDGC
+                      vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         base-orphans-0.6@base-orphans-0.6-AbJ3lKVXygDCG0eeQEv8Iu:Data.Orphans
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         hashable-1.2.6.1@hashable-1.2.6.1-2ZLNuHq395GGIHwEHuqZol:Data.Hashable.Generic
+         reflection-2.1.2@reflection-2.1.2-Bem12O1xFGSHr4C2Hyu1c4:Data.Reflection
+         stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve:Control.Monad.STM
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Lazy
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Show
+         transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
+         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Fusion.Bundle
+         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed
+family instance modules: adjunctions-4.3@adjunctions-4.3-A5jfd1yrmaY4DRMJuiquBp:Data.Functor.Rep
+                         base-4.9.1.0:Control.Applicative base-4.9.1.0:Data.Complex
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Compose
+                         base-4.9.1.0:Data.Functor.Const base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.Functor.Product base-4.9.1.0:Data.Functor.Sum
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Biff
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Clown
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Fix
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Flip
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Join
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Joker
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Product
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Sum
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Tannen
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Wrapped
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         ghc-boot-th-8.0.2@ghc-boot-th-8.0.2:GHC.LanguageExtensions.Type
+                         kan-extensions-5.0.2@kan-extensions-5.0.2-8LTJJ1zQJWB7SfewWXUuqX:Data.Functor.Day
+                         kan-extensions-5.0.2@kan-extensions-5.0.2-8LTJJ1zQJWB7SfewWXUuqX:Data.Functor.Yoneda
+                         lens-4.15.4@lens-4.15.4-Km66e7WFRbEC7HnDdV2JDW:Control.Lens.At
+                         lens-4.15.4@lens-4.15.4-Km66e7WFRbEC7HnDdV2JDW:Control.Lens.Internal.Indexed
+                         lens-4.15.4@lens-4.15.4-Km66e7WFRbEC7HnDdV2JDW:Control.Lens.Reified
+                         lens-4.15.4@lens-4.15.4-Km66e7WFRbEC7HnDdV2JDW:Control.Lens.Tuple
+                         lens-4.15.4@lens-4.15.4-Km66e7WFRbEC7HnDdV2JDW:Control.Lens.Wrapped
+                         lens-4.15.4@lens-4.15.4-Km66e7WFRbEC7HnDdV2JDW:Control.Lens.Zoom
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.2.0@primitive-0.6.2.0-4578caNkWQ54Gt1mxLF2Yh:Control.Monad.Primitive
+                         primitive-0.6.2.0@primitive-0.6.2.0-4578caNkWQ54Gt1mxLF2Yh:Data.Primitive.Array
+                         profunctors-5.2.1@profunctors-5.2.1-Ga89Nyw0d7LBEIoX4AZ6gT:Data.Profunctor.Rep
+                         tagged-0.8.5@tagged-0.8.5-1mTloBSoUxv8dqUr8XBGBt:Data.Tagged
+                         template-haskell-2.11.1.0:Language.Haskell.TH.Syntax
+                         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text
+                         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Lazy
+                         th-abstraction-0.2.6.0@th-abstraction-0.2.6.0-HRFJgpoqs5HJ5LgHnjmMhQ:Language.Haskell.TH.Datatype
+                         unordered-containers-0.2.8.0@unordered-containers-0.2.8.0-Bp9XgxjuHxcI4tFehVMDGC:Data.HashMap.Base
+                         unordered-containers-0.2.8.0@unordered-containers-0.2.8.0-Bp9XgxjuHxcI4tFehVMDGC:Data.HashSet
+                         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector
+                         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Primitive
+                         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Storable
+                         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed
+                         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed.Base
+import  -/  base-4.9.1.0:Data.Foldable 254e836c2d813d34e47feb29bb8d40ed
+import  -/  base-4.9.1.0:Data.Function e669266e2bc3ac37fceae74061959895
+import  -/  base-4.9.1.0:Data.List 7349774f430841349c90dfd1144aea97
+import  -/  base-4.9.1.0:Data.Maybe ecf0c6f81372d9b58b142d5e758ea51b
+import  -/  base-4.9.1.0:GHC.Base 4caea1123ecf4b46e27cbccd6d279377
+import  -/  base-4.9.1.0:GHC.List d11eb227c1c6fbfd89bb781d72eaea0d
+import  -/  base-4.9.1.0:GHC.Show eca5834daba3b6a2bbbe64ab52056707
+import  -/  base-4.9.1.0:Prelude 74b3e204395920329f6de9d97206abe9
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 16d48e012d23eaef9bca91ccdd572c02
+import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
+import  -/  lens-4.15.4@lens-4.15.4-Km66e7WFRbEC7HnDdV2JDW:Control.Lens 51c282815697462fb4c0814abcb89573
+import  -/  lens-4.15.4@lens-4.15.4-Km66e7WFRbEC7HnDdV2JDW:Control.Lens.Getter 9cbd301daeba9df6d0bfe4ed5237d181
+import  -/  lens-4.15.4@lens-4.15.4-Km66e7WFRbEC7HnDdV2JDW:Control.Lens.Setter 04c1bc731eefe2c615222b2e138bd079
+import  -/  lens-4.15.4@lens-4.15.4-Km66e7WFRbEC7HnDdV2JDW:Control.Lens.TH 26b675f4f0fca685b6c0d66da83dd5d0
+import  -/  lens-4.15.4@lens-4.15.4-Km66e7WFRbEC7HnDdV2JDW:Control.Lens.Type fdd0dc28ec85c7e4d7f91e2cb1f30e82
+08b030fe3f2b961c717c01a1d871da8a
+  $fEqClass :: GHC.Classes.Eq Datatypes.Class
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Datatypes.Class
+                  Datatypes.$fEqClass_$c==
+                  Datatypes.$fEqClass_$c/= -}
+08b030fe3f2b961c717c01a1d871da8a
+  $fEqClass_$c/= ::
+    Datatypes.Class -> Datatypes.Class -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SL),1*U(1*U,1*U)><S(SL),1*U(1*U,1*U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (a :: Datatypes.Class) (b :: Datatypes.Class) ->
+                 case Datatypes.$fEqClass_$c== a b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+08b030fe3f2b961c717c01a1d871da8a
+  $fEqClass_$c== ::
+    Datatypes.Class -> Datatypes.Class -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SL),1*U(1*U,1*U)><S(SL),1*U(1*U,1*U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Datatypes.Class) (w1 :: Datatypes.Class) ->
+                 case w of ww { Datatypes.Class ww1 ww2 ->
+                 case w1 of ww3 { Datatypes.Class ww4 ww5 ->
+                 Datatypes.$w$c== ww1 ww2 ww4 ww5 } }) -}
+6980cebd453ee48d4827b5b7441b5984
+  $fEqDay :: GHC.Classes.Eq Datatypes.Day
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Datatypes.Day Datatypes.$fEqDay_$c== Datatypes.$fEqDay_$c/= -}
+6980cebd453ee48d4827b5b7441b5984
+  $fEqDay_$c/= :: Datatypes.Day -> Datatypes.Day -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (a :: Datatypes.Day) (b :: Datatypes.Day) ->
+                 case a of wild {
+                   Datatypes.Mo
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Datatypes.Mo -> GHC.Types.False }
+                   Datatypes.Tu
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Datatypes.Tu -> GHC.Types.False }
+                   Datatypes.We
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Datatypes.We -> GHC.Types.False }
+                   Datatypes.Th
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Datatypes.Th -> GHC.Types.False }
+                   Datatypes.Fr
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Datatypes.Fr -> GHC.Types.False }
+                   Datatypes.NA
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Datatypes.NA -> GHC.Types.False } }) -}
+6980cebd453ee48d4827b5b7441b5984
+  $fEqDay_$c== :: Datatypes.Day -> Datatypes.Day -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (ds :: Datatypes.Day) (ds1 :: Datatypes.Day) ->
+                 case ds of wild {
+                   Datatypes.Mo
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Datatypes.Mo -> GHC.Types.True }
+                   Datatypes.Tu
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Datatypes.Tu -> GHC.Types.True }
+                   Datatypes.We
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Datatypes.We -> GHC.Types.True }
+                   Datatypes.Th
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Datatypes.Th -> GHC.Types.True }
+                   Datatypes.Fr
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Datatypes.Fr -> GHC.Types.True }
+                   Datatypes.NA
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Datatypes.NA -> GHC.Types.True } }) -}
+81ef68f91fa16dc06b0164b57bfda14b
+  $fEqOneClass :: GHC.Classes.Eq Datatypes.OneClass
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Datatypes.OneClass
+                  Datatypes.$fEqOneClass_$c==
+                  Datatypes.$fEqOneClass_$c/= -}
+81ef68f91fa16dc06b0164b57bfda14b
+  $fEqOneClass_$c/= ::
+    Datatypes.OneClass -> Datatypes.OneClass -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SL),1*U(1*U,1*U(1*U,1*U(U),1*U(U)))><S(SL),1*U(1*U,1*U(1*U,1*U(U),1*U(U)))>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Datatypes.OneClass) (w1 :: Datatypes.OneClass) ->
+                 case w of ww { Datatypes.OC ww1 ww2 ->
+                 case w1 of ww3 { Datatypes.OC ww4 ww5 ->
+                 Datatypes.$w$c/= ww1 ww2 ww4 ww5 } }) -}
+81ef68f91fa16dc06b0164b57bfda14b
+  $fEqOneClass_$c== ::
+    Datatypes.OneClass -> Datatypes.OneClass -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SL),1*U(1*U,1*U(1*U,1*U(U),1*U(U)))><S(SL),1*U(1*U,1*U(1*U,1*U(U),1*U(U)))>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Datatypes.OneClass) (w1 :: Datatypes.OneClass) ->
+                 case w of ww { Datatypes.OC ww1 ww2 ->
+                 case w1 of ww3 { Datatypes.OC ww4 ww5 ->
+                 Datatypes.$w$c==2 ww1 ww2 ww4 ww5 } }) -}
+703041c159a5883ebba832ccb01db8cf
+  $fEqSchedule :: GHC.Classes.Eq Datatypes.Schedule
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Datatypes.Schedule
+                  Datatypes.$fEqSchedule_$c==
+                  Datatypes.$fEqSchedule_$c/= -}
+703041c159a5883ebba832ccb01db8cf
+  $fEqSchedule_$c/= ::
+    Datatypes.Schedule -> Datatypes.Schedule -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SLL),1*U(1*U,1*U(U),1*U(U))><S(SLL),1*U(1*U,1*U(U),1*U(U))>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (a :: Datatypes.Schedule) (b :: Datatypes.Schedule) ->
+                 case Datatypes.$fEqSchedule_$c== a b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+703041c159a5883ebba832ccb01db8cf
+  $fEqSchedule_$c== ::
+    Datatypes.Schedule -> Datatypes.Schedule -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SLL),1*U(1*U,1*U(U),1*U(U))><S(SLL),1*U(1*U,1*U(U),1*U(U))>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Datatypes.Schedule) (w1 :: Datatypes.Schedule) ->
+                 case w of ww { Datatypes.Schedule ww1 ww2 ww3 ->
+                 case w1 of ww4 { Datatypes.Schedule ww5 ww6 ww7 ->
+                 Datatypes.$w$c==1 ww1 ww2 ww3 ww5 ww6 ww7 } }) -}
+6980cebd453ee48d4827b5b7441b5984
+  $fOrdDay :: GHC.Classes.Ord Datatypes.Day
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Datatypes.Day
+                  Datatypes.$fEqDay
+                  Datatypes.$fOrdDay_$ccompare
+                  Datatypes.$fOrdDay_$c<
+                  Datatypes.$fOrdDay_$c<=
+                  Datatypes.$fOrdDay_$c>
+                  Datatypes.$fOrdDay_$c>=
+                  Datatypes.$fOrdDay_$cmax
+                  Datatypes.$fOrdDay_$cmin -}
+6980cebd453ee48d4827b5b7441b5984
+  $fOrdDay_$c< :: Datatypes.Day -> Datatypes.Day -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (a :: Datatypes.Day) (b :: Datatypes.Day) ->
+                 case a of wild {
+                   Datatypes.Mo
+                   -> case b of wild1 {
+                        Datatypes.Mo -> GHC.Types.False
+                        Datatypes.Tu -> GHC.Types.True
+                        Datatypes.We -> GHC.Types.True
+                        Datatypes.Th -> GHC.Types.True
+                        Datatypes.Fr -> GHC.Types.True
+                        Datatypes.NA -> GHC.Types.True }
+                   Datatypes.Tu
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Datatypes.We -> GHC.Types.True
+                        Datatypes.Th -> GHC.Types.True
+                        Datatypes.Fr -> GHC.Types.True
+                        Datatypes.NA -> GHC.Types.True }
+                   Datatypes.We
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Datatypes.Th -> GHC.Types.True
+                        Datatypes.Fr -> GHC.Types.True
+                        Datatypes.NA -> GHC.Types.True }
+                   Datatypes.Th
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Datatypes.Fr -> GHC.Types.True
+                        Datatypes.NA -> GHC.Types.True }
+                   Datatypes.Fr
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.False Datatypes.NA -> GHC.Types.True }
+                   Datatypes.NA
+                   -> case b of wild1 { DEFAULT -> GHC.Types.False } }) -}
+6980cebd453ee48d4827b5b7441b5984
+  $fOrdDay_$c<= :: Datatypes.Day -> Datatypes.Day -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (a :: Datatypes.Day) (b :: Datatypes.Day) ->
+                 case a of wild {
+                   Datatypes.Mo -> case b of wild1 { DEFAULT -> GHC.Types.True }
+                   Datatypes.Tu
+                   -> case b of wild1 {
+                        Datatypes.Mo -> GHC.Types.False
+                        Datatypes.Tu -> GHC.Types.True
+                        Datatypes.We -> GHC.Types.True
+                        Datatypes.Th -> GHC.Types.True
+                        Datatypes.Fr -> GHC.Types.True
+                        Datatypes.NA -> GHC.Types.True }
+                   Datatypes.We
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Datatypes.We -> GHC.Types.True
+                        Datatypes.Th -> GHC.Types.True
+                        Datatypes.Fr -> GHC.Types.True
+                        Datatypes.NA -> GHC.Types.True }
+                   Datatypes.Th
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Datatypes.Th -> GHC.Types.True
+                        Datatypes.Fr -> GHC.Types.True
+                        Datatypes.NA -> GHC.Types.True }
+                   Datatypes.Fr
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Datatypes.Fr -> GHC.Types.True
+                        Datatypes.NA -> GHC.Types.True }
+                   Datatypes.NA
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.False Datatypes.NA -> GHC.Types.True } }) -}
+6980cebd453ee48d4827b5b7441b5984
+  $fOrdDay_$c> :: Datatypes.Day -> Datatypes.Day -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (a :: Datatypes.Day) (b :: Datatypes.Day) ->
+                 case a of wild {
+                   Datatypes.Mo -> case b of wild1 { DEFAULT -> GHC.Types.False }
+                   Datatypes.Tu
+                   -> case b of wild1 {
+                        Datatypes.Mo -> GHC.Types.True
+                        Datatypes.Tu -> GHC.Types.False
+                        Datatypes.We -> GHC.Types.False
+                        Datatypes.Th -> GHC.Types.False
+                        Datatypes.Fr -> GHC.Types.False
+                        Datatypes.NA -> GHC.Types.False }
+                   Datatypes.We
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        Datatypes.We -> GHC.Types.False
+                        Datatypes.Th -> GHC.Types.False
+                        Datatypes.Fr -> GHC.Types.False
+                        Datatypes.NA -> GHC.Types.False }
+                   Datatypes.Th
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        Datatypes.Th -> GHC.Types.False
+                        Datatypes.Fr -> GHC.Types.False
+                        Datatypes.NA -> GHC.Types.False }
+                   Datatypes.Fr
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        Datatypes.Fr -> GHC.Types.False
+                        Datatypes.NA -> GHC.Types.False }
+                   Datatypes.NA
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Datatypes.NA -> GHC.Types.False } }) -}
+6980cebd453ee48d4827b5b7441b5984
+  $fOrdDay_$c>= :: Datatypes.Day -> Datatypes.Day -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (a :: Datatypes.Day) (b :: Datatypes.Day) ->
+                 case a of wild {
+                   Datatypes.Mo
+                   -> case b of wild1 {
+                        Datatypes.Mo -> GHC.Types.True
+                        Datatypes.Tu -> GHC.Types.False
+                        Datatypes.We -> GHC.Types.False
+                        Datatypes.Th -> GHC.Types.False
+                        Datatypes.Fr -> GHC.Types.False
+                        Datatypes.NA -> GHC.Types.False }
+                   Datatypes.Tu
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        Datatypes.We -> GHC.Types.False
+                        Datatypes.Th -> GHC.Types.False
+                        Datatypes.Fr -> GHC.Types.False
+                        Datatypes.NA -> GHC.Types.False }
+                   Datatypes.We
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        Datatypes.Th -> GHC.Types.False
+                        Datatypes.Fr -> GHC.Types.False
+                        Datatypes.NA -> GHC.Types.False }
+                   Datatypes.Th
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        Datatypes.Fr -> GHC.Types.False
+                        Datatypes.NA -> GHC.Types.False }
+                   Datatypes.Fr
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Datatypes.NA -> GHC.Types.False }
+                   Datatypes.NA -> case b of wild1 { DEFAULT -> GHC.Types.True } }) -}
+6980cebd453ee48d4827b5b7441b5984
+  $fOrdDay_$ccompare ::
+    Datatypes.Day -> Datatypes.Day -> GHC.Types.Ordering
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (a :: Datatypes.Day) (b :: Datatypes.Day) ->
+                 case a of wild {
+                   Datatypes.Mo
+                   -> case b of wild1 {
+                        Datatypes.Mo -> GHC.Types.EQ
+                        Datatypes.Tu -> GHC.Types.LT
+                        Datatypes.We -> GHC.Types.LT
+                        Datatypes.Th -> GHC.Types.LT
+                        Datatypes.Fr -> GHC.Types.LT
+                        Datatypes.NA -> GHC.Types.LT }
+                   Datatypes.Tu
+                   -> case b of wild1 {
+                        Datatypes.Mo -> GHC.Types.GT
+                        Datatypes.Tu -> GHC.Types.EQ
+                        Datatypes.We -> GHC.Types.LT
+                        Datatypes.Th -> GHC.Types.LT
+                        Datatypes.Fr -> GHC.Types.LT
+                        Datatypes.NA -> GHC.Types.LT }
+                   Datatypes.We
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.GT
+                        Datatypes.We -> GHC.Types.EQ
+                        Datatypes.Th -> GHC.Types.LT
+                        Datatypes.Fr -> GHC.Types.LT
+                        Datatypes.NA -> GHC.Types.LT }
+                   Datatypes.Th
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.GT
+                        Datatypes.Th -> GHC.Types.EQ
+                        Datatypes.Fr -> GHC.Types.LT
+                        Datatypes.NA -> GHC.Types.LT }
+                   Datatypes.Fr
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.GT
+                        Datatypes.Fr -> GHC.Types.EQ
+                        Datatypes.NA -> GHC.Types.LT }
+                   Datatypes.NA
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.GT Datatypes.NA -> GHC.Types.EQ } }) -}
+6980cebd453ee48d4827b5b7441b5984
+  $fOrdDay_$cmax :: Datatypes.Day -> Datatypes.Day -> Datatypes.Day
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (x :: Datatypes.Day) (y :: Datatypes.Day) ->
+                 case x of wild {
+                   Datatypes.Mo -> y
+                   Datatypes.Tu
+                   -> case y of wild1 {
+                        DEFAULT -> Datatypes.Tu
+                        Datatypes.We -> Datatypes.We
+                        Datatypes.Th -> Datatypes.Th
+                        Datatypes.Fr -> Datatypes.Fr
+                        Datatypes.NA -> Datatypes.NA }
+                   Datatypes.We
+                   -> case y of wild1 {
+                        DEFAULT -> Datatypes.We
+                        Datatypes.Th -> Datatypes.Th
+                        Datatypes.Fr -> Datatypes.Fr
+                        Datatypes.NA -> Datatypes.NA }
+                   Datatypes.Th
+                   -> case y of wild1 {
+                        DEFAULT -> Datatypes.Th
+                        Datatypes.Fr -> Datatypes.Fr
+                        Datatypes.NA -> Datatypes.NA }
+                   Datatypes.Fr
+                   -> case y of wild1 {
+                        DEFAULT -> Datatypes.Fr Datatypes.NA -> Datatypes.NA }
+                   Datatypes.NA -> case y of wild1 { DEFAULT -> Datatypes.NA } }) -}
+6980cebd453ee48d4827b5b7441b5984
+  $fOrdDay_$cmin :: Datatypes.Day -> Datatypes.Day -> Datatypes.Day
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (x :: Datatypes.Day) (y :: Datatypes.Day) ->
+                 case x of wild {
+                   Datatypes.Mo -> case y of wild1 { DEFAULT -> Datatypes.Mo }
+                   Datatypes.Tu
+                   -> case y of wild1 {
+                        Datatypes.Mo -> Datatypes.Mo
+                        Datatypes.Tu -> Datatypes.Tu
+                        Datatypes.We -> Datatypes.Tu
+                        Datatypes.Th -> Datatypes.Tu
+                        Datatypes.Fr -> Datatypes.Tu
+                        Datatypes.NA -> Datatypes.Tu }
+                   Datatypes.We
+                   -> case y of wild1 {
+                        DEFAULT -> wild1
+                        Datatypes.We -> Datatypes.We
+                        Datatypes.Th -> Datatypes.We
+                        Datatypes.Fr -> Datatypes.We
+                        Datatypes.NA -> Datatypes.We }
+                   Datatypes.Th
+                   -> case y of wild1 {
+                        DEFAULT -> wild1
+                        Datatypes.Th -> Datatypes.Th
+                        Datatypes.Fr -> Datatypes.Th
+                        Datatypes.NA -> Datatypes.Th }
+                   Datatypes.Fr
+                   -> case y of wild1 {
+                        DEFAULT -> wild1
+                        Datatypes.Fr -> Datatypes.Fr
+                        Datatypes.NA -> Datatypes.Fr }
+                   Datatypes.NA -> y }) -}
+81ef68f91fa16dc06b0164b57bfda14b
+  $fOrdOneClass :: GHC.Classes.Ord Datatypes.OneClass
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Datatypes.OneClass
+                  Datatypes.$fEqOneClass
+                  Datatypes.$fOrdOneClass_$ccompare1
+                  Datatypes.$fOrdOneClass_$c<
+                  Datatypes.$fOrdOneClass_$c<=
+                  Datatypes.$fOrdOneClass_$c>
+                  Datatypes.$fOrdOneClass_$c>=
+                  Datatypes.$fOrdOneClass_$cmax
+                  Datatypes.$fOrdOneClass_$cmin -}
+81ef68f91fa16dc06b0164b57bfda14b
+  $fOrdOneClass_$c< ::
+    Datatypes.OneClass -> Datatypes.OneClass -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LS(SLL)),1*U(A,1*U(U,U(U),U(U)))><S(LS(SLL)),1*U(A,1*U(U,U(U),U(U)))>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Datatypes.OneClass) (y :: Datatypes.OneClass) ->
+                 case x of wild { Datatypes.OC x1 x2 ->
+                 case y of wild1 { Datatypes.OC x4 x5 ->
+                 case Datatypes.$fOrdOneClass_$ccompare x2 x5 of wild2 {
+                   DEFAULT -> GHC.Types.False GHC.Types.LT -> GHC.Types.True } } }) -}
+81ef68f91fa16dc06b0164b57bfda14b
+  $fOrdOneClass_$c<= ::
+    Datatypes.OneClass -> Datatypes.OneClass -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LS(SLL)),1*U(A,1*U(U,U(U),U(U)))><S(LS(SLL)),1*U(A,1*U(U,U(U),U(U)))>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Datatypes.OneClass) (y :: Datatypes.OneClass) ->
+                 case x of wild { Datatypes.OC x1 x2 ->
+                 case y of wild1 { Datatypes.OC x4 x5 ->
+                 case Datatypes.$fOrdOneClass_$ccompare x2 x5 of wild2 {
+                   DEFAULT -> GHC.Types.True GHC.Types.GT -> GHC.Types.False } } }) -}
+81ef68f91fa16dc06b0164b57bfda14b
+  $fOrdOneClass_$c> ::
+    Datatypes.OneClass -> Datatypes.OneClass -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LS(SLL)),1*U(A,1*U(U,U(U),U(U)))><S(LS(SLL)),1*U(A,1*U(U,U(U),U(U)))>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Datatypes.OneClass) (y :: Datatypes.OneClass) ->
+                 case x of wild { Datatypes.OC x1 x2 ->
+                 case y of wild1 { Datatypes.OC x4 x5 ->
+                 case Datatypes.$fOrdOneClass_$ccompare x2 x5 of wild2 {
+                   DEFAULT -> GHC.Types.False GHC.Types.GT -> GHC.Types.True } } }) -}
+81ef68f91fa16dc06b0164b57bfda14b
+  $fOrdOneClass_$c>= ::
+    Datatypes.OneClass -> Datatypes.OneClass -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LS(SLL)),1*U(A,1*U(U,U(U),U(U)))><S(LS(SLL)),1*U(A,1*U(U,U(U),U(U)))>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Datatypes.OneClass) (y :: Datatypes.OneClass) ->
+                 case x of wild { Datatypes.OC x1 x2 ->
+                 case y of wild1 { Datatypes.OC x4 x5 ->
+                 case Datatypes.$fOrdOneClass_$ccompare x2 x5 of wild2 {
+                   DEFAULT -> GHC.Types.True GHC.Types.LT -> GHC.Types.False } } }) -}
+703041c159a5883ebba832ccb01db8cf
+  $fOrdOneClass_$ccompare ::
+    Datatypes.Schedule -> Datatypes.Schedule -> GHC.Types.Ordering
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SLL),U(U,U(U),U(U))><S(SLL),U(U,U(U),U(U))>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Datatypes.Schedule) (w1 :: Datatypes.Schedule) ->
+                 case w of ww { Datatypes.Schedule ww1 ww2 ww3 ->
+                 case w1 of ww4 { Datatypes.Schedule ww5 ww6 ww7 ->
+                 Datatypes.$w$ccompare ww1 ww2 ww3 ww5 ww6 ww7 } }) -}
+81ef68f91fa16dc06b0164b57bfda14b
+  $fOrdOneClass_$ccompare1 ::
+    Datatypes.OneClass -> Datatypes.OneClass -> GHC.Types.Ordering
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LS(SLL)),1*U(A,1*U(U,U(U),U(U)))><S(LS(SLL)),1*U(A,1*U(U,U(U),U(U)))>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (a :: Datatypes.OneClass) (b :: Datatypes.OneClass) ->
+                 case a of wild { Datatypes.OC x1 x2 ->
+                 case b of wild1 { Datatypes.OC x4 x5 ->
+                 Datatypes.$fOrdOneClass_$ccompare x2 x5 } }) -}
+81ef68f91fa16dc06b0164b57bfda14b
+  $fOrdOneClass_$cmax ::
+    Datatypes.OneClass -> Datatypes.OneClass -> Datatypes.OneClass
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LS(SLL)),U(U,U(U,U(U),U(U)))><S(LS(SLL)),U(U,U(U,U(U),U(U)))>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Datatypes.OneClass) (y :: Datatypes.OneClass) ->
+                 case x of wild { Datatypes.OC x1 x2 ->
+                 case y of wild1 { Datatypes.OC x4 x5 ->
+                 case Datatypes.$fOrdOneClass_$ccompare x2 x5 of wild2 {
+                   DEFAULT -> wild1 GHC.Types.GT -> wild } } }) -}
+81ef68f91fa16dc06b0164b57bfda14b
+  $fOrdOneClass_$cmin ::
+    Datatypes.OneClass -> Datatypes.OneClass -> Datatypes.OneClass
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LS(SLL)),U(U,U(U,U(U),U(U)))><S(LS(SLL)),U(U,U(U,U(U),U(U)))>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Datatypes.OneClass) (y :: Datatypes.OneClass) ->
+                 case x of wild { Datatypes.OC x1 x2 ->
+                 case y of wild1 { Datatypes.OC x4 x5 ->
+                 case Datatypes.$fOrdOneClass_$ccompare x2 x5 of wild2 {
+                   DEFAULT -> wild GHC.Types.GT -> wild1 } } }) -}
+703041c159a5883ebba832ccb01db8cf
+  $fOrdSchedule :: GHC.Classes.Ord Datatypes.Schedule
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Datatypes.Schedule
+                  Datatypes.$fEqSchedule
+                  Datatypes.$fOrdOneClass_$ccompare
+                  Datatypes.$fOrdSchedule_$c<
+                  Datatypes.$fOrdSchedule_$c<=
+                  Datatypes.$fOrdSchedule_$c>
+                  Datatypes.$fOrdSchedule_$c>=
+                  Datatypes.$fOrdSchedule_$cmax
+                  Datatypes.$fOrdSchedule_$cmin -}
+703041c159a5883ebba832ccb01db8cf
+  $fOrdSchedule_$c< ::
+    Datatypes.Schedule -> Datatypes.Schedule -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SLL),U(U,U(U),U(U))><S(SLL),U(U,U(U),U(U))>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Datatypes.Schedule) (y :: Datatypes.Schedule) ->
+                 case Datatypes.$fOrdOneClass_$ccompare x y of wild {
+                   DEFAULT -> GHC.Types.False GHC.Types.LT -> GHC.Types.True }) -}
+703041c159a5883ebba832ccb01db8cf
+  $fOrdSchedule_$c<= ::
+    Datatypes.Schedule -> Datatypes.Schedule -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SLL),U(U,U(U),U(U))><S(SLL),U(U,U(U),U(U))>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Datatypes.Schedule) (y :: Datatypes.Schedule) ->
+                 case Datatypes.$fOrdOneClass_$ccompare x y of wild {
+                   DEFAULT -> GHC.Types.True GHC.Types.GT -> GHC.Types.False }) -}
+703041c159a5883ebba832ccb01db8cf
+  $fOrdSchedule_$c> ::
+    Datatypes.Schedule -> Datatypes.Schedule -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SLL),U(U,U(U),U(U))><S(SLL),U(U,U(U),U(U))>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Datatypes.Schedule) (y :: Datatypes.Schedule) ->
+                 case Datatypes.$fOrdOneClass_$ccompare x y of wild {
+                   DEFAULT -> GHC.Types.False GHC.Types.GT -> GHC.Types.True }) -}
+703041c159a5883ebba832ccb01db8cf
+  $fOrdSchedule_$c>= ::
+    Datatypes.Schedule -> Datatypes.Schedule -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SLL),U(U,U(U),U(U))><S(SLL),U(U,U(U),U(U))>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Datatypes.Schedule) (y :: Datatypes.Schedule) ->
+                 case Datatypes.$fOrdOneClass_$ccompare x y of wild {
+                   DEFAULT -> GHC.Types.True GHC.Types.LT -> GHC.Types.False }) -}
+703041c159a5883ebba832ccb01db8cf
+  $fOrdSchedule_$cmax ::
+    Datatypes.Schedule -> Datatypes.Schedule -> Datatypes.Schedule
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SLL),U(U,U(U),U(U))><S(SLL),U(U,U(U),U(U))>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Datatypes.Schedule) (y :: Datatypes.Schedule) ->
+                 case Datatypes.$fOrdOneClass_$ccompare x y of wild {
+                   DEFAULT -> y GHC.Types.GT -> x }) -}
+703041c159a5883ebba832ccb01db8cf
+  $fOrdSchedule_$cmin ::
+    Datatypes.Schedule -> Datatypes.Schedule -> Datatypes.Schedule
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SLL),U(U,U(U),U(U))><S(SLL),U(U,U(U),U(U))>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Datatypes.Schedule) (y :: Datatypes.Schedule) ->
+                 case Datatypes.$fOrdOneClass_$ccompare x y of wild {
+                   DEFAULT -> x GHC.Types.GT -> y }) -}
+08b030fe3f2b961c717c01a1d871da8a
+  $fShowClass :: GHC.Show.Show Datatypes.Class
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Datatypes.Class
+                  Datatypes.$fShowClass_$cshowsPrec
+                  Datatypes.$fShowClass_$cshow
+                  Datatypes.$fShowClass_$cshowList -}
+08b030fe3f2b961c717c01a1d871da8a
+  $fShowClass1 :: Datatypes.Class -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (\ (w :: Datatypes.Class) (w1 :: GHC.Base.String) ->
+                 case w of ww { Datatypes.Class ww1 ww2 ->
+                 Datatypes.$w$cshowsPrec 0# ww1 ww2 w1 }) -}
+5cc8fba4bd893bda9bcee91c728708c5
+  $fShowClass10 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Tu"#) -}
+e66da190abcaabe6a27f9788ba6f2ffe
+  $fShowClass11 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Mo"#) -}
+5f04166017ac895d74f4a222cbd58bea
+  $fShowClass12 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "_day = "#) -}
+808f3bf08ab9ba1df2f0bf5eb0bc7e40
+  $fShowClass13 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Schedule {"#) -}
+df2c0b58bd722e1bfe996c578cb8ffe7
+  $fShowClass14 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "_times = "#) -}
+8419e1598c4149ef117c6bbaa93de197
+  $fShowClass15 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "_name = "#) -}
+3809cabcb070cdd8b5e282e6090262b2
+  $fShowClass16 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Class {"#) -}
+68ab364be4b559c09fdfca10684d5325
+  $fShowClass2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "}"#) -}
+6afe390b7b8cb5a8054caabb106d050a
+  $fShowClass3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "_endTime = "#) -}
+b6c8f75a7296511cd556fdbdb99a9ca0
+  $fShowClass4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "_startTime = "#) -}
+779a81baab015d4e29adb4b37b3045ee
+  $fShowClass5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# ", "#) -}
+8836634edc84ec80f7d6c27c043872c6
+  $fShowClass6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "NA"#) -}
+ddab5b4333d3f19f4bff13d25043d6d6
+  $fShowClass7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Fr"#) -}
+6f5a6aa801700691626865ec3548a9e8
+  $fShowClass8 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Th"#) -}
+0d4f73a8fd853fd96e0c440db13c664b
+  $fShowClass9 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "We"#) -}
+08b030fe3f2b961c717c01a1d871da8a
+  $fShowClass_$cshow :: Datatypes.Class -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Datatypes.Class) ->
+                 Datatypes.$fShowClass_$cshowsPrec
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+08b030fe3f2b961c717c01a1d871da8a
+  $fShowClass_$cshowList :: [Datatypes.Class] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Datatypes.Class
+                   Datatypes.$fShowClass1) -}
+08b030fe3f2b961c717c01a1d871da8a
+  $fShowClass_$cshowsPrec ::
+    GHC.Types.Int -> Datatypes.Class -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U(1*U,1*U)><L,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Datatypes.Class)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { Datatypes.Class ww3 ww4 ->
+                 Datatypes.$w$cshowsPrec ww1 ww3 ww4 w2 } }) -}
+6980cebd453ee48d4827b5b7441b5984
+  $fShowDay :: GHC.Show.Show Datatypes.Day
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Datatypes.Day
+                  Datatypes.$fShowDay_$cshowsPrec
+                  Datatypes.$fShowDay_$cshow
+                  Datatypes.$fShowDay_$cshowList -}
+6980cebd453ee48d4827b5b7441b5984
+  $fShowDay_$cshow :: Datatypes.Day -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Datatypes.Day) ->
+                 Datatypes.$fShowDay_$cshowsPrec
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+6980cebd453ee48d4827b5b7441b5984
+  $fShowDay_$cshowList :: [Datatypes.Day] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Datatypes.Day
+                   Datatypes.$w$cshowsPrec2) -}
+6980cebd453ee48d4827b5b7441b5984
+  $fShowDay_$cshowsPrec ::
+    GHC.Types.Int -> Datatypes.Day -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,A><S,1*U><L,1*U>, Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, True)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Datatypes.Day)
+                   (w2 :: GHC.Base.String) ->
+                 Datatypes.$w$cshowsPrec2 w1 w2) -}
+81ef68f91fa16dc06b0164b57bfda14b
+  $fShowOneClass :: GHC.Show.Show Datatypes.OneClass
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Datatypes.OneClass
+                  Datatypes.$fShowOneClass_$cshowsPrec
+                  Datatypes.$fShowOneClass_$cshow
+                  Datatypes.$fShowOneClass_$cshowList -}
+81ef68f91fa16dc06b0164b57bfda14b
+  $fShowOneClass1 :: Datatypes.OneClass -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (\ (w :: Datatypes.OneClass) (w1 :: GHC.Base.String) ->
+                 case w of ww { Datatypes.OC ww1 ww2 ->
+                 Datatypes.$w$cshowsPrec3 0# ww1 ww2 w1 }) -}
+710f8151eb20111cb7164d83b254958f
+  $fShowOneClass2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "_oCtimes = "#) -}
+67647efa148d368ae1f3cddbfe576355
+  $fShowOneClass3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "_oCname = "#) -}
+46da7bbd3c8e67235aba153be27bdaaa
+  $fShowOneClass4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "OC {"#) -}
+81ef68f91fa16dc06b0164b57bfda14b
+  $fShowOneClass_$cshow :: Datatypes.OneClass -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U(1*U,1*U(1*U,1*U(U),1*U(U)))>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Datatypes.OneClass) ->
+                 Datatypes.$fShowOneClass_$cshowsPrec
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+81ef68f91fa16dc06b0164b57bfda14b
+  $fShowOneClass_$cshowList :: [Datatypes.OneClass] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Datatypes.OneClass
+                   Datatypes.$fShowOneClass1) -}
+81ef68f91fa16dc06b0164b57bfda14b
+  $fShowOneClass_$cshowsPrec ::
+    GHC.Types.Int -> Datatypes.OneClass -> GHC.Show.ShowS
+  {- Arity: 3,
+     Strictness: <S(S),1*U(U)><S,1*U(1*U,1*U(1*U,1*U(U),1*U(U)))><L,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Datatypes.OneClass)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { Datatypes.OC ww3 ww4 ->
+                 Datatypes.$w$cshowsPrec3 ww1 ww3 ww4 w2 } }) -}
+703041c159a5883ebba832ccb01db8cf
+  $fShowSchedule :: GHC.Show.Show Datatypes.Schedule
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Datatypes.Schedule
+                  Datatypes.$fShowSchedule_$cshowsPrec
+                  Datatypes.$fShowSchedule_$cshow
+                  Datatypes.$fShowSchedule_$cshowList -}
+703041c159a5883ebba832ccb01db8cf
+  $fShowSchedule1 :: Datatypes.Schedule -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (\ (w :: Datatypes.Schedule) (w1 :: GHC.Base.String) ->
+                 case w of ww { Datatypes.Schedule ww1 ww2 ww3 ->
+                 Datatypes.$w$cshowsPrec1 0# ww1 ww2 ww3 w1 }) -}
+703041c159a5883ebba832ccb01db8cf
+  $fShowSchedule_$cshow :: Datatypes.Schedule -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U(1*U,1*U(U),1*U(U))>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Datatypes.Schedule) ->
+                 Datatypes.$fShowSchedule_$cshowsPrec
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+703041c159a5883ebba832ccb01db8cf
+  $fShowSchedule_$cshowList :: [Datatypes.Schedule] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Datatypes.Schedule
+                   Datatypes.$fShowSchedule1) -}
+703041c159a5883ebba832ccb01db8cf
+  $fShowSchedule_$cshowsPrec ::
+    GHC.Types.Int -> Datatypes.Schedule -> GHC.Show.ShowS
+  {- Arity: 3,
+     Strictness: <S(S),1*U(U)><S,1*U(1*U,1*U(U),1*U(U))><L,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Datatypes.Schedule)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { Datatypes.Schedule ww3 ww4 ww5 ->
+                 Datatypes.$w$cshowsPrec1 ww1 ww3 ww4 ww5 w2 } }) -}
+55ee4b86caed0a5d36808559a88c8303
+  $tc'Class :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   7878996045633320005##
+                   10397518365881753270##
+                   Datatypes.$trModule
+                   Datatypes.$tc'Class1) -}
+29e42d303e3b5176260f9d011ec941af
+  $tc'Class1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Class"#) -}
+27d4e2f4999a126c97d4b10c0b710100
+  $tc'Fr :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   5968439772541837814##
+                   10088904441994313357##
+                   Datatypes.$trModule
+                   Datatypes.$tc'Fr1) -}
+f1c0ac58361017f6b67508b25e9d2ad0
+  $tc'Fr1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Fr"#) -}
+2d5a129c8c5cd4977bdd4852d6c517cd
+  $tc'Mo :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   9680001985236793934##
+                   163636529153725984##
+                   Datatypes.$trModule
+                   Datatypes.$tc'Mo1) -}
+8c1093e4883bd384d1d84c118b2241e0
+  $tc'Mo1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Mo"#) -}
+23b4636f665363e2757df5516d24de72
+  $tc'NA :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   10896079181817380338##
+                   15554486536563894018##
+                   Datatypes.$trModule
+                   Datatypes.$tc'NA1) -}
+45b5a278146ebf7b5a512c62203321f3
+  $tc'NA1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'NA"#) -}
+f52411276b906954ef41a87cbf169944
+  $tc'OC :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   11842893122905960819##
+                   18147079375591221786##
+                   Datatypes.$trModule
+                   Datatypes.$tc'OC1) -}
+347ed1ad316073bd2b2b628c01850bba
+  $tc'OC1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'OC"#) -}
+e271a848b7f22e18e255370e954fc9ff
+  $tc'Schedule :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   5483611190999987045##
+                   1129856035193442969##
+                   Datatypes.$trModule
+                   Datatypes.$tc'Schedule1) -}
+dce15f4da7f5fda59881e6b14ad5a5af
+  $tc'Schedule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Schedule"#) -}
+9362afa72f17883f328f2b04d4921fa6
+  $tc'Th :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1981718429959406504##
+                   10999870198804122181##
+                   Datatypes.$trModule
+                   Datatypes.$tc'Th1) -}
+9fc5fae5f28aa75540be1b106d805c73
+  $tc'Th1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Th"#) -}
+f157137fc1c0285e3a0988ca4f8c7912
+  $tc'Tu :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   8928507913905766488##
+                   14907985522417986323##
+                   Datatypes.$trModule
+                   Datatypes.$tc'Tu1) -}
+5e3fe23a140028070e06adfff4e112d9
+  $tc'Tu1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Tu"#) -}
+0fa54c5da47bca20875d1b382a913af6
+  $tc'We :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   653440603020251494##
+                   15830532877219162533##
+                   Datatypes.$trModule
+                   Datatypes.$tc'We1) -}
+13777ec655ba8be9e9af50a93badedcd
+  $tc'We1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'We"#) -}
+66c3b9651ea4ceb8e3ba0b1bcc47ed6c
+  $tcClass :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   7647873906351179006##
+                   16085519168762199931##
+                   Datatypes.$trModule
+                   Datatypes.$tcClass1) -}
+38dba62f3dc4106a51fcf3e4db9334c9
+  $tcClass1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Class"#) -}
+9c20c5556c665bdaf5e7d1f6c635cf5c
+  $tcDay :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   5179918606379775979##
+                   14227615749967079078##
+                   Datatypes.$trModule
+                   Datatypes.$tcDay1) -}
+cfc8361c3de0c9be074bdd3d779ca6fd
+  $tcDay1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Day"#) -}
+cac84dc87fd8c1cf255efc2be2b1bde2
+  $tcOneClass :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   16605425756306697193##
+                   5435407859142918045##
+                   Datatypes.$trModule
+                   Datatypes.$tcOneClass1) -}
+e23f05b8cd5bce0615c1a8dca0ce411c
+  $tcOneClass1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "OneClass"#) -}
+8b9bf438dc8319b10a9c2f3d50c60558
+  $tcSchedule :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   18143068819857640731##
+                   16626569811310186755##
+                   Datatypes.$trModule
+                   Datatypes.$tcSchedule1) -}
+009a3ba4c028acbd333f4ebbe4b900ce
+  $tcSchedule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Schedule"#) -}
+e718bcc7177509f7b8e110ebe84bd1cc
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Datatypes.$trModule2
+                   Datatypes.$trModule1) -}
+8d8fb88795d3c27d55c2db85a3c4cdb2
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Datatypes"#) -}
+d0a4d8f962ee591671fe3c1f7f79b165
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "Scheduler-0.1.0.0-AWz6UrLP5DrLXG0NLtv6y2"#) -}
+487f1271d111d734a00ec99c8fb0d8f0
+  $w$c/= ::
+    GHC.Base.String
+    -> Datatypes.Schedule
+    -> GHC.Base.String
+    -> Datatypes.Schedule
+    -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S,1*U><L,1*U(1*U,1*U(U),1*U(U))><S,1*U><L,1*U(1*U,1*U(U),1*U(U))>,
+     Inline: [0],
+     Unfolding: (\ (ww :: GHC.Base.String)
+                   (ww1 :: Datatypes.Schedule)
+                   (ww2 :: GHC.Base.String)
+                   (ww3 :: Datatypes.Schedule) ->
+                 case GHC.Base.eqString ww ww2 of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True
+                   -> case ww1 of ww4 { Datatypes.Schedule ww5 ww6 ww7 ->
+                      case ww3 of ww8 { Datatypes.Schedule ww9 ww10 ww11 ->
+                      case Datatypes.$w$c==1 ww5 ww6 ww7 ww9 ww10 ww11 of wild1 {
+                        GHC.Types.False -> GHC.Types.True
+                        GHC.Types.True -> GHC.Types.False } } } }) -}
+2ab775af0c89d3a33fc45c3a757a87e9
+  $w$c== ::
+    GHC.Base.String
+    -> [Datatypes.Schedule]
+    -> GHC.Base.String
+    -> [Datatypes.Schedule]
+    -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S,1*U><L,1*U><S,1*U><L,1*U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Base.String)
+                   (ww1 :: [Datatypes.Schedule])
+                   (ww2 :: GHC.Base.String)
+                   (ww3 :: [Datatypes.Schedule]) ->
+                 case GHC.Base.eqString ww ww2 of wild {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True
+                   -> GHC.Classes.$fEq[]_$c==
+                        @ Datatypes.Schedule
+                        Datatypes.$fEqSchedule
+                        ww1
+                        ww3 }) -}
+f5a2780e29863a338a20899ecea27967
+  $w$c==1 ::
+    Datatypes.Day
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> Datatypes.Day
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Types.Bool
+  {- Arity: 6, HasNoCafRefs,
+     Strictness: <S,1*U><L,1*U(U)><L,1*U(U)><S,1*U><L,1*U(U)><L,1*U(U)>,
+     Inline: [0],
+     Unfolding: (\ (ww :: Datatypes.Day)
+                   (ww1 :: GHC.Types.Int)
+                   (ww2 :: GHC.Types.Int)
+                   (ww3 :: Datatypes.Day)
+                   (ww4 :: GHC.Types.Int)
+                   (ww5 :: GHC.Types.Int) ->
+                 case ww of wild {
+                   Datatypes.Mo
+                   -> case ww3 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Datatypes.Mo
+                        -> case ww1 of wild2 { GHC.Types.I# x ->
+                           case ww4 of wild3 { GHC.Types.I# y ->
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.==# x y) of wild4 {
+                             GHC.Types.False -> GHC.Types.False
+                             GHC.Types.True -> GHC.Classes.eqInt ww2 ww5 } } } }
+                   Datatypes.Tu
+                   -> case ww3 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Datatypes.Tu
+                        -> case ww1 of wild2 { GHC.Types.I# x ->
+                           case ww4 of wild3 { GHC.Types.I# y ->
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.==# x y) of wild4 {
+                             GHC.Types.False -> GHC.Types.False
+                             GHC.Types.True -> GHC.Classes.eqInt ww2 ww5 } } } }
+                   Datatypes.We
+                   -> case ww3 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Datatypes.We
+                        -> case ww1 of wild2 { GHC.Types.I# x ->
+                           case ww4 of wild3 { GHC.Types.I# y ->
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.==# x y) of wild4 {
+                             GHC.Types.False -> GHC.Types.False
+                             GHC.Types.True -> GHC.Classes.eqInt ww2 ww5 } } } }
+                   Datatypes.Th
+                   -> case ww3 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Datatypes.Th
+                        -> case ww1 of wild2 { GHC.Types.I# x ->
+                           case ww4 of wild3 { GHC.Types.I# y ->
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.==# x y) of wild4 {
+                             GHC.Types.False -> GHC.Types.False
+                             GHC.Types.True -> GHC.Classes.eqInt ww2 ww5 } } } }
+                   Datatypes.Fr
+                   -> case ww3 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Datatypes.Fr
+                        -> case ww1 of wild2 { GHC.Types.I# x ->
+                           case ww4 of wild3 { GHC.Types.I# y ->
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.==# x y) of wild4 {
+                             GHC.Types.False -> GHC.Types.False
+                             GHC.Types.True -> GHC.Classes.eqInt ww2 ww5 } } } }
+                   Datatypes.NA
+                   -> case ww3 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Datatypes.NA
+                        -> case ww1 of wild2 { GHC.Types.I# x ->
+                           case ww4 of wild3 { GHC.Types.I# y ->
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.==# x y) of wild4 {
+                             GHC.Types.False -> GHC.Types.False
+                             GHC.Types.True -> GHC.Classes.eqInt ww2 ww5 } } } } }) -}
+983431d212e5a8fafc3f63aeea6fc085
+  $w$c==2 ::
+    GHC.Base.String
+    -> Datatypes.Schedule
+    -> GHC.Base.String
+    -> Datatypes.Schedule
+    -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S,1*U><L,1*U(1*U,1*U(U),1*U(U))><S,1*U><L,1*U(1*U,1*U(U),1*U(U))>,
+     Inline: [0],
+     Unfolding: (\ (ww :: GHC.Base.String)
+                   (ww1 :: Datatypes.Schedule)
+                   (ww2 :: GHC.Base.String)
+                   (ww3 :: Datatypes.Schedule) ->
+                 case GHC.Base.eqString ww ww2 of wild {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True -> Datatypes.$fEqSchedule_$c== ww1 ww3 }) -}
+12d322793d70d2d34b9c88e2234ee62b
+  $w$ccompare ::
+    Datatypes.Day
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> Datatypes.Day
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Types.Ordering
+  {- Arity: 6, HasNoCafRefs,
+     Strictness: <S,U><L,U(U)><L,U(U)><S,U><L,U(U)><L,U(U)>,
+     Inline: [0] -}
+4ae0163c25f1c2ea0d0d88879e4f25b5
+  $w$cshowsPrec ::
+    GHC.Prim.Int#
+    -> GHC.Base.String
+    -> [Datatypes.Schedule]
+    -> GHC.Base.String
+    -> GHC.Base.String
+  {- Arity: 4, Strictness: <S,U><L,1*U><L,1*U><L,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: GHC.Base.String)
+                   (ww2 :: [Datatypes.Schedule])
+                   (w :: GHC.Base.String) ->
+                 let {
+                   p :: GHC.Show.ShowS {- Arity: 1, Strictness: <L,1*U> -}
+                   = \ (x :: GHC.Base.String)[OneShot] ->
+                     GHC.Base.++
+                       @ GHC.Types.Char
+                       Datatypes.$fShowClass16
+                       (GHC.Base.++
+                          @ GHC.Types.Char
+                          Datatypes.$fShowClass15
+                          (GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.shows6
+                             (GHC.Show.showLitString
+                                ww1
+                                (GHC.Types.:
+                                   @ GHC.Types.Char
+                                   GHC.Show.shows6
+                                   (GHC.Base.++
+                                      @ GHC.Types.Char
+                                      Datatypes.$fShowClass5
+                                      (GHC.Base.++
+                                         @ GHC.Types.Char
+                                         Datatypes.$fShowClass14
+                                         (let {
+                                            s :: GHC.Base.String
+                                            = GHC.Base.++ @ GHC.Types.Char Datatypes.$fShowClass2 x
+                                          } in
+                                          case ww2 of wild {
+                                            [] -> GHC.CString.unpackAppendCString# "[]"# s
+                                            : x1 xs
+                                            -> GHC.Types.:
+                                                 @ GHC.Types.Char
+                                                 GHC.Show.showList__2
+                                                 (case x1 of ww3 { Datatypes.Schedule ww4 ww5 ww6 ->
+                                                  Datatypes.$w$cshowsPrec1
+                                                    0#
+                                                    ww4
+                                                    ww5
+                                                    ww6
+                                                    (let {
+                                                       lvl27 :: [GHC.Types.Char]
+                                                       = GHC.Types.:
+                                                           @ GHC.Types.Char
+                                                           GHC.Show.showList__1
+                                                           s
+                                                     } in
+                                                     letrec {
+                                                       showl :: [Datatypes.Schedule]
+                                                                -> GHC.Base.String
+                                                         {- Arity: 1, Strictness: <S,1*U> -}
+                                                       = \ (ds2 :: [Datatypes.Schedule]) ->
+                                                         case ds2 of wild1 {
+                                                           [] -> lvl27
+                                                           : y ys
+                                                           -> GHC.Types.:
+                                                                @ GHC.Types.Char
+                                                                GHC.Show.shows5
+                                                                (case y of ww7 { Datatypes.Schedule ww8 ww9 ww10 ->
+                                                                 Datatypes.$w$cshowsPrec1
+                                                                   0#
+                                                                   ww8
+                                                                   ww9
+                                                                   ww10
+                                                                   (showl ys) }) }
+                                                     } in
+                                                     showl xs) }) })))))))
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 11#) of wild {
+                   GHC.Types.False -> p w
+                   GHC.Types.True
+                   -> GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.shows7
+                        (p (GHC.Types.: @ GHC.Types.Char GHC.Show.shows4 w)) }) -}
+cf89339543d7d6a16aee9ea2f861671e
+  $w$cshowsPrec1 ::
+    GHC.Prim.Int#
+    -> Datatypes.Day
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Base.String
+    -> GHC.Base.String
+  {- Arity: 5, Strictness: <S,U><L,1*U><L,1*U(U)><L,1*U(U)><L,U>,
+     Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: Datatypes.Day)
+                   (ww2 :: GHC.Types.Int)
+                   (ww3 :: GHC.Types.Int)
+                   (w :: GHC.Base.String) ->
+                 let {
+                   p :: GHC.Show.ShowS {- Arity: 1, Strictness: <L,1*U> -}
+                   = \ (x :: GHC.Base.String)[OneShot] ->
+                     GHC.Base.++
+                       @ GHC.Types.Char
+                       Datatypes.$fShowClass13
+                       (GHC.Base.++
+                          @ GHC.Types.Char
+                          Datatypes.$fShowClass12
+                          (Datatypes.$w$cshowsPrec2
+                             ww1
+                             (GHC.Base.++
+                                @ GHC.Types.Char
+                                Datatypes.$fShowClass5
+                                (GHC.Base.++
+                                   @ GHC.Types.Char
+                                   Datatypes.$fShowClass4
+                                   (case ww2 of ww4 { GHC.Types.I# ww5 ->
+                                    case GHC.Show.$wshowSignedInt
+                                           0#
+                                           ww5
+                                           (GHC.Base.++
+                                              @ GHC.Types.Char
+                                              Datatypes.$fShowClass5
+                                              (GHC.Base.++
+                                                 @ GHC.Types.Char
+                                                 Datatypes.$fShowClass3
+                                                 (case ww3 of ww6 { GHC.Types.I# ww7 ->
+                                                  case GHC.Show.$wshowSignedInt
+                                                         0#
+                                                         ww7
+                                                         (GHC.Base.++
+                                                            @ GHC.Types.Char
+                                                            Datatypes.$fShowClass2
+                                                            x) of ww8 { (#,#) ww9 ww10 ->
+                                                  GHC.Types.:
+                                                    @ GHC.Types.Char
+                                                    ww9
+                                                    ww10 } }))) of ww6 { (#,#) ww7 ww8 ->
+                                    GHC.Types.: @ GHC.Types.Char ww7 ww8 } })))))
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 11#) of wild {
+                   GHC.Types.False -> p w
+                   GHC.Types.True
+                   -> GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.shows7
+                        (p (GHC.Types.: @ GHC.Types.Char GHC.Show.shows4 w)) }) -}
+6980cebd453ee48d4827b5b7441b5984
+  $w$cshowsPrec2 ::
+    Datatypes.Day -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>, Inline: [0],
+     Unfolding: (\ (w :: Datatypes.Day) (w1 :: GHC.Base.String) ->
+                 case w of wild {
+                   Datatypes.Mo
+                   -> GHC.Base.++ @ GHC.Types.Char Datatypes.$fShowClass11 w1
+                   Datatypes.Tu
+                   -> GHC.Base.++ @ GHC.Types.Char Datatypes.$fShowClass10 w1
+                   Datatypes.We
+                   -> GHC.Base.++ @ GHC.Types.Char Datatypes.$fShowClass9 w1
+                   Datatypes.Th
+                   -> GHC.Base.++ @ GHC.Types.Char Datatypes.$fShowClass8 w1
+                   Datatypes.Fr
+                   -> GHC.Base.++ @ GHC.Types.Char Datatypes.$fShowClass7 w1
+                   Datatypes.NA
+                   -> GHC.Base.++ @ GHC.Types.Char Datatypes.$fShowClass6 w1 }) -}
+099cdf4601238fe6a01b5c3865bb0dd9
+  $w$cshowsPrec3 ::
+    GHC.Prim.Int#
+    -> GHC.Base.String
+    -> Datatypes.Schedule
+    -> GHC.Base.String
+    -> GHC.Base.String
+  {- Arity: 4,
+     Strictness: <S,U><L,1*U><L,1*U(1*U,1*U(U),1*U(U))><L,U>,
+     Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: GHC.Base.String)
+                   (ww2 :: Datatypes.Schedule)
+                   (w :: GHC.Base.String) ->
+                 let {
+                   p :: GHC.Show.ShowS {- Arity: 1, Strictness: <L,1*U> -}
+                   = \ (x :: GHC.Base.String)[OneShot] ->
+                     GHC.Base.++
+                       @ GHC.Types.Char
+                       Datatypes.$fShowOneClass4
+                       (GHC.Base.++
+                          @ GHC.Types.Char
+                          Datatypes.$fShowOneClass3
+                          (GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.shows6
+                             (GHC.Show.showLitString
+                                ww1
+                                (GHC.Types.:
+                                   @ GHC.Types.Char
+                                   GHC.Show.shows6
+                                   (GHC.Base.++
+                                      @ GHC.Types.Char
+                                      Datatypes.$fShowClass5
+                                      (GHC.Base.++
+                                         @ GHC.Types.Char
+                                         Datatypes.$fShowOneClass2
+                                         (case ww2 of ww3 { Datatypes.Schedule ww4 ww5 ww6 ->
+                                          Datatypes.$w$cshowsPrec1
+                                            0#
+                                            ww4
+                                            ww5
+                                            ww6
+                                            (GHC.Base.++
+                                               @ GHC.Types.Char
+                                               Datatypes.$fShowClass2
+                                               x) })))))))
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 11#) of wild {
+                   GHC.Types.False -> p w
+                   GHC.Types.True
+                   -> GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.shows7
+                        (p (GHC.Types.: @ GHC.Types.Char GHC.Show.shows4 w)) }) -}
+5a20f33ea3d876fd2c9c366b25c6d7e5
+  $woneClass ::
+    Datatypes.Day
+    -> Datatypes.Class -> (# GHC.Base.String, Datatypes.Schedule #)
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><L,U(1*U,1*U)>,
+     Inline: [0],
+     Unfolding: (\ (w :: Datatypes.Day) (w1 :: Datatypes.Class) ->
+                 (# case w1 of wild { Datatypes.Class x1 x2 -> x1 },
+                    case w1 of wild { Datatypes.Class x1 x2 ->
+                    letrec {
+                      go :: [Datatypes.Schedule] -> Data.Monoid.First Datatypes.Schedule
+                        {- Arity: 1, Strictness: <S,1*U> -}
+                      = \ (ds :: [Datatypes.Schedule]) ->
+                        case ds of wild1 {
+                          []
+                          -> (GHC.Base.Nothing @ Datatypes.Schedule)
+                               `cast`
+                             (Sym (Data.Monoid.N:First[0]) <Datatypes.Schedule>_N)
+                          : y ys
+                          -> case y of wild2 { Datatypes.Schedule ds1 ds2 ds3 ->
+                             case ds1 of wild3 {
+                               Datatypes.Mo
+                               -> case w of wild4 {
+                                    DEFAULT -> go ys
+                                    Datatypes.Mo
+                                    -> (GHC.Base.Just @ Datatypes.Schedule wild2)
+                                         `cast`
+                                       (Sym (Data.Monoid.N:First[0]) <Datatypes.Schedule>_N) }
+                               Datatypes.Tu
+                               -> case w of wild4 {
+                                    DEFAULT -> go ys
+                                    Datatypes.Tu
+                                    -> (GHC.Base.Just @ Datatypes.Schedule wild2)
+                                         `cast`
+                                       (Sym (Data.Monoid.N:First[0]) <Datatypes.Schedule>_N) }
+                               Datatypes.We
+                               -> case w of wild4 {
+                                    DEFAULT -> go ys
+                                    Datatypes.We
+                                    -> (GHC.Base.Just @ Datatypes.Schedule wild2)
+                                         `cast`
+                                       (Sym (Data.Monoid.N:First[0]) <Datatypes.Schedule>_N) }
+                               Datatypes.Th
+                               -> case w of wild4 {
+                                    DEFAULT -> go ys
+                                    Datatypes.Th
+                                    -> (GHC.Base.Just @ Datatypes.Schedule wild2)
+                                         `cast`
+                                       (Sym (Data.Monoid.N:First[0]) <Datatypes.Schedule>_N) }
+                               Datatypes.Fr
+                               -> case w of wild4 {
+                                    DEFAULT -> go ys
+                                    Datatypes.Fr
+                                    -> (GHC.Base.Just @ Datatypes.Schedule wild2)
+                                         `cast`
+                                       (Sym (Data.Monoid.N:First[0]) <Datatypes.Schedule>_N) }
+                               Datatypes.NA
+                               -> case w of wild4 {
+                                    DEFAULT -> go ys
+                                    Datatypes.NA
+                                    -> (GHC.Base.Just @ Datatypes.Schedule wild2)
+                                         `cast`
+                                       (Sym (Data.Monoid.N:First[0]) <Datatypes.Schedule>_N) } } } }
+                    } in
+                    case (go x2)
+                           `cast`
+                         (Data.Monoid.N:First[0] <Datatypes.Schedule>_N) of wild1 {
+                      GHC.Base.Nothing -> Datatypes.oneClass1
+                      GHC.Base.Just v -> v } } #)) -}
+08b030fe3f2b961c717c01a1d871da8a
+  data Class
+    = Class {_name :: GHC.Base.String, _times :: [Datatypes.Schedule]}
+6980cebd453ee48d4827b5b7441b5984
+  data Day = Mo | Tu | We | Th | Fr | NA
+81ef68f91fa16dc06b0164b57bfda14b
+  data OneClass
+    = OC {_oCname :: GHC.Base.String, _oCtimes :: Datatypes.Schedule}
+703041c159a5883ebba832ccb01db8cf
+  data Schedule
+    = Schedule {_day :: Datatypes.Day,
+                _startTime :: GHC.Types.Int,
+                _endTime :: GHC.Types.Int}
+e8bc2a1e33d0a5b225e7b48987a1d0f8
+  _day :: Datatypes.Schedule -> Datatypes.Day
+  RecSel Left Datatypes.Schedule
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SLL),1*U(1*U,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Datatypes.Schedule) ->
+                 case ds of wild { Datatypes.Schedule ds1 ds2 ds3 -> ds1 }) -}
+dc724cd7b2b1e75bbbfe9254f75ba0e6
+  _endTime :: Datatypes.Schedule -> GHC.Types.Int
+  RecSel Left Datatypes.Schedule
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLS),1*U(A,A,1*U(U))>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Datatypes.Schedule) ->
+                 case ds of wild { Datatypes.Schedule ds1 ds2 ds3 -> ds3 }) -}
+f817bd083b255a8e634ad65eb8ee7676
+  _name :: Datatypes.Class -> GHC.Base.String
+  RecSel Left Datatypes.Class
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Datatypes.Class) ->
+                 case ds of wild { Datatypes.Class ds1 ds2 -> ds1 }) -}
+fc0beca93402bb7ee4ceea57c4ff9681
+  _oCname :: Datatypes.OneClass -> GHC.Base.String
+  RecSel Left Datatypes.OneClass
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Datatypes.OneClass) ->
+                 case ds of wild { Datatypes.OC ds1 ds2 -> ds1 }) -}
+0589e52aeb4b2db431ae2d59d4fdb65f
+  _oCtimes :: Datatypes.OneClass -> Datatypes.Schedule
+  RecSel Left Datatypes.OneClass
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U(U,U,U))>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Datatypes.OneClass) ->
+                 case ds of wild { Datatypes.OC ds1 ds2 -> ds2 }) -}
+8a8852f08da5da1a494c1471f8d155ef
+  _startTime :: Datatypes.Schedule -> GHC.Types.Int
+  RecSel Left Datatypes.Schedule
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LSL),1*U(A,1*U(U),A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Datatypes.Schedule) ->
+                 case ds of wild { Datatypes.Schedule ds1 ds2 ds3 -> ds2 }) -}
+ce94b2621ec792e0c73504dfc3ac481d
+  _times :: Datatypes.Class -> [Datatypes.Schedule]
+  RecSel Left Datatypes.Class
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Datatypes.Class) ->
+                 case ds of wild { Datatypes.Class ds1 ds2 -> ds2 }) -}
+591f4967be050cffec5a8b0ddf297cd7
+  day :: Control.Lens.Type.Lens' Datatypes.Schedule Datatypes.Day
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),1*U(1*C1(C1(U)),A)><L,1*C1(U)><S,1*U(U,U,U)>,
+     Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (3, False, False)
+                (\ @ (f :: * -> *)
+                   ($dFunctor :: GHC.Base.Functor f)
+                   (f1 :: Datatypes.Day -> f Datatypes.Day)
+                   (ds :: Datatypes.Schedule) ->
+                 case ds of wild { Datatypes.Schedule x1 x2 x3 ->
+                 GHC.Base.fmap
+                   @ f
+                   $dFunctor
+                   @ Datatypes.Day
+                   @ Datatypes.Schedule
+                   (\ (y1 :: Datatypes.Day) -> Datatypes.Schedule y1 x2 x3)
+                   (f1 x1) }) -}
+c301b5b7238f049d67086b184c81e63b
+  endTime :: Control.Lens.Type.Lens' Datatypes.Schedule GHC.Types.Int
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),1*U(1*C1(C1(U)),A)><L,1*C1(U)><S,1*U(U,U,U)>,
+     Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (3, False, False)
+                (\ @ (f :: * -> *)
+                   ($dFunctor :: GHC.Base.Functor f)
+                   (f1 :: GHC.Types.Int -> f GHC.Types.Int)
+                   (ds :: Datatypes.Schedule) ->
+                 case ds of wild { Datatypes.Schedule x1 x2 x3 ->
+                 GHC.Base.fmap
+                   @ f
+                   $dFunctor
+                   @ GHC.Types.Int
+                   @ Datatypes.Schedule
+                   (\ (y1 :: GHC.Types.Int) -> Datatypes.Schedule x1 x2 y1)
+                   (f1 x3) }) -}
+fa80062d7c60932d0b2c4dee5b8a55a8
+  name :: Control.Lens.Type.Lens' Datatypes.Class GHC.Base.String
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),1*U(1*C1(C1(U)),A)><L,1*C1(U)><S,1*U(U,U)>,
+     Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (3, False, False)
+                (\ @ (f :: * -> *)
+                   ($dFunctor :: GHC.Base.Functor f)
+                   (f1 :: GHC.Base.String -> f GHC.Base.String)
+                   (ds :: Datatypes.Class) ->
+                 case ds of wild { Datatypes.Class x1 x2 ->
+                 GHC.Base.fmap
+                   @ f
+                   $dFunctor
+                   @ GHC.Base.String
+                   @ Datatypes.Class
+                   (\ (y1 :: GHC.Base.String) -> Datatypes.Class y1 x2)
+                   (f1 x1) }) -}
+73fc9d4e92d1abc9ce9b1717928642ce
+  oCname ::
+    Control.Lens.Type.Lens' Datatypes.OneClass GHC.Base.String
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),1*U(1*C1(C1(U)),A)><L,1*C1(U)><S,1*U(U,U)>,
+     Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (3, False, False)
+                (\ @ (f :: * -> *)
+                   ($dFunctor :: GHC.Base.Functor f)
+                   (f1 :: GHC.Base.String -> f GHC.Base.String)
+                   (ds :: Datatypes.OneClass) ->
+                 case ds of wild { Datatypes.OC x1 x2 ->
+                 GHC.Base.fmap
+                   @ f
+                   $dFunctor
+                   @ GHC.Base.String
+                   @ Datatypes.OneClass
+                   (\ (y1 :: GHC.Base.String) -> Datatypes.OC y1 x2)
+                   (f1 x1) }) -}
+ffec030e6e43b97c3832d75706f11a81
+  oCtimes ::
+    Control.Lens.Type.Lens' Datatypes.OneClass Datatypes.Schedule
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),1*U(1*C1(C1(U)),A)><L,1*C1(U)><S,1*U(U,U)>,
+     Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (3, False, False)
+                (\ @ (f :: * -> *)
+                   ($dFunctor :: GHC.Base.Functor f)
+                   (f1 :: Datatypes.Schedule -> f Datatypes.Schedule)
+                   (ds :: Datatypes.OneClass) ->
+                 case ds of wild { Datatypes.OC x1 x2 ->
+                 GHC.Base.fmap
+                   @ f
+                   $dFunctor
+                   @ Datatypes.Schedule
+                   @ Datatypes.OneClass
+                   (\ (y1 :: Datatypes.Schedule) -> Datatypes.OC x1 y1)
+                   (f1 x2) }) -}
+596a284d42ec1af525df2fb4250f20c8
+  oneClass :: Datatypes.Day -> Datatypes.Class -> Datatypes.OneClass
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><L,U(1*U,1*U)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Datatypes.Day) (w1 :: Datatypes.Class) ->
+                 case Datatypes.$woneClass w w1 of ww { (#,#) ww1 ww2 ->
+                 Datatypes.OC ww1 ww2 }) -}
+5613b69dfe7d200be987669f716a6342
+  oneClass1 :: Datatypes.Schedule
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Datatypes.Schedule
+                   Datatypes.NA
+                   Datatypes.oneClass2
+                   Datatypes.oneClass2) -}
+a49075fae48e0fc5ed346c71db15b242
+  oneClass2 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+814692488fa574b090ef1e4a42a8edff
+  sameClass :: Datatypes.Class -> Datatypes.Class -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SL),1*U(1*U,A)><S(SL),1*U(1*U,A)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (a :: Datatypes.Class) (b :: Datatypes.Class) ->
+                 case a of wild { Datatypes.Class ds ds1 ->
+                 case b of wild1 { Datatypes.Class ds2 ds3 ->
+                 GHC.Base.eqString ds ds2 } }) -}
+d0c7a9f80f2e48331ad93bda5e828974
+  siphonClass ::
+    [Datatypes.Class] -> Datatypes.Day -> [Datatypes.Class]
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: (\ (ds :: [Datatypes.Class]) (d :: Datatypes.Day) ->
+                 case ds of wild {
+                   [] -> GHC.Types.[] @ Datatypes.Class
+                   : c cs
+                   -> GHC.Types.:
+                        @ Datatypes.Class
+                        (case c of wild1 { Datatypes.Class x1 x2 ->
+                         Datatypes.Class
+                           x1
+                           (GHC.List.filter
+                              @ Datatypes.Schedule
+                              (\ (x :: Datatypes.Schedule) ->
+                               case x of wild2 { Datatypes.Schedule ds1 ds2 ds3 ->
+                               Datatypes.$fEqDay_$c== ds1 d })
+                              x2) })
+                        (case cs of wild1 {
+                           [] -> GHC.Types.[] @ Datatypes.Class
+                           : ipv ipv1 -> Datatypes.siphonClass1 }) }) -}
+33ea459ac05a8663ad881cbeb161c3fd
+  siphonClass1 :: [Datatypes.Class]
+  {- Strictness: x -}
+4205a7b8bf07e431f9002236c3dd2a9e
+  sortClass ::
+    [Datatypes.Class] -> Datatypes.Day -> [Datatypes.Class]
+  {- Arity: 2, Strictness: <S,1*U><L,A>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ds :: [Datatypes.Class]) (ds1 :: Datatypes.Day) ->
+                 case ds of wild {
+                   [] -> GHC.Types.[] @ Datatypes.Class
+                   : ipv ipv1 -> Datatypes.siphonClass1 }) -}
+b4bf0a33c3f14f038e7d9084db6b7412
+  startTime ::
+    Control.Lens.Type.Lens' Datatypes.Schedule GHC.Types.Int
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),1*U(1*C1(C1(U)),A)><L,1*C1(U)><S,1*U(U,U,U)>,
+     Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (3, False, False)
+                (\ @ (f :: * -> *)
+                   ($dFunctor :: GHC.Base.Functor f)
+                   (f1 :: GHC.Types.Int -> f GHC.Types.Int)
+                   (ds :: Datatypes.Schedule) ->
+                 case ds of wild { Datatypes.Schedule x1 x2 x3 ->
+                 GHC.Base.fmap
+                   @ f
+                   $dFunctor
+                   @ GHC.Types.Int
+                   @ Datatypes.Schedule
+                   (\ (y1 :: GHC.Types.Int) -> Datatypes.Schedule x1 y1 x3)
+                   (f1 x2) }) -}
+c20106ae0a53251fc7d5cd1d6c3f1003
+  times ::
+    Control.Lens.Type.Lens' Datatypes.Class [Datatypes.Schedule]
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),1*U(1*C1(C1(U)),A)><L,1*C1(U)><S,1*U(U,U)>,
+     Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (3, False, False)
+                (\ @ (f :: * -> *)
+                   ($dFunctor :: GHC.Base.Functor f)
+                   (f1 :: [Datatypes.Schedule] -> f [Datatypes.Schedule])
+                   (ds :: Datatypes.Class) ->
+                 case ds of wild { Datatypes.Class x1 x2 ->
+                 GHC.Base.fmap
+                   @ f
+                   $dFunctor
+                   @ [Datatypes.Schedule]
+                   @ Datatypes.Class
+                   (\ (y1 :: [Datatypes.Schedule]) -> Datatypes.Class x1 y1)
+                   (f1 x2) }) -}
+instance GHC.Classes.Eq [Datatypes.Class] = Datatypes.$fEqClass
+instance GHC.Classes.Eq [Datatypes.Day] = Datatypes.$fEqDay
+instance GHC.Classes.Eq [Datatypes.OneClass]
+  = Datatypes.$fEqOneClass
+instance GHC.Classes.Eq [Datatypes.Schedule]
+  = Datatypes.$fEqSchedule
+instance GHC.Classes.Ord [Datatypes.Day] = Datatypes.$fOrdDay
+instance GHC.Classes.Ord [Datatypes.OneClass]
+  = Datatypes.$fOrdOneClass
+instance GHC.Classes.Ord [Datatypes.Schedule]
+  = Datatypes.$fOrdSchedule
+instance GHC.Show.Show [Datatypes.Class] = Datatypes.$fShowClass
+instance GHC.Show.Show [Datatypes.Day] = Datatypes.$fShowDay
+instance GHC.Show.Show [Datatypes.OneClass]
+  = Datatypes.$fShowOneClass
+instance GHC.Show.Show [Datatypes.Schedule]
+  = Datatypes.$fShowSchedule
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+
