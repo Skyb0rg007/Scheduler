@@ -14,6 +14,13 @@
   (major1) == 4 && (major2) <  9 || \
   (major1) == 4 && (major2) == 9 && (minor) <= 1)
 
+/* package lens-4.15.4 */
+#define VERSION_lens "4.15.4"
+#define MIN_VERSION_lens(major1,major2,minor) (\
+  (major1) <  4 || \
+  (major1) == 4 && (major2) <  15 || \
+  (major1) == 4 && (major2) == 15 && (minor) <= 4)
+
 /* tool alex-3.2.1 */
 #define TOOL_VERSION_alex "3.2.1"
 #define MIN_TOOL_VERSION_alex(major1,major2,minor) (\
@@ -84,7 +91,7 @@
   (major1) == 2 && (major2) <  25 || \
   (major1) == 2 && (major2) == 25 && (minor) <= 0)
 
-#define CURRENT_COMPONENT_ID "Scheduler-0.1.0.0-9nHin0ltSR13qW1MBjyE1X"
+#define CURRENT_COMPONENT_ID "Scheduler-0.1.0.0-1e7NPLXwS28Gg3mFfUuLXf"
 
-#define CURRENT_PACKAGE_KEY "Scheduler-0.1.0.0-9nHin0ltSR13qW1MBjyE1X"
+#define CURRENT_PACKAGE_KEY "Scheduler-0.1.0.0-1e7NPLXwS28Gg3mFfUuLXf"
 
