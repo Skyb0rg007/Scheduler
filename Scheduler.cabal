@@ -7,7 +7,7 @@ license:             BSD3
 license-file:        LICENSE
 author:              Skye Soss
 maintainer:          skye.soss@tufts.edu
-copyright:           2017 Author name here
+copyright:           2017 Skye Soss
 category:            Web
 build-type:          Simple
 extra-source-files:  README.md
