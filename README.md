@@ -12,4 +12,4 @@ TODO:
 - [ ] create detailed Show instances
 - [ ] be able to compile everything into HTML (GHCJS?)
 - [ ] connect to HTML framework
-- [ ] automate the JSON get request from SIS 
+- [ ] automate the JSON get request from SIS
