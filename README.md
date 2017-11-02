@@ -6,6 +6,7 @@ and display them on the website HTML
 :elephant: :elephant: :elephant:
 
 TODO:
+- [x] use JavaScript to 'mutate' the class list into something usable
 - [ ] create datatypes to parse the JSON into
 - [ ] create parser through aeson library into said datatypes
 - [ ] create algorithm for turning data into lists of classes
