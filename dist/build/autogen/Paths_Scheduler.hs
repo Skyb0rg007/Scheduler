@@ -30,10 +30,10 @@ version = Version [0,1,0,0] []
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
 
 bindir     = "C:\\Users\\skyle\\AppData\\Roaming\\cabal\\bin"
-libdir     = "C:\\Users\\skyle\\AppData\\Roaming\\cabal\\x86_64-windows-ghc-8.0.2\\Scheduler-0.1.0.0-24ZxBOvNxTL1Glg62uuXmR"
+libdir     = "C:\\Users\\skyle\\AppData\\Roaming\\cabal\\x86_64-windows-ghc-8.0.2\\Scheduler-0.1.0.0-BTBOjftC7eO6B1cTO8acym"
 dynlibdir  = "C:\\Users\\skyle\\AppData\\Roaming\\cabal\\x86_64-windows-ghc-8.0.2"
 datadir    = "C:\\Users\\skyle\\AppData\\Roaming\\cabal\\x86_64-windows-ghc-8.0.2\\Scheduler-0.1.0.0"
-libexecdir = "C:\\Users\\skyle\\AppData\\Roaming\\cabal\\Scheduler-0.1.0.0-24ZxBOvNxTL1Glg62uuXmR"
+libexecdir = "C:\\Users\\skyle\\AppData\\Roaming\\cabal\\Scheduler-0.1.0.0-BTBOjftC7eO6B1cTO8acym"
 sysconfdir = "C:\\Users\\skyle\\AppData\\Roaming\\cabal\\etc"
 
 getBinDir, getLibDir, getDynLibDir, getDataDir, getLibexecDir, getSysconfDir :: IO FilePath

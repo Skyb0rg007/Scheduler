@@ -21,19 +21,12 @@
   (major1) == 4 && (major2) <  9 || \
   (major1) == 4 && (major2) == 9 && (minor) <= 1)
 
-/* package containers-0.5.7.1 */
-#define VERSION_containers "0.5.7.1"
-#define MIN_VERSION_containers(major1,major2,minor) (\
+/* package bytestring-0.10.8.1 */
+#define VERSION_bytestring "0.10.8.1"
+#define MIN_VERSION_bytestring(major1,major2,minor) (\
   (major1) <  0 || \
-  (major1) == 0 && (major2) <  5 || \
-  (major1) == 0 && (major2) == 5 && (minor) <= 7)
-
-/* package lens-4.15.4 */
-#define VERSION_lens "4.15.4"
-#define MIN_VERSION_lens(major1,major2,minor) (\
-  (major1) <  4 || \
-  (major1) == 4 && (major2) <  15 || \
-  (major1) == 4 && (major2) == 15 && (minor) <= 4)
+  (major1) == 0 && (major2) <  10 || \
+  (major1) == 0 && (major2) == 10 && (minor) <= 8)
 
 /* package text-1.2.2.2 */
 #define VERSION_text "1.2.2.2"
@@ -112,7 +105,7 @@
   (major1) == 2 && (major2) <  25 || \
   (major1) == 2 && (major2) == 25 && (minor) <= 0)
 
-#define CURRENT_COMPONENT_ID "Scheduler-0.1.0.0-24ZxBOvNxTL1Glg62uuXmR"
+#define CURRENT_COMPONENT_ID "Scheduler-0.1.0.0-BTBOjftC7eO6B1cTO8acym"
 
-#define CURRENT_PACKAGE_KEY "Scheduler-0.1.0.0-24ZxBOvNxTL1Glg62uuXmR"
+#define CURRENT_PACKAGE_KEY "Scheduler-0.1.0.0-BTBOjftC7eO6B1cTO8acym"
 

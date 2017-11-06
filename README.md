@@ -7,8 +7,8 @@ and display them on the website HTML
 
 TODO:
 - [x] use JavaScript to 'mutate' the class list into something usable
-- [ ] create datatypes to parse the JSON into
-- [ ] create parser through aeson library into said datatypes
+- [x] create datatypes to parse the JSON into
+- [x] create parser through aeson library into said datatypes
 - [ ] create algorithm for turning data into lists of classes
 - [ ] create detailed Show instances
 - [ ] be able to compile everything into HTML (GHCJS?)
