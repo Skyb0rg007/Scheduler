@@ -1,5 +1,6 @@
 module Main where
 
+import           Algorithms
 import           Data.Aeson
 import qualified Data.ByteString.Lazy.Char8 as B (pack, readFile)
 import           Data.Maybe
@@ -13,3 +14,8 @@ main = do
       x = fromMaybe [] m
       y = take 10 (drop 100 x)
   print y
+
+allClasses :: IO [FullCourse]
+allClasses =
+  fromMaybe [] . decode
+  <$> B.readFile "src\\MutatedClasses.json"

@@ -6,9 +6,12 @@ module Datatypes where
 import           Data.Aeson
 import           GHC.Generics
 
+--Pretty self-explanatory for what this represents
 data DayOfWeek = Mo | Tu | We | Th | Fr | Sa | Su
            deriving (Generic, Show, Eq, Ord, Enum, ToJSON, FromJSON)
 
+--One schedule: day, start, and end
+--Ex. Tuesdays from 12 noon to 12:50
 data Day = Day
          { day   :: DayOfWeek
          , start :: Int
@@ -23,13 +26,23 @@ instance Ord Day where
     | (e2 < s1) && (s2 < e1) = GT
     | otherwise = EQ
 
+--Tufts uses time as number of minutes past midnight, so this converts back
 toTime :: Int -> String
 toTime i = do
   let (hr, mi) = divMod i 60
       am = hr < 12
-      hr' = if am then hr else hr - 12
-  show hr' ++ ":" ++ show mi ++ " " ++ (if am then "AM" else "PM")
+      hr' = if am || hr == 12 then hr else hr - 12
+  show hr' ++ ":" ++ showMin mi ++ " " ++ (if am then "AM" else "PM")
 
+--ensures 2 places are shown
+showMin :: Int -> String
+showMin i = case length $ show i of
+  1 -> '0':show i
+  2 -> show i
+  _ -> error "Why are you trying to make a time with over 99 minutes?"
+
+--One "class": the final answer is a bunch of these
+--Ex. Calc 34-03 with Mary Glacier
 data Section = Section
          { instructor :: String
          , sectionNum :: String
@@ -39,6 +52,8 @@ instance Show Section where
   show (Section i n ds) = n ++ " with " ++ i ++ ":\n"
                           ++ unlines (show <$> ds)
 
+--All of the possibilities. The initial input is a bunch of these
+--Ex. Calc 34
 data FullCourse = FullCourse
         { courseTitle :: String
         , courseNum   :: String
