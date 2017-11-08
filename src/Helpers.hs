@@ -4,7 +4,7 @@ module Helpers (findCourse, allClasses) where
 import           Data.Aeson                 (decode)
 import qualified Data.ByteString.Lazy.Char8 as B (readFile)
 import           Data.List                  (find, isInfixOf)
-import           Data.Maybe                 (fromMaybe)
+import           Data.Maybe                 (fromJust)
 import           Datatypes                  (FullCourse (courseTitle),
                                              emptyClass)
 
@@ -24,5 +24,5 @@ findCourse = do
 --Moved this to the Helper module
 allClasses :: IO [FullCourse]
 allClasses =
-  fromMaybe [] . decode
+  fromJust . decode
   <$> B.readFile "src\\MutatedClasses.json"
