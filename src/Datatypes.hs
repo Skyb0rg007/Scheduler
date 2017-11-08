@@ -1,6 +1,8 @@
 {-# LANGUAGE DeriveAnyClass #-}
 {-# LANGUAGE DeriveGeneric  #-}
 
+--Where the underlying datatypes are located
+--Includes their compare and show definitions
 module Datatypes where
 
 import           Data.Aeson
