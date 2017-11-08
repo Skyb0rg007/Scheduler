@@ -5,7 +5,6 @@ import           Data.Aeson
 import qualified Data.ByteString.Lazy.Char8 as B (pack, readFile)
 import           Data.Maybe
 import           Datatypes
-import           Lib
 
 main :: IO ()
 main = do

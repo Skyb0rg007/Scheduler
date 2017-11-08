@@ -1,19 +1,19 @@
 
 ==================== FINAL INTERFACE ====================
-2017-11-06 01:56:53.2392703 UTC
+2017-11-08 06:25:56.710614 UTC
 
 interface main@main:Main 8002
-  interface hash: 5b9e599b4e25186c2b5948216629d20f
-  ABI hash: 12e7d65cca054662d3458151f8e3f9c7
-  export-list hash: a608e715f8bc0844d614cf6d400203ef
+  interface hash: 807dcfc6d9e7e0219e229de92dc1551e
+  ABI hash: 7c65c9786bc4f6d188216c07e7e1a356
+  export-list hash: e875f57cd067618618d7e6f16f559870
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 2e49f32c6bad683a7cb230ed04a33215
   sig of: Nothing
   used TH splices: False
   where
 exports:
+  Main.allClasses
   Main.main
-  Main.remSpace
 module dependencies:
 package dependencies: Scheduler-0.1.0.0@Scheduler-0.1.0.0-2KhWUDBbeU0Ht4qZIHl35W
                       Win32-2.3.1.1@Win32-2.3.1.1
@@ -91,18 +91,16 @@ family instance modules: Scheduler-0.1.0.0@Scheduler-0.1.0.0-2KhWUDBbeU0Ht4qZIHl
                          vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Storable
                          vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed
                          vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed.Base
-import  -/  Scheduler-0.1.0.0@Scheduler-0.1.0.0-2KhWUDBbeU0Ht4qZIHl35W:Datatypes b251feff5146ed04ed84c69fe46996b9
-import  -/  Scheduler-0.1.0.0@Scheduler-0.1.0.0-2KhWUDBbeU0Ht4qZIHl35W:Lib cd9400529a7c72b1b244f40d0beea3bd
+import  -/  Scheduler-0.1.0.0@Scheduler-0.1.0.0-2KhWUDBbeU0Ht4qZIHl35W:Algorithms fd51dc8dca0a1957d50e9053ecfec1a7
+import  -/  Scheduler-0.1.0.0@Scheduler-0.1.0.0-2KhWUDBbeU0Ht4qZIHl35W:Datatypes c69bec3dacf7ed7a73953f0aa218ef3c
 import  -/  aeson-1.1.2.0@aeson-1.1.2.0-IYYaF432Hu8HQKp7no3ap1:Data.Aeson 2c2ea416ea3f3f7ead4fbc7d22c60646
+import  -/  base-4.9.1.0:Data.Functor 682cc832c233b71cec70179490a08631
 import  -/  base-4.9.1.0:Data.Maybe ecf0c6f81372d9b58b142d5e758ea51b
-import  -/  base-4.9.1.0:Data.OldList c9282ee91951bdcbd918d2960562c007
 import  -/  base-4.9.1.0:GHC.Base 4caea1123ecf4b46e27cbccd6d279377
 import  -/  base-4.9.1.0:GHC.List d11eb227c1c6fbfd89bb781d72eaea0d
-import  -/  base-4.9.1.0:GHC.Show eca5834daba3b6a2bbbe64ab52056707
 import  -/  base-4.9.1.0:Prelude 74b3e204395920329f6de9d97206abe9
 import  -/  base-4.9.1.0:System.IO 5daf3f384209c11d9566e3409af8ec5d
 import  -/  bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Lazy.Char8 9dc8b6278321ad88a4601372f94916b0
-import  -/  ghc-prim-0.5.0.0:GHC.Classes 16d48e012d23eaef9bca91ccdd572c02
 import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
 d6831ef04cb9301b090dfae6f7bb7ec7
   $trModule :: GHC.Types.Module
@@ -116,6 +114,148 @@ d6831ef04cb9301b090dfae6f7bb7ec7
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "main"#) -}
+3e2e557a11092c0d40e3d65d84d2c52a
+  allClasses :: GHC.Types.IO [Datatypes.FullCourse]
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.allClasses1
+                  `cast`
+                (Sym (GHC.Types.N:IO[0] <[Datatypes.FullCourse]>_R)) -}
+c796dcd6c090b5be781ac7cb2fac4f83
+  allClasses1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, [Datatypes.FullCourse] #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (eta :: GHC.Prim.State#
+                             GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.IO.Handle.FD.openBinaryFile1
+                        Main.allClasses4
+                        GHC.IO.IOMode.ReadMode
+                        eta of ds1 { (#,#) ipv ipv1 ->
+                 case Data.ByteString.Lazy.getContents2
+                        ipv1
+                        ipv of ds { (#,#) ipv2 ipv3 ->
+                 (# ipv2,
+                    case ipv3 of wild {
+                      Data.ByteString.Lazy.Internal.Empty
+                      -> case Data.Attoparsec.ByteString.Lazy.parse_$sgo
+                                @ Data.Aeson.Types.Internal.Value
+                                Main.allClasses3 of wild1 {
+                           Data.Attoparsec.ByteString.Lazy.Fail ipv4 ipv5 ipv6
+                           -> GHC.Types.[] @ Datatypes.FullCourse
+                           Data.Attoparsec.ByteString.Lazy.Done ds2 v
+                           -> case (Datatypes.$fFromJSONFullCourse_$cparseJSONList v)
+                                     `cast`
+                                   (Data.Aeson.Types.Internal.N:Parser[0]
+                                        <[Datatypes.FullCourse]>_R)
+                                     @ Data.Aeson.Types.Internal.Result
+                                     @ [Datatypes.FullCourse]
+                                     (GHC.Types.[] @ Data.Aeson.Types.Internal.JSONPathElement)
+                                     Main.allClasses2
+                                     (Data.Aeson.Types.Internal.Success
+                                        @ [Datatypes.FullCourse]) of wild2 {
+                                Data.Aeson.Types.Internal.Error ipv4
+                                -> GHC.Types.[] @ Datatypes.FullCourse
+                                Data.Aeson.Types.Internal.Success a1 -> a1 } }
+                      Data.ByteString.Lazy.Internal.Chunk dt dt1 dt2 dt3 xs
+                      -> case Data.Attoparsec.ByteString.Lazy.parse_go
+                                @ Data.Aeson.Types.Internal.Value
+                                (Data.Aeson.Parser.Internal.$wjsonEOF
+                                   @ Data.Aeson.Types.Internal.Value
+                                   dt
+                                   dt1
+                                   dt2
+                                   dt3
+                                   dt3
+                                   0#
+                                   0#
+                                   Data.Attoparsec.Internal.Types.Incomplete
+                                   (Data.Attoparsec.ByteString.Internal.failK
+                                      @ Data.Aeson.Types.Internal.Value)
+                                     `cast`
+                                   (Sub (Sym (Data.Attoparsec.Internal.Types.D:R:StateByteString[0]))
+                                    ->_R <Data.Attoparsec.Internal.Types.Pos
+                                          -> Data.Attoparsec.Internal.Types.More
+                                          -> [GHC.Base.String]
+                                          -> GHC.Base.String
+                                          -> Data.Attoparsec.Internal.Types.IResult
+                                               Data.ByteString.Internal.ByteString
+                                               Data.Aeson.Types.Internal.Value>_R)
+                                   (Data.Attoparsec.ByteString.Internal.successK
+                                      @ Data.Aeson.Types.Internal.Value)
+                                     `cast`
+                                   (Sub (Sym (Data.Attoparsec.Internal.Types.D:R:StateByteString[0]))
+                                    ->_R <Data.Attoparsec.Internal.Types.Pos
+                                          -> Data.Attoparsec.Internal.Types.More
+                                          -> Data.Aeson.Types.Internal.Value
+                                          -> Data.Attoparsec.Internal.Types.IResult
+                                               Data.ByteString.Internal.ByteString
+                                               Data.Aeson.Types.Internal.Value>_R))
+                                xs of wild1 {
+                           Data.Attoparsec.ByteString.Lazy.Fail ipv4 ipv5 ipv6
+                           -> GHC.Types.[] @ Datatypes.FullCourse
+                           Data.Attoparsec.ByteString.Lazy.Done ds2 v
+                           -> case (Datatypes.$fFromJSONFullCourse_$cparseJSONList v)
+                                     `cast`
+                                   (Data.Aeson.Types.Internal.N:Parser[0]
+                                        <[Datatypes.FullCourse]>_R)
+                                     @ Data.Aeson.Types.Internal.Result
+                                     @ [Datatypes.FullCourse]
+                                     (GHC.Types.[] @ Data.Aeson.Types.Internal.JSONPathElement)
+                                     Main.allClasses2
+                                     (Data.Aeson.Types.Internal.Success
+                                        @ [Datatypes.FullCourse]) of wild2 {
+                                Data.Aeson.Types.Internal.Error ipv4
+                                -> GHC.Types.[] @ Datatypes.FullCourse
+                                Data.Aeson.Types.Internal.Success a1 -> a1 } } } #) } }) -}
+7544c270703e433dada7d0bf444c29a1
+  allClasses2 ::
+    Data.Aeson.Types.Internal.JSONPath
+    -> GHC.Base.String
+    -> Data.Aeson.Types.Internal.Result [Datatypes.FullCourse]
+  {- Arity: 2, HasNoCafRefs,
+     Unfolding: (\ (ds :: Data.Aeson.Types.Internal.JSONPath)
+                   (eta :: GHC.Base.String) ->
+                 Data.Aeson.Types.Internal.Error @ [Datatypes.FullCourse] eta) -}
+05d14d161f5fcd1b1ce38eccd22222d6
+  allClasses3 ::
+    Data.Attoparsec.Internal.Types.IResult
+      Data.ByteString.Internal.ByteString Data.Aeson.Types.Internal.Value
+  {- Unfolding: (Data.Aeson.Parser.Internal.$wjsonEOF
+                   @ Data.Aeson.Types.Internal.Value
+                   __NULL
+                   Data.ByteString.Internal.$fMonoidByteString3
+                   0#
+                   0#
+                   0#
+                   0#
+                   0#
+                   Data.Attoparsec.Internal.Types.Incomplete
+                   (Data.Attoparsec.ByteString.Internal.failK
+                      @ Data.Aeson.Types.Internal.Value)
+                     `cast`
+                   (Sub (Sym (Data.Attoparsec.Internal.Types.D:R:StateByteString[0]))
+                    ->_R <Data.Attoparsec.Internal.Types.Pos
+                          -> Data.Attoparsec.Internal.Types.More
+                          -> [GHC.Base.String]
+                          -> GHC.Base.String
+                          -> Data.Attoparsec.Internal.Types.IResult
+                               Data.ByteString.Internal.ByteString
+                               Data.Aeson.Types.Internal.Value>_R)
+                   (Data.Attoparsec.ByteString.Internal.successK
+                      @ Data.Aeson.Types.Internal.Value)
+                     `cast`
+                   (Sub (Sym (Data.Attoparsec.Internal.Types.D:R:StateByteString[0]))
+                    ->_R <Data.Attoparsec.Internal.Types.Pos
+                          -> Data.Attoparsec.Internal.Types.More
+                          -> Data.Aeson.Types.Internal.Value
+                          -> Data.Attoparsec.Internal.Types.IResult
+                               Data.ByteString.Internal.ByteString
+                               Data.Aeson.Types.Internal.Value>_R)) -}
+a09f597ad98cf958a65ed61381b65375
+  allClasses4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "src\\MutatedClasses.json"#) -}
 d9c0dee8a685c5ed422401aaa63f23bf
   main :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
@@ -134,9 +274,6 @@ d9c0dee8a685c5ed422401aaa63f23bf
      Unfolding: (GHC.TopHandler.runMainIO1
                    @ ()
                    Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
-64c1836f4c0ca2f9502da27cd8d4612f
-  remSpace :: GHC.Base.String -> GHC.Base.String
-  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
 vectorised variables:
 vectorised tycons:
 vectorised reused tycons:

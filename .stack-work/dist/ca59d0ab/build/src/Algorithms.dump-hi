@@ -1,0 +1,260 @@
+
+==================== FINAL INTERFACE ====================
+2017-11-08 06:25:55.1032704 UTC
+
+interface Scheduler-0.1.0.0-2KhWUDBbeU0Ht4qZIHl35W:Algorithms 8002
+  interface hash: 3fa982168bf368255df1d8f14410f8d1
+  ABI hash: fd51dc8dca0a1957d50e9053ecfec1a7
+  export-list hash: 5828570685f6be47bfbf9897b4ba8d48
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 9c7ca48fa2ed9dec3b5da8a23dfd3e5d
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Algorithms.conflict
+  Algorithms.conflicts
+  Algorithms.total
+module dependencies: Datatypes
+package dependencies: Win32-2.3.1.1@Win32-2.3.1.1
+                      aeson-1.1.2.0@aeson-1.1.2.0-IYYaF432Hu8HQKp7no3ap1
+                      array-0.5.1.1@array-0.5.1.1
+                      attoparsec-0.13.1.0@attoparsec-0.13.1.0-3ql4hcH9pGfBAlE21oqFTQ
+                      base-4.9.1.0
+                      base-compat-0.9.3@base-compat-0.9.3-m1TEyTenyr5nJN40TpHVj
+                      binary-0.8.3.0@binary-0.8.3.0
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      containers-0.5.7.1@containers-0.5.7.1
+                      deepseq-1.4.2.0@deepseq-1.4.2.0
+                      dlist-0.8.0.3@dlist-0.8.0.3-BHFBNaw8k6n9WiaUNzoXpk
+                      ghc-boot-th-8.0.2@ghc-boot-th-8.0.2 ghc-prim-0.5.0.0
+                      hashable-1.2.6.1@hashable-1.2.6.1-2ZLNuHq395GGIHwEHuqZol
+                      integer-gmp-1.0.0.1
+                      integer-logarithms-1.0.2@integer-logarithms-1.0.2-92lMiWV9mmYAwfMEYgfQ0D
+                      primitive-0.6.2.0@primitive-0.6.2.0-4578caNkWQ54Gt1mxLF2Yh
+                      random-1.1@random-1.1-9tceXaeYIMZ4JrKq20Egog
+                      scientific-0.3.5.2@scientific-0.3.5.2-FM2NdrNTcdbCDq9wuNnhIA
+                      tagged-0.8.5@tagged-0.8.5-1mTloBSoUxv8dqUr8XBGBt
+                      template-haskell-2.11.1.0
+                      text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00
+                      time-1.6.0.1@time-1.6.0.1
+                      time-locale-compat-0.1.1.3@time-locale-compat-0.1.1.3-KZ1jqNx8uhlHjmuPPj6V1Y
+                      transformers-0.5.2.0@transformers-0.5.2.0
+                      unordered-containers-0.2.8.0@unordered-containers-0.2.8.0-Bp9XgxjuHxcI4tFehVMDGC
+                      uuid-types-1.0.3@uuid-types-1.0.3-HQOuja9trySCcuflACyDTJ
+                      vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ
+orphans: attoparsec-0.13.1.0@attoparsec-0.13.1.0-3ql4hcH9pGfBAlE21oqFTQ:Data.Attoparsec.ByteString.Char8
+         attoparsec-0.13.1.0@attoparsec-0.13.1.0-3ql4hcH9pGfBAlE21oqFTQ:Data.Attoparsec.Text.Internal
+         base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         hashable-1.2.6.1@hashable-1.2.6.1-2ZLNuHq395GGIHwEHuqZol:Data.Hashable.Generic
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Lazy
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Show
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Calendar.Gregorian
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Format.Parse
+         time-1.6.0.1@time-1.6.0.1:Data.Time.LocalTime.LocalTime
+         transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
+         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Fusion.Bundle
+         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed
+family instance modules: Scheduler-0.1.0.0-2KhWUDBbeU0Ht4qZIHl35W:Datatypes
+                         attoparsec-0.13.1.0@attoparsec-0.13.1.0-3ql4hcH9pGfBAlE21oqFTQ:Data.Attoparsec.Internal.Types
+                         base-4.9.1.0:Control.Applicative base-4.9.1.0:Data.Complex
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Compose
+                         base-4.9.1.0:Data.Functor.Const base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.Functor.Product base-4.9.1.0:Data.Functor.Sum
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         dlist-0.8.0.3@dlist-0.8.0.3-BHFBNaw8k6n9WiaUNzoXpk:Data.DList
+                         ghc-boot-th-8.0.2@ghc-boot-th-8.0.2:GHC.LanguageExtensions.Type
+                         primitive-0.6.2.0@primitive-0.6.2.0-4578caNkWQ54Gt1mxLF2Yh:Control.Monad.Primitive
+                         primitive-0.6.2.0@primitive-0.6.2.0-4578caNkWQ54Gt1mxLF2Yh:Data.Primitive.Array
+                         tagged-0.8.5@tagged-0.8.5-1mTloBSoUxv8dqUr8XBGBt:Data.Tagged
+                         template-haskell-2.11.1.0:Language.Haskell.TH.Syntax
+                         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text
+                         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Lazy
+                         unordered-containers-0.2.8.0@unordered-containers-0.2.8.0-Bp9XgxjuHxcI4tFehVMDGC:Data.HashMap.Base
+                         unordered-containers-0.2.8.0@unordered-containers-0.2.8.0-Bp9XgxjuHxcI4tFehVMDGC:Data.HashSet
+                         uuid-types-1.0.3@uuid-types-1.0.3-HQOuja9trySCcuflACyDTJ:Data.UUID.Types.Internal
+                         uuid-types-1.0.3@uuid-types-1.0.3-HQOuja9trySCcuflACyDTJ:Data.UUID.Types.Internal.Builder
+                         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector
+                         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Primitive
+                         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Storable
+                         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed
+                         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed.Base
+import  -/  Datatypes c69bec3dacf7ed7a73953f0aa218ef3c
+  exports: db5f894380e240b6295255e84947198c
+  FullCourse 92e5d5667c768813f6f0ed155b423992
+  Section 6ef6d63ad0397e072050a8ca6f86ddd1
+  day 7da7691070b305722235aeada7aea863
+  schedules 518d9fb4085c2152d6760c183f8ce39c
+  sections 6df12b65a3008d532d5b4b7ced29cd8f
+import  -/  base-4.9.1.0:Data.Foldable 254e836c2d813d34e47feb29bb8d40ed
+import  -/  base-4.9.1.0:Data.Functor 682cc832c233b71cec70179490a08631
+import  -/  base-4.9.1.0:GHC.Base 4caea1123ecf4b46e27cbccd6d279377
+import  -/  base-4.9.1.0:GHC.List d11eb227c1c6fbfd89bb781d72eaea0d
+import  -/  base-4.9.1.0:Prelude 74b3e204395920329f6de9d97206abe9
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 16d48e012d23eaef9bca91ccdd572c02
+bb43dff7ebfe9be4b744ae7856031807
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Algorithms.$trModule2
+                   Algorithms.$trModule1) -}
+d622f52471fbc293ca4c86c38fd0fcdf
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Algorithms"#) -}
+0eb6bcd9498908cf8702f7d5bbe3902d
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "Scheduler-0.1.0.0-2KhWUDBbeU0Ht4qZIHl35W"#) -}
+21d3065001eaf4cfe81c9dcdbc2c829b
+  $wconflict ::
+    [Datatypes.Day] -> Datatypes.Section -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,1*U(A,A,1*U)>,
+     Inline: [0],
+     Unfolding: (\ (ww :: [Datatypes.Day]) (w :: Datatypes.Section) ->
+                 let {
+                   lvl :: [Datatypes.Day]
+                   = case w of wild { Datatypes.Section ds1 ds2 ds3 -> ds3 }
+                 } in
+                 letrec {
+                   go :: [Datatypes.Day] -> Data.Monoid.All
+                     {- Arity: 1, Strictness: <S,1*U> -}
+                   = \ (ds :: [Datatypes.Day]) ->
+                     case ds of wild {
+                       [] -> GHC.Types.True `cast` (Sym (Data.Monoid.N:All[0]))
+                       : y ys
+                       -> let {
+                            z :: Data.Monoid.All = go ys
+                          } in
+                          letrec {
+                            go1 :: [Datatypes.Day] -> Data.Monoid.All
+                              {- Arity: 1, Strictness: <S,1*U> -}
+                            = \ (ds1 :: [Datatypes.Day]) ->
+                              case ds1 of wild1 {
+                                [] -> z
+                                : y1 ys1
+                                -> case y of ww1 { Datatypes.Day ww2 ww3 ww4 ->
+                                   case y1 of ww5 { Datatypes.Day ww6 ww7 ww8 ->
+                                   case Datatypes.$w$c== ww2 ww3 ww4 ww6 ww7 ww8 of wild2 {
+                                     GHC.Types.False -> go1 ys1
+                                     GHC.Types.True
+                                     -> case ww2 of wild3 {
+                                          Datatypes.Mo
+                                          -> case ww6 of wild4 {
+                                               DEFAULT -> go1 ys1
+                                               Datatypes.Mo
+                                               -> GHC.Types.False
+                                                    `cast`
+                                                  (Sym (Data.Monoid.N:All[0])) }
+                                          Datatypes.Tu
+                                          -> case ww6 of wild4 {
+                                               DEFAULT -> go1 ys1
+                                               Datatypes.Tu
+                                               -> GHC.Types.False
+                                                    `cast`
+                                                  (Sym (Data.Monoid.N:All[0])) }
+                                          Datatypes.We
+                                          -> case ww6 of wild4 {
+                                               DEFAULT -> go1 ys1
+                                               Datatypes.We
+                                               -> GHC.Types.False
+                                                    `cast`
+                                                  (Sym (Data.Monoid.N:All[0])) }
+                                          Datatypes.Th
+                                          -> case ww6 of wild4 {
+                                               DEFAULT -> go1 ys1
+                                               Datatypes.Th
+                                               -> GHC.Types.False
+                                                    `cast`
+                                                  (Sym (Data.Monoid.N:All[0])) }
+                                          Datatypes.Fr
+                                          -> case ww6 of wild4 {
+                                               DEFAULT -> go1 ys1
+                                               Datatypes.Fr
+                                               -> GHC.Types.False
+                                                    `cast`
+                                                  (Sym (Data.Monoid.N:All[0])) }
+                                          Datatypes.Sa
+                                          -> case ww6 of wild4 {
+                                               DEFAULT -> go1 ys1
+                                               Datatypes.Sa
+                                               -> GHC.Types.False
+                                                    `cast`
+                                                  (Sym (Data.Monoid.N:All[0])) }
+                                          Datatypes.Su
+                                          -> case ww6 of wild4 {
+                                               DEFAULT -> go1 ys1
+                                               Datatypes.Su
+                                               -> GHC.Types.False
+                                                    `cast`
+                                                  (Sym (Data.Monoid.N:All[0])) } } } } } }
+                          } in
+                          go1 lvl }
+                 } in
+                 (go ww) `cast` (Data.Monoid.N:All[0])) -}
+506310afcfe0a7822b71186052153ddb
+  conflict ::
+    Datatypes.Section -> Datatypes.Section -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LLS),1*U(A,A,1*U)><L,1*U(A,A,1*U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Datatypes.Section) (w1 :: Datatypes.Section) ->
+                 case w of ww { Datatypes.Section ww1 ww2 ww3 ->
+                 Algorithms.$wconflict ww3 w1 }) -}
+b806e13fd0b2b3548ef3e732367814ab
+  conflicts ::
+    [Datatypes.Section] -> Datatypes.Section -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,U(A,A,U)>,
+     Unfolding: InlineRule (0, True, True)
+                Algorithms.conflicts1
+                  `cast`
+                (<[Datatypes.Section]>_R
+                 ->_R <Datatypes.Section>_R
+                 ->_R Data.Monoid.N:All[0]) -}
+2b714e1b20613dd8d03ebb7eef727fe1
+  conflicts1 ::
+    [Datatypes.Section] -> Datatypes.Section -> Data.Monoid.All
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,U(A,A,U)>,
+     Unfolding: (\ (ss :: [Datatypes.Section])
+                   (s :: Datatypes.Section) ->
+                 letrec {
+                   go :: [Datatypes.Section] -> Data.Monoid.All
+                     {- Arity: 1, Strictness: <S,1*U> -}
+                   = \ (ds :: [Datatypes.Section]) ->
+                     case ds of wild {
+                       [] -> GHC.Types.True `cast` (Sym (Data.Monoid.N:All[0]))
+                       : y ys
+                       -> case s of ww { Datatypes.Section ww1 ww2 ww3 ->
+                          case Algorithms.$wconflict ww3 y of wild1 {
+                            GHC.Types.False
+                            -> GHC.Types.False `cast` (Sym (Data.Monoid.N:All[0]))
+                            GHC.Types.True -> go ys } } }
+                 } in
+                 go ss) -}
+b63be77fd8aea6a10e2371a5973a75b8
+  total ::
+    [Datatypes.FullCourse]
+    -> [Datatypes.Section] -> [[Datatypes.Section]]
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,U> -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

@@ -1,24 +1,24 @@
-
-
 module Algorithms where
 
---import           Data.List (sort)
---import           Data.Maybe
 import           Datatypes
 
---turns a course into just the important bits
-concatClasses :: FullCourse -> [[Day]]
-concatClasses c = schedules <$> sections c
+conflict :: Section -> Section -> Bool
+conflict s1 s2 = and $ (\(x,y) -> x /= y || day x /= day y) <$> zipped
+  where zipped = [(x,y) | x <- schedules s1, y <- schedules s2]
 
---returns whether two 'sections' conflict
-mustBeOne :: [Day] -> [Day] -> [(Day,Day)]
-mustBeOne ds1 ds2 = do
-  let zipped  = [(x,y) | x <- ds1, y <- ds2]
-                :: [(Day,Day)] --Create all combinations
-      works   = filter (\(x,y) -> (x /= y || day x /= day y)) zipped
-                :: [(Day,Day)] -- Get rid of combos that conflict
-  works
---
--- --returns the
--- theOne :: [Day] -> [Day] -> [[(Day,Day)]]
--- theOne
+conflicts :: [Section] -> Section -> Bool
+conflicts ss s = and $ conflict s <$> ss
+
+--   To Choose From | Already chosen | Final working combos
+total :: [FullCourse] -> [Section] -> [[Section]]
+total [] d      = [d]
+  --If no more to choose from, then you're done
+total (x:xs) [] = concat $ total xs . return <$> sections x
+  --How to start out if nothing is chosen yet
+  --(call total for each Section in the first class)
+total (x:xs) used = do
+  let sects = sections x :: [Section]
+      works = filter (conflicts used) sects :: [Section]
+  concat $ (\n -> total xs (n:used)) <$> works
+  --Find every section that fits every pre-chosen section
+  --Call total on each
