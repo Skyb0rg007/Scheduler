@@ -65,6 +65,7 @@ instance Show FullCourse where
   show (FullCourse t n ss) = t {- ++ "\n" ++ n -} ++ "\n"
                              ++ unlines (show <$> ss)
 
+--Usefull to export so that it can be a placeholder for a failed operation
 emptyClass :: FullCourse
 emptyClass = FullCourse "" "" []
 
