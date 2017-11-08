@@ -1,21 +1,18 @@
 
 ==================== FINAL INTERFACE ====================
-2017-11-08 07:00:27.4624039 UTC
+2017-11-08 07:23:38.9003611 UTC
 
 interface Scheduler-0.1.0.0-2KhWUDBbeU0Ht4qZIHl35W:Datatypes [family instance module] 8002
-  interface hash: e75b289c44de798b08a20811df006616
-  ABI hash: c69bec3dacf7ed7a73953f0aa218ef3c
-  export-list hash: db5f894380e240b6295255e84947198c
+  interface hash: 9198b72623efb25cdac01941a072a181
+  ABI hash: 3fec1a903f1907a710c3eac026fc2900
+  export-list hash: a1c08236f424cbef9f6c616ef47a8584
   orphan hash: 2cb9324e462b850e6e9e3d053e9717d3
   flag hash: 9a18a574072c9b7aff9acf9d95f38f67
   sig of: Nothing
   used TH splices: False
   where
 exports:
-  Datatypes.showMin
-  Datatypes.toTime
   Datatypes.Day{Datatypes.Day day end start}
-  Datatypes.DayOfWeek{Datatypes.Fr Datatypes.Mo Datatypes.Sa Datatypes.Su Datatypes.Th Datatypes.Tu Datatypes.We}
   Datatypes.FullCourse{Datatypes.FullCourse courseNum courseTitle sections}
   Datatypes.Section{Datatypes.Section instructor schedules sectionNum}
 module dependencies:
@@ -395,7 +392,7 @@ import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
 30adb823c3a47cfbdab9ac918f08aeab
   $fEnumDayOfWeek_go9 :: GHC.Prim.Int# -> [Datatypes.DayOfWeek]
   {- Arity: 1, HasNoCafRefs, Strictness: <L,U> -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fEqDay :: GHC.Classes.Eq Datatypes.Day
   DFunId
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -465,7 +462,7 @@ import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
                    Datatypes.Su
                    -> case ds1 of wild1 {
                         DEFAULT -> GHC.Types.False Datatypes.Su -> GHC.Types.True } }) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fEqDay_$c/= :: Datatypes.Day -> Datatypes.Day -> GHC.Types.Bool
   {- Arity: 2, HasNoCafRefs,
      Strictness: <S(SLL),1*U(1*U,1*U(U),1*U(U))><S(SLL),1*U(1*U,1*U(U),1*U(U))>,
@@ -474,7 +471,7 @@ import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
                  case Datatypes.$fEqDay_$c== a b of wild {
                    GHC.Types.False -> GHC.Types.True
                    GHC.Types.True -> GHC.Types.False }) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fEqDay_$c== :: Datatypes.Day -> Datatypes.Day -> GHC.Types.Bool
   {- Arity: 2, HasNoCafRefs,
      Strictness: <S(SLL),1*U(1*U,1*U(U),1*U(U))><S(SLL),1*U(1*U,1*U(U),1*U(U))>,
@@ -484,7 +481,7 @@ import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
                  case w of ww { Datatypes.Day ww1 ww2 ww3 ->
                  case w1 of ww4 { Datatypes.Day ww5 ww6 ww7 ->
                  Datatypes.$w$c== ww1 ww2 ww3 ww5 ww6 ww7 } }) -}
-92e5d5667c768813f6f0ed155b423992
+62370a5bcfac5435810582c02d9e53d6
   $fEqFullCourse :: GHC.Classes.Eq Datatypes.FullCourse
   DFunId
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -492,7 +489,7 @@ import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
                   @ Datatypes.FullCourse
                   Datatypes.$fEqFullCourse_$c==
                   Datatypes.$fEqFullCourse_$c/= -}
-92e5d5667c768813f6f0ed155b423992
+62370a5bcfac5435810582c02d9e53d6
   $fEqFullCourse_$c/= ::
     Datatypes.FullCourse -> Datatypes.FullCourse -> GHC.Types.Bool
   {- Arity: 2, HasNoCafRefs,
@@ -502,7 +499,7 @@ import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
                  case Datatypes.$fEqFullCourse_$c== a b of wild {
                    GHC.Types.False -> GHC.Types.True
                    GHC.Types.True -> GHC.Types.False }) -}
-92e5d5667c768813f6f0ed155b423992
+62370a5bcfac5435810582c02d9e53d6
   $fEqFullCourse_$c== ::
     Datatypes.FullCourse -> Datatypes.FullCourse -> GHC.Types.Bool
   {- Arity: 2, HasNoCafRefs,
@@ -513,7 +510,7 @@ import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
                  case w of ww { Datatypes.FullCourse ww1 ww2 ww3 ->
                  case w1 of ww4 { Datatypes.FullCourse ww5 ww6 ww7 ->
                  Datatypes.$w$c==1 ww1 ww2 ww3 ww5 ww6 ww7 } }) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fEqSection :: GHC.Classes.Eq Datatypes.Section
   DFunId
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -521,7 +518,7 @@ import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
                   @ Datatypes.Section
                   Datatypes.$fEqSection_$c==
                   Datatypes.$fEqSection_$c/= -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fEqSection_$c/= ::
     Datatypes.Section -> Datatypes.Section -> GHC.Types.Bool
   {- Arity: 2, HasNoCafRefs,
@@ -531,7 +528,7 @@ import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
                  case Datatypes.$fEqSection_$c== a b of wild {
                    GHC.Types.False -> GHC.Types.True
                    GHC.Types.True -> GHC.Types.False }) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fEqSection_$c== ::
     Datatypes.Section -> Datatypes.Section -> GHC.Types.Bool
   {- Arity: 2, HasNoCafRefs,
@@ -542,7 +539,7 @@ import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
                  case w of ww { Datatypes.Section ww1 ww2 ww3 ->
                  case w1 of ww4 { Datatypes.Section ww5 ww6 ww7 ->
                  Datatypes.$w$c==2 ww1 ww2 ww3 ww5 ww6 ww7 } }) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fFromJSONDay :: Data.Aeson.Types.FromJSON.FromJSON Datatypes.Day
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -550,7 +547,7 @@ import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
                   @ Datatypes.Day
                   Datatypes.$fFromJSONDay_$cparseJSON
                   Datatypes.$fFromJSONDay_$cparseJSONList -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fFromJSONDay1 ::
     [Data.Aeson.Types.Internal.Parser Datatypes.Day]
     -> forall (f :: * -> *) r.
@@ -4071,7 +4068,7 @@ c0c7bea8d7ca3ee4e14d2c7730f133ec
     -> [Data.Aeson.Types.Internal.Value]
     -> [Data.Aeson.Types.Internal.Parser Datatypes.DayOfWeek]
   {- Arity: 2, Strictness: <L,U><S,1*U> -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fFromJSONDay_$cparseJSON ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser Datatypes.Day
@@ -4135,7 +4132,7 @@ c0c7bea8d7ca3ee4e14d2c7730f133ec
                      ks (Datatypes.$fFromJSONDay_$cto @ GHC.Prim.Any a1)))
                    `cast`
                  (Sym (Data.Aeson.Types.Internal.N:Parser[0] <Datatypes.Day>_R))) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fFromJSONDay_$cparseJSONList ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser [Datatypes.Day]
@@ -4172,7 +4169,7 @@ c0c7bea8d7ca3ee4e14d2c7730f133ec
                         `cast`
                       (Sym (Data.Aeson.Types.Internal.N:Parser[0]
                                 <[Datatypes.Day]>_R)) } }) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fFromJSONDay_$cto ::
     GHC.Generics.Rep Datatypes.Day x -> Datatypes.Day
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(U,1*U(U,U))>m,
@@ -4551,13 +4548,13 @@ c0c7bea8d7ca3ee4e14d2c7730f133ec
                                 'GHC.Generics.NoSourceStrictness
                                 'GHC.Generics.DecidedLazy) f a) ->
                  Datatypes.$fFromJSONDay17) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fFromJSONDay_go ::
     GHC.Prim.Int#
     -> [Data.Aeson.Types.Internal.Value]
     -> [Data.Aeson.Types.Internal.Parser Datatypes.Day]
   {- Arity: 2, Strictness: <L,U><S,1*U> -}
-92e5d5667c768813f6f0ed155b423992
+62370a5bcfac5435810582c02d9e53d6
   $fFromJSONFullCourse ::
     Data.Aeson.Types.FromJSON.FromJSON Datatypes.FullCourse
   DFunId
@@ -4566,7 +4563,7 @@ c0c7bea8d7ca3ee4e14d2c7730f133ec
                   @ Datatypes.FullCourse
                   Datatypes.$fFromJSONFullCourse_$cparseJSON
                   Datatypes.$fFromJSONFullCourse_$cparseJSONList -}
-92e5d5667c768813f6f0ed155b423992
+62370a5bcfac5435810582c02d9e53d6
   $fFromJSONFullCourse1 ::
     [Data.Aeson.Types.Internal.Parser Datatypes.FullCourse]
     -> forall (f :: * -> *) r.
@@ -4624,7 +4621,7 @@ a21176b108f280a1193e81f6082fec21
 f572492466dfa4351d3eecf3a9abffac
   $fFromJSONFullCourse15 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "courseTitle"#) -}
-b778c4f5a981d0fe4cb56e253a5aaf1b
+30c5d3610ba066a9cfbb353f3f066fe3
   $fFromJSONFullCourse2 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.FromJSON.FromArgs
@@ -5195,7 +5192,7 @@ b778c4f5a981d0fe4cb56e253a5aaf1b
                                                                        (GHC.Generics.Rec0
                                                                           [Datatypes.Section]))))
                               a1>_R))) -}
-ae01eca4be520c18e741e731eea1ed5d
+de7a8ff9478a8f0c441c3839c63e34c6
   $fFromJSONFullCourse3 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.FromJSON.FromArgs
@@ -5276,7 +5273,7 @@ efe3f6faf58a8a3061ea5847eb066953
                    Datatypes.$fFromJSONFullCourse10
                      `cast`
                    (Sym (GHC.Generics.D:R:SingSymbols0[0]) <"courseNum">_N)) -}
-92e5d5667c768813f6f0ed155b423992
+62370a5bcfac5435810582c02d9e53d6
   $fFromJSONFullCourse_$cparseJSON ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser Datatypes.FullCourse
@@ -5342,7 +5339,7 @@ efe3f6faf58a8a3061ea5847eb066953
                    `cast`
                  (Sym (Data.Aeson.Types.Internal.N:Parser[0]
                            <Datatypes.FullCourse>_R))) -}
-92e5d5667c768813f6f0ed155b423992
+62370a5bcfac5435810582c02d9e53d6
   $fFromJSONFullCourse_$cparseJSONList ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser [Datatypes.FullCourse]
@@ -5379,7 +5376,7 @@ efe3f6faf58a8a3061ea5847eb066953
                         `cast`
                       (Sym (Data.Aeson.Types.Internal.N:Parser[0]
                                 <[Datatypes.FullCourse]>_R)) } }) -}
-92e5d5667c768813f6f0ed155b423992
+62370a5bcfac5435810582c02d9e53d6
   $fFromJSONFullCourse_$cto ::
     GHC.Generics.Rep Datatypes.FullCourse x -> Datatypes.FullCourse
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(U,1*U(U,U))>m,
@@ -5502,7 +5499,7 @@ efe3f6faf58a8a3061ea5847eb066953
                              <GHC.Generics.K1 GHC.Generics.R [Datatypes.Section]>_R <x>_N)
                         (GHC.Generics.N:K1[0]
                              <GHC.Generics.R>_P <[Datatypes.Section]>_R <x>_P)) } }) -}
-ee6e5ab901c684ab00d2683fc7a22bb9
+69615b822f1376461ff20c62f1f886ac
   $fFromJSONFullCourse_$s$fFromJSON[] ::
     Data.Aeson.Types.FromJSON.FromJSON [Datatypes.Section]
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -5772,13 +5769,13 @@ ee6e5ab901c684ab00d2683fc7a22bb9
                                 'GHC.Generics.NoSourceStrictness
                                 'GHC.Generics.DecidedLazy) f a) ->
                  Datatypes.$fFromJSONFullCourse15) -}
-92e5d5667c768813f6f0ed155b423992
+62370a5bcfac5435810582c02d9e53d6
   $fFromJSONFullCourse_go ::
     GHC.Prim.Int#
     -> [Data.Aeson.Types.Internal.Value]
     -> [Data.Aeson.Types.Internal.Parser Datatypes.FullCourse]
   {- Arity: 2, Strictness: <L,U><S,1*U> -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fFromJSONSection ::
     Data.Aeson.Types.FromJSON.FromJSON Datatypes.Section
   DFunId
@@ -5787,7 +5784,7 @@ ee6e5ab901c684ab00d2683fc7a22bb9
                   @ Datatypes.Section
                   Datatypes.$fFromJSONSection_$cparseJSON
                   Datatypes.$fFromJSONSection_$cparseJSONList -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fFromJSONSection1 ::
     [Data.Aeson.Types.Internal.Parser Datatypes.Section]
     -> forall (f :: * -> *) r.
@@ -5867,7 +5864,7 @@ aeb47ea0ba9c74235b0f61a303e8cdab
 75e7deb6906940c74fa474b472147a75
   $fFromJSONSection16 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "instructor"#) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fFromJSONSection2 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.FromJSON.FromArgs
@@ -6436,7 +6433,7 @@ aeb47ea0ba9c74235b0f61a303e8cdab
                                                                        (GHC.Generics.Rec0
                                                                           [Datatypes.Day]))))
                               a1>_R))) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fFromJSONSection3 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.FromJSON.FromArgs
@@ -6517,7 +6514,7 @@ f4682988fe9caa98886dc29173efb5c3
                    Datatypes.$fFromJSONSection10
                      `cast`
                    (Sym (GHC.Generics.D:R:SingSymbols0[0]) <"sectionNum">_N)) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fFromJSONSection_$cparseJSON ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser Datatypes.Section
@@ -6583,7 +6580,7 @@ f4682988fe9caa98886dc29173efb5c3
                    `cast`
                  (Sym (Data.Aeson.Types.Internal.N:Parser[0]
                            <Datatypes.Section>_R))) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fFromJSONSection_$cparseJSONList ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser [Datatypes.Section]
@@ -6620,7 +6617,7 @@ f4682988fe9caa98886dc29173efb5c3
                         `cast`
                       (Sym (Data.Aeson.Types.Internal.N:Parser[0]
                                 <[Datatypes.Section]>_R)) } }) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fFromJSONSection_$cto ::
     GHC.Generics.Rep Datatypes.Section x -> Datatypes.Section
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(U,1*U(U,U))>m,
@@ -6743,7 +6740,7 @@ f4682988fe9caa98886dc29173efb5c3
                              <GHC.Generics.K1 GHC.Generics.R [Datatypes.Day]>_R <x>_N)
                         (GHC.Generics.N:K1[0]
                              <GHC.Generics.R>_P <[Datatypes.Day]>_R <x>_P)) } }) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fFromJSONSection_$s$fFromJSON[] ::
     Data.Aeson.Types.FromJSON.FromJSON [Datatypes.Day]
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -7025,13 +7022,13 @@ fbc1c26c356a292207d759811541d1e7
                                 'GHC.Generics.NoSourceStrictness
                                 'GHC.Generics.DecidedLazy) f a) ->
                  Datatypes.$fFromJSONSection16) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fFromJSONSection_go ::
     GHC.Prim.Int#
     -> [Data.Aeson.Types.Internal.Value]
     -> [Data.Aeson.Types.Internal.Parser Datatypes.Section]
   {- Arity: 2, Strictness: <L,U><S,1*U> -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fGenericDay :: GHC.Generics.Generic Datatypes.Day
   DFunId
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -7039,7 +7036,7 @@ fbc1c26c356a292207d759811541d1e7
                   @ Datatypes.Day
                   Datatypes.$fGenericDay_$cfrom
                   Datatypes.$fFromJSONDay_$cto -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fGenericDay1 ::
     Datatypes.Day
     -> GHC.Generics.M1
@@ -8423,7 +8420,7 @@ aa7fc4a50f7ea1bdfaf6ad51fd938bd0
                                                                                                'GHC.Types.False)
                                                                                             GHC.Generics.U1))>_R))
                           (Sub (Sym (Datatypes.Rep_DayOfWeek[0]))) <x>_N) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fGenericDay_$cfrom ::
     Datatypes.Day -> GHC.Generics.Rep Datatypes.Day x
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U,U)>m,
@@ -8473,7 +8470,7 @@ aa7fc4a50f7ea1bdfaf6ad51fd938bd0
                                                                                 GHC.Generics.R
                                                                                 GHC.Types.Int)))>_R))
                           (Sub (Sym (Datatypes.Rep_Day[0]))) <x>_N) -}
-92e5d5667c768813f6f0ed155b423992
+62370a5bcfac5435810582c02d9e53d6
   $fGenericFullCourse :: GHC.Generics.Generic Datatypes.FullCourse
   DFunId
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -8481,7 +8478,7 @@ aa7fc4a50f7ea1bdfaf6ad51fd938bd0
                   @ Datatypes.FullCourse
                   Datatypes.$fGenericFullCourse_$cfrom
                   Datatypes.$fFromJSONFullCourse_$cto -}
-92e5d5667c768813f6f0ed155b423992
+62370a5bcfac5435810582c02d9e53d6
   $fGenericFullCourse1 ::
     Datatypes.FullCourse
     -> GHC.Generics.M1
@@ -8633,7 +8630,7 @@ aa7fc4a50f7ea1bdfaf6ad51fd938bd0
                                                                  (GHC.Generics.K1
                                                                     GHC.Generics.R
                                                                     [Datatypes.Section]))>_R) <x>_N) }) -}
-92e5d5667c768813f6f0ed155b423992
+62370a5bcfac5435810582c02d9e53d6
   $fGenericFullCourse_$cfrom ::
     Datatypes.FullCourse -> GHC.Generics.Rep Datatypes.FullCourse x
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U,U)>m,
@@ -8683,7 +8680,7 @@ aa7fc4a50f7ea1bdfaf6ad51fd938bd0
                                                                                 GHC.Generics.R
                                                                                 [Datatypes.Section])))>_R))
                           (Sub (Sym (Datatypes.Rep_FullCourse[0]))) <x>_N) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fGenericSection :: GHC.Generics.Generic Datatypes.Section
   DFunId
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -8691,7 +8688,7 @@ aa7fc4a50f7ea1bdfaf6ad51fd938bd0
                   @ Datatypes.Section
                   Datatypes.$fGenericSection_$cfrom
                   Datatypes.$fFromJSONSection_$cto -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fGenericSection1 ::
     Datatypes.Section
     -> GHC.Generics.M1
@@ -8841,7 +8838,7 @@ aa7fc4a50f7ea1bdfaf6ad51fd938bd0
                                                                  (GHC.Generics.K1
                                                                     GHC.Generics.R
                                                                     [Datatypes.Day]))>_R) <x>_N) }) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fGenericSection_$cfrom ::
     Datatypes.Section -> GHC.Generics.Rep Datatypes.Section x
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U,U)>m,
@@ -8891,7 +8888,7 @@ aa7fc4a50f7ea1bdfaf6ad51fd938bd0
                                                                                 GHC.Generics.R
                                                                                 [Datatypes.Day])))>_R))
                           (Sub (Sym (Datatypes.Rep_Section[0]))) <x>_N) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fOrdDay :: GHC.Classes.Ord Datatypes.Day
   DFunId
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -9125,7 +9122,7 @@ aa7fc4a50f7ea1bdfaf6ad51fd938bd0
                 (\ (x :: Datatypes.DayOfWeek) (y :: Datatypes.DayOfWeek) ->
                  case Datatypes.$fOrdDayOfWeek_$c<= x y of wild {
                    GHC.Types.False -> y GHC.Types.True -> x }) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fOrdDay_$c< :: Datatypes.Day -> Datatypes.Day -> GHC.Types.Bool
   {- Arity: 2, HasNoCafRefs,
      Strictness: <S(SLL),1*U(1*U,1*U(U),1*U(U))><S(SLL),1*U(1*U,1*U(U),1*U(U))>,
@@ -9133,7 +9130,7 @@ aa7fc4a50f7ea1bdfaf6ad51fd938bd0
                 (\ (x :: Datatypes.Day) (y :: Datatypes.Day) ->
                  case Datatypes.$fOrdDay_$ccompare x y of wild {
                    DEFAULT -> GHC.Types.False GHC.Types.LT -> GHC.Types.True }) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fOrdDay_$c<= :: Datatypes.Day -> Datatypes.Day -> GHC.Types.Bool
   {- Arity: 2, HasNoCafRefs,
      Strictness: <S(SLL),1*U(1*U,1*U(U),1*U(U))><S(SLL),1*U(1*U,1*U(U),1*U(U))>,
@@ -9141,7 +9138,7 @@ aa7fc4a50f7ea1bdfaf6ad51fd938bd0
                 (\ (x :: Datatypes.Day) (y :: Datatypes.Day) ->
                  case Datatypes.$fOrdDay_$ccompare x y of wild {
                    DEFAULT -> GHC.Types.True GHC.Types.GT -> GHC.Types.False }) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fOrdDay_$c> :: Datatypes.Day -> Datatypes.Day -> GHC.Types.Bool
   {- Arity: 2, HasNoCafRefs,
      Strictness: <S(SLL),1*U(1*U,1*U(U),1*U(U))><S(SLL),1*U(1*U,1*U(U),1*U(U))>,
@@ -9149,7 +9146,7 @@ aa7fc4a50f7ea1bdfaf6ad51fd938bd0
                 (\ (x :: Datatypes.Day) (y :: Datatypes.Day) ->
                  case Datatypes.$fOrdDay_$ccompare x y of wild {
                    DEFAULT -> GHC.Types.False GHC.Types.GT -> GHC.Types.True }) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fOrdDay_$c>= :: Datatypes.Day -> Datatypes.Day -> GHC.Types.Bool
   {- Arity: 2, HasNoCafRefs,
      Strictness: <S(SLL),1*U(1*U,1*U(U),1*U(U))><S(SLL),1*U(1*U,1*U(U),1*U(U))>,
@@ -9157,7 +9154,7 @@ aa7fc4a50f7ea1bdfaf6ad51fd938bd0
                 (\ (x :: Datatypes.Day) (y :: Datatypes.Day) ->
                  case Datatypes.$fOrdDay_$ccompare x y of wild {
                    DEFAULT -> GHC.Types.True GHC.Types.LT -> GHC.Types.False }) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fOrdDay_$ccompare ::
     Datatypes.Day -> Datatypes.Day -> GHC.Types.Ordering
   {- Arity: 2, HasNoCafRefs,
@@ -9168,7 +9165,7 @@ aa7fc4a50f7ea1bdfaf6ad51fd938bd0
                  case w of ww { Datatypes.Day ww1 ww2 ww3 ->
                  case w1 of ww4 { Datatypes.Day ww5 ww6 ww7 ->
                  Datatypes.$w$ccompare ww1 ww2 ww3 ww5 ww6 ww7 } }) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fOrdDay_$cmax :: Datatypes.Day -> Datatypes.Day -> Datatypes.Day
   {- Arity: 2, HasNoCafRefs,
      Strictness: <S(SLL),U(U,U(U),U(U))><S(SLL),U(U,U(U),U(U))>m,
@@ -9176,7 +9173,7 @@ aa7fc4a50f7ea1bdfaf6ad51fd938bd0
                 (\ (x :: Datatypes.Day) (y :: Datatypes.Day) ->
                  case Datatypes.$fOrdDay_$ccompare x y of wild {
                    DEFAULT -> y GHC.Types.GT -> x }) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fOrdDay_$cmin :: Datatypes.Day -> Datatypes.Day -> Datatypes.Day
   {- Arity: 2, HasNoCafRefs,
      Strictness: <S(SLL),U(U,U(U),U(U))><S(SLL),U(U,U(U),U(U))>m,
@@ -9184,7 +9181,7 @@ aa7fc4a50f7ea1bdfaf6ad51fd938bd0
                 (\ (x :: Datatypes.Day) (y :: Datatypes.Day) ->
                  case Datatypes.$fOrdDay_$ccompare x y of wild {
                    DEFAULT -> x GHC.Types.GT -> y }) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fShowDay :: GHC.Show.Show Datatypes.Day
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -9193,7 +9190,7 @@ aa7fc4a50f7ea1bdfaf6ad51fd938bd0
                   Datatypes.$fShowDay_$cshowsPrec
                   Datatypes.$fShowDay_$cshow
                   Datatypes.$fShowDay_$cshowList -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fShowDay1 :: Datatypes.Day -> GHC.Base.String -> [GHC.Types.Char]
   {- Arity: 2,
      Unfolding: (\ (x :: Datatypes.Day)
@@ -9203,7 +9200,7 @@ aa7fc4a50f7ea1bdfaf6ad51fd938bd0
                    @ GHC.Types.Char
                    (Datatypes.$w$cshow ww1 ww2 ww3)
                    s }) -}
-b31ca6c38ad7ff9001af331815fd61d5
+d0d6eae86911b9d1ad245578e00d01f0
   $fShowDay2 :: GHC.Types.Int -> GHC.Types.Int -> [GHC.Types.Char]
   {- Arity: 2,
      Unfolding: (\ (ww :: GHC.Types.Int)[OneShot]
@@ -9218,15 +9215,36 @@ b31ca6c38ad7ff9001af331815fd61d5
                    = GHC.CString.unpackAppendCString#
                        ":"#
                        (case ww1 of ww4 { GHC.Types.I# ww5 ->
-                        case Datatypes.$wshowMin ww5 of ww6 { (#,#) ww7 ww8 ->
-                        GHC.Base.++
-                          @ GHC.Types.Char
-                          (GHC.Types.: @ GHC.Types.Char ww7 ww8)
-                          (GHC.CString.unpackAppendCString#
-                             " "#
-                             (case am of wild {
-                                GHC.Types.False -> Datatypes.$fShowDay4
-                                GHC.Types.True -> Datatypes.$fShowDay3 })) } })
+                        case GHC.Show.$wshowSignedInt
+                               0#
+                               ww5
+                               (GHC.Types.[] @ GHC.Types.Char) of ww6 { (#,#) ww7 ww8 ->
+                        let {
+                          n1 :: [GHC.Types.Char]
+                          = GHC.CString.unpackAppendCString#
+                              " "#
+                              (case am of wild {
+                                 GHC.Types.False -> Datatypes.$fShowDay6
+                                 GHC.Types.True -> Datatypes.$fShowDay5 })
+                        } in
+                        case GHC.List.$wlenAcc
+                               @ GHC.Types.Char
+                               (GHC.Types.: @ GHC.Types.Char ww7 ww8)
+                               0# of ww9 {
+                          DEFAULT -> Datatypes.$fShowDay4
+                          1#
+                          -> GHC.Base.++
+                               @ GHC.Types.Char
+                               (GHC.Types.:
+                                  @ GHC.Types.Char
+                                  Datatypes.$fShowDay3
+                                  (GHC.Types.: @ GHC.Types.Char ww7 ww8))
+                               n1
+                          2#
+                          -> GHC.Base.++
+                               @ GHC.Types.Char
+                               (GHC.Types.: @ GHC.Types.Char ww7 ww8)
+                               n1 } } })
                  } in
                  case am of wild {
                    GHC.Types.False
@@ -9258,18 +9276,18 @@ b31ca6c38ad7ff9001af331815fd61d5
                         @ GHC.Types.Char
                         (GHC.Types.: @ GHC.Types.Char ww5 ww6)
                         n } } }) -}
-0f47cb9a214a766a6cc35f6ac330464b
-  $fShowDay3 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "AM"#) -}
-882506b9bd9a535b2c959a19b1e4faf9
-  $fShowDay4 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "PM"#) -}
-ba4ac053eae5b249db74a28c0f0d7765
-  $fShowDay5 :: GHC.Types.Char
+337b3fb22d0f24f21c689ade1e3cd01e
+  $fShowDay3 :: GHC.Types.Char
   {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.C# '0'#) -}
-b90a43298b4308cdc02f05a41f361b7d
-  $fShowDay6 :: GHC.Base.String
+7bfe662d0a0c3fbd4f64efc74c3c8b1f
+  $fShowDay4 :: GHC.Base.String
   {- Strictness: x -}
+93d0895d2fba34b6391427d1acff6008
+  $fShowDay5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "AM"#) -}
+b8f2b5825ce7a0a227cae4116613ec3d
+  $fShowDay6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "PM"#) -}
 30adb823c3a47cfbdab9ac918f08aeab
   $fShowDayOfWeek :: GHC.Show.Show Datatypes.DayOfWeek
   DFunId
@@ -9304,7 +9322,7 @@ b90a43298b4308cdc02f05a41f361b7d
                    (w1 :: Datatypes.DayOfWeek)
                    (w2 :: GHC.Base.String) ->
                  Datatypes.$w$cshowsPrec w1 w2) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fShowDay_$cshow :: Datatypes.Day -> GHC.Base.String
   {- Arity: 1, Strictness: <S(SLL),1*U(1*U,1*U(U),1*U(U))>,
      Inline: INLINE[0],
@@ -9312,12 +9330,12 @@ b90a43298b4308cdc02f05a41f361b7d
                 (\ (w :: Datatypes.Day) ->
                  case w of ww { Datatypes.Day ww1 ww2 ww3 ->
                  Datatypes.$w$cshow ww1 ww2 ww3 }) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fShowDay_$cshowList :: [Datatypes.Day] -> GHC.Show.ShowS
   {- Arity: 2, Strictness: <S,1*U><L,U>,
      Unfolding: (\ (ls :: [Datatypes.Day]) (s :: GHC.Base.String) ->
                  GHC.Show.showList__ @ Datatypes.Day Datatypes.$fShowDay1 ls s) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fShowDay_$cshowsPrec ::
     GHC.Types.Int -> Datatypes.Day -> GHC.Show.ShowS
   {- Arity: 3,
@@ -9338,7 +9356,7 @@ b90a43298b4308cdc02f05a41f361b7d
                       n
                       (Datatypes.$fShowDay_$cshow x))
                    s) -}
-92e5d5667c768813f6f0ed155b423992
+62370a5bcfac5435810582c02d9e53d6
   $fShowFullCourse :: GHC.Show.Show Datatypes.FullCourse
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -9347,7 +9365,7 @@ b90a43298b4308cdc02f05a41f361b7d
                   Datatypes.$fShowFullCourse_$cshowsPrec
                   Datatypes.$fShowFullCourse_$cshow1
                   Datatypes.$fShowFullCourse_$cshowList -}
-92e5d5667c768813f6f0ed155b423992
+62370a5bcfac5435810582c02d9e53d6
   $fShowFullCourse1 ::
     Datatypes.FullCourse -> GHC.Base.String -> [GHC.Types.Char]
   {- Arity: 2,
@@ -9355,7 +9373,7 @@ b90a43298b4308cdc02f05a41f361b7d
                    (s :: GHC.Base.String)[OneShot] ->
                  case x of ww { Datatypes.FullCourse ww1 ww2 ww3 ->
                  GHC.Base.++ @ GHC.Types.Char (Datatypes.$w$cshow1 ww1 ww3) s }) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fShowFullCourse_$cshow :: Datatypes.Section -> GHC.Base.String
   {- Arity: 1, Strictness: <S(LSL),1*U(1*U,1*U,1*U)>,
      Inline: INLINE[0],
@@ -9363,7 +9381,7 @@ b90a43298b4308cdc02f05a41f361b7d
                 (\ (w :: Datatypes.Section) ->
                  case w of ww { Datatypes.Section ww1 ww2 ww3 ->
                  Datatypes.$w$cshow2 ww1 ww2 ww3 }) -}
-92e5d5667c768813f6f0ed155b423992
+62370a5bcfac5435810582c02d9e53d6
   $fShowFullCourse_$cshow1 :: Datatypes.FullCourse -> GHC.Base.String
   {- Arity: 1, Strictness: <S(SLL),1*U(1*U,A,1*U)>,
      Inline: INLINE[0],
@@ -9371,7 +9389,7 @@ b90a43298b4308cdc02f05a41f361b7d
                 (\ (w :: Datatypes.FullCourse) ->
                  case w of ww { Datatypes.FullCourse ww1 ww2 ww3 ->
                  Datatypes.$w$cshow1 ww1 ww3 }) -}
-92e5d5667c768813f6f0ed155b423992
+62370a5bcfac5435810582c02d9e53d6
   $fShowFullCourse_$cshowList ::
     [Datatypes.FullCourse] -> GHC.Show.ShowS
   {- Arity: 2, Strictness: <S,1*U><L,U>,
@@ -9382,7 +9400,7 @@ b90a43298b4308cdc02f05a41f361b7d
                    Datatypes.$fShowFullCourse1
                    ls
                    s) -}
-92e5d5667c768813f6f0ed155b423992
+62370a5bcfac5435810582c02d9e53d6
   $fShowFullCourse_$cshowsPrec ::
     GHC.Types.Int -> Datatypes.FullCourse -> GHC.Show.ShowS
   {- Arity: 3, Strictness: <L,A><S(SLL),1*U(1*U,A,1*U)><L,1*U>,
@@ -9402,7 +9420,7 @@ b90a43298b4308cdc02f05a41f361b7d
                       n
                       (Datatypes.$fShowFullCourse_$cshow1 x))
                    s) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fShowSection :: GHC.Show.Show Datatypes.Section
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -9411,7 +9429,7 @@ b90a43298b4308cdc02f05a41f361b7d
                   Datatypes.$fShowSection_$cshowsPrec
                   Datatypes.$fShowFullCourse_$cshow
                   Datatypes.$fShowSection_$cshowList -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fShowSection1 ::
     Datatypes.Section -> GHC.Base.String -> [GHC.Types.Char]
   {- Arity: 2,
@@ -9422,7 +9440,7 @@ b90a43298b4308cdc02f05a41f361b7d
                    @ GHC.Types.Char
                    (Datatypes.$w$cshow2 ww1 ww2 ww3)
                    s }) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fShowSection_$cshowList :: [Datatypes.Section] -> GHC.Show.ShowS
   {- Arity: 2, Strictness: <S,1*U><L,U>,
      Unfolding: (\ (ls :: [Datatypes.Section]) (s :: GHC.Base.String) ->
@@ -9431,7 +9449,7 @@ b90a43298b4308cdc02f05a41f361b7d
                    Datatypes.$fShowSection1
                    ls
                    s) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fShowSection_$cshowsPrec ::
     GHC.Types.Int -> Datatypes.Section -> GHC.Show.ShowS
   {- Arity: 3, Strictness: <L,A><S(LSL),1*U(1*U,1*U,1*U)><L,1*U>,
@@ -9451,7 +9469,7 @@ b90a43298b4308cdc02f05a41f361b7d
                       n
                       (Datatypes.$fShowFullCourse_$cshow x))
                    s) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fToJSONDay :: Data.Aeson.Types.ToJSON.ToJSON Datatypes.Day
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -9461,7 +9479,7 @@ b90a43298b4308cdc02f05a41f361b7d
                   Datatypes.$fToJSONDay_$ctoEncoding
                   Datatypes.$fToJSONDay_$ctoJSONList
                   Datatypes.$fToJSONDay_$ctoEncodingList -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fToJSONDay1 ::
     Datatypes.Day
     -> Data.Tagged.Tagged
@@ -9861,7 +9879,7 @@ b2567fcf5af38c583664d3ea4eb2eebc
                            <*>_N
                            <Data.Aeson.Types.Generic.True>_P
                            <Data.Aeson.Types.Internal.Value>_R)) }) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fToJSONDay_$ctoEncoding ::
     Datatypes.Day -> Data.Aeson.Encoding.Internal.Encoding
   {- Arity: 1, Strictness: <S,1*U(1*U,1*U(U),1*U(U))>,
@@ -9870,7 +9888,7 @@ b2567fcf5af38c583664d3ea4eb2eebc
                 (\ (eta :: Datatypes.Day) ->
                  Data.Aeson.Encoding.Internal.value
                    (Datatypes.$fToJSONDay_$ctoJSON eta)) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fToJSONDay_$ctoEncodingList ::
     [Datatypes.Day] -> Data.Aeson.Encoding.Internal.Encoding
   {- Arity: 1, Strictness: <S,1*U>, Inline: INLINE (sat-args=0),
@@ -9935,7 +9953,7 @@ b2567fcf5af38c583664d3ea4eb2eebc
                         `cast`
                       (Sym (Data.Aeson.Encoding.Internal.N:Encoding'[0]
                                 <Data.Aeson.Types.Internal.Value>_P)) }) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fToJSONDay_$ctoJSON ::
     Datatypes.Day -> Data.Aeson.Types.Internal.Value
   {- Arity: 1, Strictness: <S,1*U(1*U,1*U(U),1*U(U))>m1,
@@ -9947,7 +9965,7 @@ b2567fcf5af38c583664d3ea4eb2eebc
                           <*>_N
                           <Data.Aeson.Types.Generic.True>_P
                           <Data.Aeson.Types.Internal.Value>_R) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fToJSONDay_$ctoJSONList ::
     [Datatypes.Day] -> Data.Aeson.Types.Internal.Value
   {- Arity: 1, Strictness: <S,1*U>m2, Inline: INLINE (sat-args=0),
@@ -9984,7 +10002,7 @@ b2567fcf5af38c583664d3ea4eb2eebc
                                     n
                                     eta)))) of dt1 { Data.Vector.Vector ipv ipv1 ipv2 ->
                  Data.Aeson.Types.Internal.Array dt1 }) -}
-92e5d5667c768813f6f0ed155b423992
+62370a5bcfac5435810582c02d9e53d6
   $fToJSONFullCourse ::
     Data.Aeson.Types.ToJSON.ToJSON Datatypes.FullCourse
   DFunId
@@ -9995,7 +10013,7 @@ b2567fcf5af38c583664d3ea4eb2eebc
                   Datatypes.$fToJSONFullCourse_$ctoEncoding
                   Datatypes.$fToJSONFullCourse_$ctoJSONList
                   Datatypes.$fToJSONFullCourse_$ctoEncodingList -}
-92e5d5667c768813f6f0ed155b423992
+62370a5bcfac5435810582c02d9e53d6
   $fToJSONFullCourse1 ::
     Datatypes.FullCourse
     -> Data.Tagged.Tagged
@@ -10090,7 +10108,7 @@ b2567fcf5af38c583664d3ea4eb2eebc
                            <*>_N
                            <Data.Aeson.Types.Generic.True>_P
                            <Data.Aeson.Types.Internal.Value>_R)) } } }) -}
-92e5d5667c768813f6f0ed155b423992
+62370a5bcfac5435810582c02d9e53d6
   $fToJSONFullCourse_$ctoEncoding ::
     Datatypes.FullCourse -> Data.Aeson.Encoding.Internal.Encoding
   {- Arity: 1, Strictness: <S,1*U(1*U,1*U,1*U)>,
@@ -10099,7 +10117,7 @@ b2567fcf5af38c583664d3ea4eb2eebc
                 (\ (eta :: Datatypes.FullCourse) ->
                  Data.Aeson.Encoding.Internal.value
                    (Datatypes.$fToJSONFullCourse_$ctoJSON eta)) -}
-92e5d5667c768813f6f0ed155b423992
+62370a5bcfac5435810582c02d9e53d6
   $fToJSONFullCourse_$ctoEncodingList ::
     [Datatypes.FullCourse] -> Data.Aeson.Encoding.Internal.Encoding
   {- Arity: 1, Strictness: <S,1*U>, Inline: INLINE (sat-args=0),
@@ -10164,7 +10182,7 @@ b2567fcf5af38c583664d3ea4eb2eebc
                         `cast`
                       (Sym (Data.Aeson.Encoding.Internal.N:Encoding'[0]
                                 <Data.Aeson.Types.Internal.Value>_P)) }) -}
-92e5d5667c768813f6f0ed155b423992
+62370a5bcfac5435810582c02d9e53d6
   $fToJSONFullCourse_$ctoJSON ::
     Datatypes.FullCourse -> Data.Aeson.Types.Internal.Value
   {- Arity: 1, Strictness: <S,1*U(1*U,1*U,1*U)>m1,
@@ -10176,7 +10194,7 @@ b2567fcf5af38c583664d3ea4eb2eebc
                           <*>_N
                           <Data.Aeson.Types.Generic.True>_P
                           <Data.Aeson.Types.Internal.Value>_R) -}
-92e5d5667c768813f6f0ed155b423992
+62370a5bcfac5435810582c02d9e53d6
   $fToJSONFullCourse_$ctoJSONList ::
     [Datatypes.FullCourse] -> Data.Aeson.Types.Internal.Value
   {- Arity: 1, Strictness: <S,1*U>m2, Inline: INLINE (sat-args=0),
@@ -10213,7 +10231,7 @@ b2567fcf5af38c583664d3ea4eb2eebc
                                     n
                                     eta)))) of dt1 { Data.Vector.Vector ipv ipv1 ipv2 ->
                  Data.Aeson.Types.Internal.Array dt1 }) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fToJSONSection :: Data.Aeson.Types.ToJSON.ToJSON Datatypes.Section
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -10223,7 +10241,7 @@ b2567fcf5af38c583664d3ea4eb2eebc
                   Datatypes.$fToJSONSection_$ctoEncoding
                   Datatypes.$fToJSONSection_$ctoJSONList
                   Datatypes.$fToJSONSection_$ctoEncodingList -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fToJSONSection1 ::
     Datatypes.Section
     -> Data.Tagged.Tagged
@@ -10315,7 +10333,7 @@ b2567fcf5af38c583664d3ea4eb2eebc
                            <*>_N
                            <Data.Aeson.Types.Generic.True>_P
                            <Data.Aeson.Types.Internal.Value>_R)) } } }) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fToJSONSection_$ctoEncoding ::
     Datatypes.Section -> Data.Aeson.Encoding.Internal.Encoding
   {- Arity: 1, Strictness: <S,1*U(1*U,1*U,1*U)>,
@@ -10324,7 +10342,7 @@ b2567fcf5af38c583664d3ea4eb2eebc
                 (\ (eta :: Datatypes.Section) ->
                  Data.Aeson.Encoding.Internal.value
                    (Datatypes.$fToJSONSection_$ctoJSON eta)) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fToJSONSection_$ctoEncodingList ::
     [Datatypes.Section] -> Data.Aeson.Encoding.Internal.Encoding
   {- Arity: 1, Strictness: <S,1*U>, Inline: INLINE (sat-args=0),
@@ -10389,7 +10407,7 @@ b2567fcf5af38c583664d3ea4eb2eebc
                         `cast`
                       (Sym (Data.Aeson.Encoding.Internal.N:Encoding'[0]
                                 <Data.Aeson.Types.Internal.Value>_P)) }) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fToJSONSection_$ctoJSON ::
     Datatypes.Section -> Data.Aeson.Types.Internal.Value
   {- Arity: 1, Strictness: <S,1*U(1*U,1*U,1*U)>m1,
@@ -10401,7 +10419,7 @@ b2567fcf5af38c583664d3ea4eb2eebc
                           <*>_N
                           <Data.Aeson.Types.Generic.True>_P
                           <Data.Aeson.Types.Internal.Value>_R) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $fToJSONSection_$ctoJSONList ::
     [Datatypes.Section] -> Data.Aeson.Types.Internal.Value
   {- Arity: 1, Strictness: <S,1*U>m2, Inline: INLINE (sat-args=0),
@@ -10717,7 +10735,7 @@ d0c600382c4b70e016e5245048b1bf62
                                   (GHC.Prim.==# x y) of wild4 {
                              GHC.Types.False -> GHC.Types.False
                              GHC.Types.True -> GHC.Classes.eqInt ww2 ww5 } } } } }) -}
-3753993d58f3e7b984473fda55672892
+fcfcf6f882f9ae9d44640f458bbb5ee7
   $w$c==1 ::
     GHC.Base.String
     -> GHC.Base.String
@@ -10746,7 +10764,7 @@ d0c600382c4b70e016e5245048b1bf62
                              Datatypes.$fEqSection
                              ww2
                              ww5 } }) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $w$c==2 ::
     GHC.Base.String
     -> GHC.Base.String
@@ -10876,7 +10894,7 @@ d0c600382c4b70e016e5245048b1bf62
                    Datatypes.Su
                    -> case ww3 of wild1 {
                         DEFAULT -> GHC.Types.GT Datatypes.Su -> $j GHC.Prim.void# } }) -}
-2a9cbec62f183ff4da27b21e63a15de8
+f1afcc2546d3386071c32657c0c541dc
   $w$cshow ::
     Datatypes.DayOfWeek
     -> GHC.Types.Int -> GHC.Types.Int -> GHC.Base.String
@@ -10897,7 +10915,7 @@ d0c600382c4b70e016e5245048b1bf62
                             " to "#
                             (case ww2 of ww5 { GHC.Types.I# ww6 ->
                              Datatypes.$wtoTime ww6 })) }))) -}
-ae753b699835bafd91a4d20d75970cc1
+5ecd41c5eac145bd5d3f4a78a8033188
   $w$cshow1 ::
     GHC.Base.String -> [Datatypes.Section] -> GHC.Base.String
   {- Arity: 2, Strictness: <S,1*U><L,1*U>, Inline: [0],
@@ -10914,7 +10932,7 @@ ae753b699835bafd91a4d20d75970cc1
                             @ [GHC.Types.Char]
                             Datatypes.$fShowFullCourse_$cshow
                             ww1)))) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $w$cshow2 ::
     GHC.Base.String
     -> GHC.Base.String -> [Datatypes.Day] -> GHC.Base.String
@@ -12097,7 +12115,7 @@ c5a8ebd9c822211acd7e09350810df0d
                           Data.Aeson.Types.Internal.Number
                             (Data.Scientific.Scientific dt 0#) } })
                          w1) } #)) -}
-0df58ba5a40d3fafaac461f5b1822f66
+dd0f49ee31fc5df0fc012cc3b0d30386
   $w$dRecordToPairs1 ::
     Data.Aeson.Types.Internal.Options
     -> GHC.Generics.M1
@@ -12131,7 +12149,7 @@ c5a8ebd9c822211acd7e09350810df0d
   {- Arity: 4,
      Strictness: <L,U(C(U),A,A,A,A,A)><L,1*U><L,1*U(1*U,1*U)><L,U>,
      Inline: [0] -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   $w$dRecordToPairs2 ::
     Data.Aeson.Types.Internal.Options
     -> GHC.Generics.M1
@@ -13228,27 +13246,7 @@ c5a8ebd9c822211acd7e09350810df0d
                            ipv }) of ds7 { (#,#) ipv ipv1 ->
                  case ipv1 of dt2 { Data.Text.Internal.Text ipv2 ipv3 ipv4 ->
                  (# dt2 #) } } }) -}
-21d46f10b89a71d0168eb2840a5f67ff
-  $wshowMin ::
-    GHC.Prim.Int# -> (# GHC.Types.Char, [GHC.Types.Char] #)
-  {- Arity: 1, Strictness: <S,U>, Inline: [0],
-     Unfolding: (\ (ww :: GHC.Prim.Int#) ->
-                 case GHC.Show.$wshowSignedInt
-                        0#
-                        ww
-                        (GHC.Types.[] @ GHC.Types.Char) of ww4 { (#,#) ww5 ww6 ->
-                 case GHC.List.$wlenAcc
-                        @ GHC.Types.Char
-                        (GHC.Types.: @ GHC.Types.Char ww5 ww6)
-                        0# of ww2 {
-                   DEFAULT
-                   -> case Datatypes.$fShowDay6
-                      ret_ty (# GHC.Types.Char, [GHC.Types.Char] #)
-                      of {}
-                   1#
-                   -> (# Datatypes.$fShowDay5, GHC.Types.: @ GHC.Types.Char ww5 ww6 #)
-                   2# -> ww4 } }) -}
-4ae805dee5750c0ad7e9cfeb78edda81
+110046b6b8f9f56ea0d2b6577bb1df64
   $wtoTime :: GHC.Prim.Int# -> [GHC.Types.Char]
   {- Arity: 1, Strictness: <S,U>, Inline: [0],
      Unfolding: (\ (ww :: GHC.Prim.Int#) ->
@@ -13283,19 +13281,19 @@ c5a8ebd9c822211acd7e09350810df0d
                            Datatypes.$fShowDay2
                              (GHC.Types.I# (GHC.Prim.-# ipv 1#))
                              (GHC.Types.I# (GHC.Prim.-# (GHC.Prim.+# ipv1 60#) 1#)) } } }) -}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   data Day
     = Day {day :: Datatypes.DayOfWeek,
            start :: GHC.Types.Int,
            end :: GHC.Types.Int}
 30adb823c3a47cfbdab9ac918f08aeab
   data DayOfWeek = Mo | Tu | We | Th | Fr | Sa | Su
-92e5d5667c768813f6f0ed155b423992
+62370a5bcfac5435810582c02d9e53d6
   data FullCourse
     = FullCourse {courseTitle :: GHC.Base.String,
                   courseNum :: GHC.Base.String,
                   sections :: [Datatypes.Section]}
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   axiom Rep_Day::
       GHC.Generics.Rep Datatypes.Day
         = GHC.Generics.D1
@@ -13367,7 +13365,7 @@ c5a8ebd9c822211acd7e09350810df0d
                                                                        'GHC.Generics.PrefixI
                                                                        'GHC.Types.False)
                                                                     GHC.Generics.U1)))
-92e5d5667c768813f6f0ed155b423992
+62370a5bcfac5435810582c02d9e53d6
   axiom Rep_FullCourse::
       GHC.Generics.Rep Datatypes.FullCourse
         = GHC.Generics.D1
@@ -13400,7 +13398,7 @@ c5a8ebd9c822211acd7e09350810df0d
                                                         'GHC.Generics.NoSourceStrictness
                                                         'GHC.Generics.DecidedLazy)
                                                      (GHC.Generics.Rec0 [Datatypes.Section]))))
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   axiom Rep_Section::
       GHC.Generics.Rep Datatypes.Section
         = GHC.Generics.D1
@@ -13433,88 +13431,74 @@ c5a8ebd9c822211acd7e09350810df0d
                                                         'GHC.Generics.NoSourceStrictness
                                                         'GHC.Generics.DecidedLazy)
                                                      (GHC.Generics.Rec0 [Datatypes.Day]))))
-6ef6d63ad0397e072050a8ca6f86ddd1
+f5601a0c6596b8ae5f6c33dfb48d9fbc
   data Section
     = Section {instructor :: GHC.Base.String,
                sectionNum :: GHC.Base.String,
                schedules :: [Datatypes.Day]}
-32f3268e7867b215c43714827dec8b7e
+8166c15a3d02dfe7323b99f1ac5189e2
   courseNum :: Datatypes.FullCourse -> GHC.Base.String
   RecSel Left Datatypes.FullCourse
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LSL),1*U(A,1*U,A)>,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: Datatypes.FullCourse) ->
                  case ds of wild { Datatypes.FullCourse ds1 ds2 ds3 -> ds2 }) -}
-e1a3eb17bb9d82bae5c0a8c2b4d4ba97
+4978cb0fb9f01b9b4d006bedc351d7ca
   courseTitle :: Datatypes.FullCourse -> GHC.Base.String
   RecSel Left Datatypes.FullCourse
   {- Arity: 1, HasNoCafRefs, Strictness: <S(SLL),1*U(1*U,A,A)>,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: Datatypes.FullCourse) ->
                  case ds of wild { Datatypes.FullCourse ds1 ds2 ds3 -> ds1 }) -}
-7da7691070b305722235aeada7aea863
+4b4a1184863b69635d8dd6e7a7521de7
   day :: Datatypes.Day -> Datatypes.DayOfWeek
   RecSel Left Datatypes.Day
   {- Arity: 1, HasNoCafRefs, Strictness: <S(SLL),1*U(1*U,A,A)>,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: Datatypes.Day) ->
                  case ds of wild { Datatypes.Day ds1 ds2 ds3 -> ds1 }) -}
-605a4d5c28b4b22ca85aef45a9dbd138
+d9aacfaae4731f95970febdf72514317
   end :: Datatypes.Day -> GHC.Types.Int
   RecSel Left Datatypes.Day
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LLS),1*U(A,A,1*U(U))>m,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: Datatypes.Day) ->
                  case ds of wild { Datatypes.Day ds1 ds2 ds3 -> ds3 }) -}
-52ccd9066090f209b609fa22fb1dd131
+4d1c71afbb37bb880ed93db419fd4e74
   instructor :: Datatypes.Section -> GHC.Base.String
   RecSel Left Datatypes.Section
   {- Arity: 1, HasNoCafRefs, Strictness: <S(SLL),1*U(1*U,A,A)>,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: Datatypes.Section) ->
                  case ds of wild { Datatypes.Section ds1 ds2 ds3 -> ds1 }) -}
-518d9fb4085c2152d6760c183f8ce39c
+c05bbde6f6b62bea2ebbd77b561994b6
   schedules :: Datatypes.Section -> [Datatypes.Day]
   RecSel Left Datatypes.Section
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LLS),1*U(A,A,1*U)>,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: Datatypes.Section) ->
                  case ds of wild { Datatypes.Section ds1 ds2 ds3 -> ds3 }) -}
-03d8bbdde8e1bcc1e5997a923c23c831
+9e66de0ffbd24df85e15dd74df6e078f
   sectionNum :: Datatypes.Section -> GHC.Base.String
   RecSel Left Datatypes.Section
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LSL),1*U(A,1*U,A)>,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: Datatypes.Section) ->
                  case ds of wild { Datatypes.Section ds1 ds2 ds3 -> ds2 }) -}
-6df12b65a3008d532d5b4b7ced29cd8f
+c0f571d952fdc9fbd1d83cbc3f6e1594
   sections :: Datatypes.FullCourse -> [Datatypes.Section]
   RecSel Left Datatypes.FullCourse
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LLS),1*U(A,A,1*U)>,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: Datatypes.FullCourse) ->
                  case ds of wild { Datatypes.FullCourse ds1 ds2 ds3 -> ds3 }) -}
-b6eb5a8650477b18938178c531eeddef
-  showMin :: GHC.Types.Int -> GHC.Base.String
-  {- Arity: 1, Strictness: <S(S),1*U(U)>m2, Inline: INLINE[0],
-     Unfolding: InlineRule (1, True, False)
-                (\ (w :: GHC.Types.Int) ->
-                 case w of ww { GHC.Types.I# ww1 ->
-                 case Datatypes.$wshowMin ww1 of ww2 { (#,#) ww3 ww4 ->
-                 GHC.Types.: @ GHC.Types.Char ww3 ww4 } }) -}
-b4fa8fba6f4b003e232d73db119cc6a9
+2532641b0d6b301fae1d2df75cf0a281
   start :: Datatypes.Day -> GHC.Types.Int
   RecSel Left Datatypes.Day
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LSL),1*U(A,1*U(U),A)>m,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: Datatypes.Day) ->
                  case ds of wild { Datatypes.Day ds1 ds2 ds3 -> ds2 }) -}
-eb312d3d1dab6b9f754bd588006cc27d
-  toTime :: GHC.Types.Int -> GHC.Base.String
-  {- Arity: 1, Strictness: <S(S),1*U(U)>, Inline: INLINE[0],
-     Unfolding: InlineRule (1, True, False)
-                (\ (w :: GHC.Types.Int) ->
-                 case w of ww { GHC.Types.I# ww1 -> Datatypes.$wtoTime ww1 }) -}
 instance GHC.Enum.Enum [Datatypes.DayOfWeek]
   = Datatypes.$fEnumDayOfWeek
 instance GHC.Classes.Eq [Datatypes.Day] = Datatypes.$fEqDay

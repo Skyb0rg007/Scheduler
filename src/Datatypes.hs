@@ -3,10 +3,10 @@
 
 --Where the underlying datatypes are located
 --Includes their compare and show definitions
-module Datatypes where
+module Datatypes (FullCourse (..), Section (..), Day (..), emptyClass) where
 
-import           Data.Aeson
-import           GHC.Generics
+import           Data.Aeson   (FromJSON, ToJSON)
+import           GHC.Generics (Generic)
 
 --Pretty self-explanatory for what this represents
 data DayOfWeek = Mo | Tu | We | Th | Fr | Sa | Su
@@ -64,6 +64,9 @@ data FullCourse = FullCourse
 instance Show FullCourse where
   show (FullCourse t n ss) = t {- ++ "\n" ++ n -} ++ "\n"
                              ++ unlines (show <$> ss)
+
+emptyClass :: FullCourse
+emptyClass = FullCourse "" "" []
 
 {-
 everything: [

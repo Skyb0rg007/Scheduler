@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2017-11-08 07:00:32.7676512 UTC
+2017-11-08 07:23:42.2919361 UTC
 
 interface main@main:Main 8002
-  interface hash: 849dc12901a57b3280819c973594cff4
-  ABI hash: e4ae0d5b034887d4bcc32699d985fba0
+  interface hash: 89bbf5451a7a3f18e38c7ddd85574cdf
+  ABI hash: 2260dac05f05301deeb73862165a6a1a
   export-list hash: 3aec024e2c6ad02c7711996dbb344b22
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 2e49f32c6bad683a7cb230ed04a33215
@@ -90,14 +90,11 @@ family instance modules: Scheduler-0.1.0.0@Scheduler-0.1.0.0-2KhWUDBbeU0Ht4qZIHl
                          vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Storable
                          vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed
                          vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed.Base
-import  -/  Scheduler-0.1.0.0@Scheduler-0.1.0.0-2KhWUDBbeU0Ht4qZIHl35W:Algorithms fd51dc8dca0a1957d50e9053ecfec1a7
-import  -/  Scheduler-0.1.0.0@Scheduler-0.1.0.0-2KhWUDBbeU0Ht4qZIHl35W:Datatypes c69bec3dacf7ed7a73953f0aa218ef3c
-import  -/  aeson-1.1.2.0@aeson-1.1.2.0-IYYaF432Hu8HQKp7no3ap1:Data.Aeson 2c2ea416ea3f3f7ead4fbc7d22c60646
-import  -/  base-4.9.1.0:Data.Maybe ecf0c6f81372d9b58b142d5e758ea51b
-import  -/  base-4.9.1.0:GHC.List d11eb227c1c6fbfd89bb781d72eaea0d
+import  -/  Scheduler-0.1.0.0@Scheduler-0.1.0.0-2KhWUDBbeU0Ht4qZIHl35W:Algorithms ea10996384b2321cd7f890bcb5002003
+import  -/  Scheduler-0.1.0.0@Scheduler-0.1.0.0-2KhWUDBbeU0Ht4qZIHl35W:Datatypes 3fec1a903f1907a710c3eac026fc2900
+import  -/  Scheduler-0.1.0.0@Scheduler-0.1.0.0-2KhWUDBbeU0Ht4qZIHl35W:Helpers 53d7b8f16b64c7e3855d3a9539cc4ffc
+import  -/  base-4.9.1.0:GHC.Base 4caea1123ecf4b46e27cbccd6d279377
 import  -/  base-4.9.1.0:Prelude 74b3e204395920329f6de9d97206abe9
-import  -/  base-4.9.1.0:System.IO 5daf3f384209c11d9566e3409af8ec5d
-import  -/  bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Lazy.Char8 9dc8b6278321ad88a4601372f94916b0
 import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
 d6831ef04cb9301b090dfae6f7bb7ec7
   $trModule :: GHC.Types.Module
@@ -111,17 +108,21 @@ d6831ef04cb9301b090dfae6f7bb7ec7
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "main"#) -}
-d9c0dee8a685c5ed422401aaa63f23bf
+9fec632c30965f314c4c78df3fe2bdc1
   main :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-01d62c2c484918d4b5d94b688c90c90e
+1d9fed6d741ee7ec22cc22cbf0367a8d
   main1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-  {- Arity: 1, Strictness: <S,U> -}
-1033d79446b09fbb5ef88af3224e93f4
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case Helpers.findCourse1 s of ds1 { (#,#) ipv ipv1 ->
+                 (# ipv, GHC.Tuple.() #) }) -}
+fe02dd2bbdccb8451fd3eddfb6dd9e65
   main2 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)

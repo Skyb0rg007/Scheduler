@@ -1,8 +1,8 @@
 --"Where the real works gets done"
---This is where the formulas for getting schedules are located
-module Algorithms where
+--This is where the formula for forming schedules is located
+module Algorithms (total) where
 
-import           Datatypes
+import           Datatypes (Day (day), FullCourse (..), Section (..))
 
 --Whether two sections conflict
 conflict :: Section -> Section -> Bool

@@ -1,12 +1,12 @@
 
 ==================== FINAL INTERFACE ====================
-2017-11-08 07:00:29.506936 UTC
+2017-11-08 07:23:40.7577229 UTC
 
 interface Scheduler-0.1.0.0-2KhWUDBbeU0Ht4qZIHl35W:Helpers 8002
-  interface hash: e941574e595420e1c62e61603fb0c769
-  ABI hash: 1d4ac2a49ad826d5ab39adfed66b2513
-  export-list hash: 8f1c00f4b7568b90c6f03fab8c79b341
-  orphan hash: 00bdfc7ef5e133e9572629cc1e8f1b53
+  interface hash: 9d85965f90258ca78df7624aecd09d30
+  ABI hash: 53d7b8f16b64c7e3855d3a9539cc4ffc
+  export-list hash: 823b6151a71a673975560b7a7bff52f0
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 9c7ca48fa2ed9dec3b5da8a23dfd3e5d
   sig of: Nothing
   used TH splices: False
@@ -90,11 +90,11 @@ family instance modules: Scheduler-0.1.0.0-2KhWUDBbeU0Ht4qZIHl35W:Datatypes
                          vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Storable
                          vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed
                          vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed.Base
-import  -/  Datatypes c69bec3dacf7ed7a73953f0aa218ef3c
-  exports: db5f894380e240b6295255e84947198c
-  FullCourse 3d4ca671edd92d251e3f492247a0103a
-  FullCourse 92e5d5667c768813f6f0ed155b423992
-  courseTitle e1a3eb17bb9d82bae5c0a8c2b4d4ba97
+import  -/  Datatypes 3fec1a903f1907a710c3eac026fc2900
+  exports: a1c08236f424cbef9f6c616ef47a8584
+  FullCourse 192c3d216c590588b7ae9a5c03231f9f
+  FullCourse 62370a5bcfac5435810582c02d9e53d6
+  courseTitle 4978cb0fb9f01b9b4d006bedc351d7ca
 import  -/  aeson-1.1.2.0@aeson-1.1.2.0-IYYaF432Hu8HQKp7no3ap1:Data.Aeson 2c2ea416ea3f3f7ead4fbc7d22c60646
 import  -/  base-4.9.1.0:Data.Foldable 254e836c2d813d34e47feb29bb8d40ed
 import  -/  base-4.9.1.0:Data.Functor 682cc832c233b71cec70179490a08631
@@ -107,15 +107,6 @@ import  -/  base-4.9.1.0:Prelude 74b3e204395920329f6de9d97206abe9
 import  -/  base-4.9.1.0:System.IO 5daf3f384209c11d9566e3409af8ec5d
 import  -/  bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Lazy.Char8 9dc8b6278321ad88a4601372f94916b0
 import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
-8686b8d21827d9d202ee28eb53c34bb8
-  $s$fShow[]_$s$fShow[]_$cshow ::
-    [Datatypes.FullCourse] -> GHC.Base.String
-  {- Arity: 1, Strictness: <S,1*U>,
-     Unfolding: InlineRule (1, True, False)
-                (\ (x :: [Datatypes.FullCourse]) ->
-                 Datatypes.$fShowFullCourse_$cshowList
-                   x
-                   (GHC.Types.[] @ GHC.Types.Char)) -}
 6a3cf7d5700351d43f1b0ac1c401fc6d
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
@@ -131,14 +122,14 @@ import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
                    "Scheduler-0.1.0.0-2KhWUDBbeU0Ht4qZIHl35W"#) -}
-00e4440916f7e11046995eeb8171387f
+4cac05e56aedb5913911ada4f6daffea
   allClasses :: GHC.Types.IO [Datatypes.FullCourse]
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Helpers.allClasses1
                   `cast`
                 (Sym (GHC.Types.N:IO[0] <[Datatypes.FullCourse]>_R)) -}
-c861bd86121ada176a9b88a6dfece629
+b51498f003b3b00c321d80de739c1914
   allClasses1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, [Datatypes.FullCourse] #)
@@ -146,7 +137,7 @@ c861bd86121ada176a9b88a6dfece629
      Unfolding: (\ (eta :: GHC.Prim.State#
                              GHC.Prim.RealWorld)[OneShot] ->
                  case GHC.IO.Handle.FD.openBinaryFile1
-                        Helpers.allClasses4
+                        Helpers.allClasses5
                         GHC.IO.IOMode.ReadMode
                         eta of ds1 { (#,#) ipv ipv1 ->
                  case Data.ByteString.Lazy.getContents2
@@ -155,9 +146,7 @@ c861bd86121ada176a9b88a6dfece629
                  (# ipv2,
                     case ipv3 of wild {
                       Data.ByteString.Lazy.Internal.Empty
-                      -> case Data.Attoparsec.ByteString.Lazy.parse_$sgo
-                                @ Data.Aeson.Types.Internal.Value
-                                Helpers.allClasses3 of wild1 {
+                      -> case Helpers.allClasses3 of wild1 {
                            Data.Attoparsec.ByteString.Lazy.Fail ipv4 ipv5 ipv6
                            -> GHC.Types.[] @ Datatypes.FullCourse
                            Data.Attoparsec.ByteString.Lazy.Done ds2 v
@@ -225,7 +214,7 @@ c861bd86121ada176a9b88a6dfece629
                                 Data.Aeson.Types.Internal.Error ipv4
                                 -> GHC.Types.[] @ Datatypes.FullCourse
                                 Data.Aeson.Types.Internal.Success a1 -> a1 } } } #) } }) -}
-8236ec979f7fc0463e5e6863db81c072
+fa07eb62601fa7161a388b2cd0b30b93
   allClasses2 ::
     Data.Aeson.Types.Internal.JSONPath
     -> GHC.Base.String
@@ -234,8 +223,15 @@ c861bd86121ada176a9b88a6dfece629
      Unfolding: (\ (ds :: Data.Aeson.Types.Internal.JSONPath)
                    (eta :: GHC.Base.String) ->
                  Data.Aeson.Types.Internal.Error @ [Datatypes.FullCourse] eta) -}
-73f4e074008d19d1dbf2e1a232a3ff75
+e9919b354137efb188918c58fab74c1a
   allClasses3 ::
+    Data.Attoparsec.ByteString.Lazy.Result
+      Data.Aeson.Types.Internal.Value
+  {- Unfolding: (Data.Attoparsec.ByteString.Lazy.parse_$sgo
+                   @ Data.Aeson.Types.Internal.Value
+                   Helpers.allClasses4) -}
+c2844de7ac3bab6f248f2f3092468c07
+  allClasses4 ::
     Data.Attoparsec.Internal.Types.IResult
       Data.ByteString.Internal.ByteString Data.Aeson.Types.Internal.Value
   {- Unfolding: (Data.Aeson.Parser.Internal.$wjsonEOF
@@ -269,18 +265,18 @@ c861bd86121ada176a9b88a6dfece629
                           -> Data.Attoparsec.Internal.Types.IResult
                                Data.ByteString.Internal.ByteString
                                Data.Aeson.Types.Internal.Value>_R)) -}
-46e34488b2ef4f163af9ec2a2ab35e85
-  allClasses4 :: [GHC.Types.Char]
+22ce3353154cff0d97f884946ae001d4
+  allClasses5 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
                    "src\\MutatedClasses.json"#) -}
-e033317de9721940754700969d474d60
+cf35517b96f75a4bc32fafd69197d915
   findCourse :: GHC.Types.IO Datatypes.FullCourse
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Helpers.findCourse1
                   `cast`
                 (Sym (GHC.Types.N:IO[0] <Datatypes.FullCourse>_R)) -}
-7ba713314c3b530f584239830b37e516
+acc760c6c87eb2eef6db9bee0ee8ce0e
   findCourse1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, Datatypes.FullCourse #)
@@ -312,7 +308,15 @@ e033317de9721940754700969d474d60
                    DEFAULT
                    -> case GHC.IO.Handle.Text.hPutStr2
                              GHC.IO.Handle.FD.stdout
-                             (Helpers.$s$fShow[]_$s$fShow[]_$cshow ipv4)
+                             (GHC.Show.showList__
+                                @ [GHC.Types.Char]
+                                GHC.Show.shows_$cshowList1
+                                (GHC.Base.map
+                                   @ Datatypes.FullCourse
+                                   @ [GHC.Types.Char]
+                                   Datatypes.courseTitle
+                                   ipv4)
+                                (GHC.Types.[] @ GHC.Types.Char))
                              GHC.Types.True
                              ipv2 of ds2 { (#,#) ipv5 ipv6 ->
                       case GHC.IO.Handle.Internals.wantReadableHandle_1
@@ -343,53 +347,52 @@ e033317de9721940754700969d474d60
                    0#
                    -> case GHC.IO.Handle.Text.hPutStr2
                              GHC.IO.Handle.FD.stdout
-                             Helpers.findCourse3
+                             Helpers.findCourse4
                              GHC.Types.True
                              ipv2 of ds2 { (#,#) ipv5 ipv6 ->
-                      (# ipv5, Helpers.findCourse2 #) }
+                      (# ipv5, Helpers.findCourse3 #) }
                    1#
                    -> case GHC.IO.Handle.Text.hPutStr2
                              GHC.IO.Handle.FD.stdout
-                             (case ipv4 of wild {
-                                [] -> case GHC.List.badHead ret_ty GHC.Base.String of {}
-                                : x ds2
-                                -> case x of ww { Datatypes.FullCourse ww1 ww4 ww3 ->
-                                   Datatypes.$w$cshow1 ww1 ww3 } })
+                             (GHC.Types.:
+                                @ GHC.Types.Char
+                                GHC.Show.shows6
+                                (case ipv4 of wild {
+                                   [] -> case GHC.List.badHead ret_ty [GHC.Types.Char] of {}
+                                   : x ds2
+                                   -> case x of wild1 { Datatypes.FullCourse ds3 ds4 ds5 ->
+                                      GHC.Show.showLitString ds3 Helpers.findCourse2 } }))
                              GHC.Types.True
                              ipv2 of ds2 { (#,#) ipv5 ipv6 ->
                       (# ipv5, GHC.List.head @ Datatypes.FullCourse ipv4 #) } } } }) -}
-b5f205f0107d6bf5496b828c73eb784c
-  findCourse2 :: Datatypes.FullCourse
-  {- HasNoCafRefs,
-     Unfolding: (Datatypes.FullCourse
-                   (GHC.Types.[] @ GHC.Types.Char)
-                   (GHC.Types.[] @ GHC.Types.Char)
-                   (GHC.Types.[] @ Datatypes.Section)) -}
-a648cb93bdaa5a51f479ec43c003c806
-  findCourse3 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.Types.:
-                   @ GHC.Types.Char
-                   GHC.Show.shows6
-                   Helpers.findCourse4) -}
-fd118f36cb309d331c8f4b34e27be907
-  findCourse4 :: GHC.Base.String
-  {- Unfolding: (GHC.Show.showLitString
-                   Helpers.findCourse6
-                   Helpers.findCourse5) -}
-e3992b6b0b444d49898478646deb04f6
-  findCourse5 :: [GHC.Types.Char]
+6bd2608db0470c8c8ec564326a9aae51
+  findCourse2 :: [GHC.Types.Char]
   {- HasNoCafRefs,
      Unfolding: (GHC.Types.:
                    @ GHC.Types.Char
                    GHC.Show.shows6
                    (GHC.Types.[] @ GHC.Types.Char)) -}
+7cd478ba145e9691e8e75c53fbbe9edc
+  findCourse3 :: Datatypes.FullCourse
+  {- HasNoCafRefs,
+     Unfolding: (Datatypes.FullCourse
+                   (GHC.Types.[] @ GHC.Types.Char)
+                   (GHC.Types.[] @ GHC.Types.Char)
+                   (GHC.Types.[] @ Datatypes.Section)) -}
+5a755da4cbd3d76c8e5164e3494a1092
+  findCourse4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   GHC.Show.shows6
+                   Helpers.findCourse5) -}
+032990de96d80bea2f4f009bcd8dca04
+  findCourse5 :: GHC.Base.String
+  {- Unfolding: (GHC.Show.showLitString
+                   Helpers.findCourse6
+                   Helpers.findCourse2) -}
 295fa6b459cc68a3cf347c4c57347bd2
   findCourse6 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "No results"#) -}
-"SPEC/Helpers $fShow[]_$cshow @ FullCourse" [ALWAYS] forall ($dShow :: GHC.Show.Show
-                                                                         Datatypes.FullCourse)
-  GHC.Show.$fShow[]_$cshow @ Datatypes.FullCourse $dShow
-  = Helpers.$s$fShow[]_$s$fShow[]_$cshow
 vectorised variables:
 vectorised tycons:
 vectorised reused tycons:

@@ -1,19 +1,17 @@
 
 ==================== FINAL INTERFACE ====================
-2017-11-08 07:00:29.7972308 UTC
+2017-11-08 07:23:41.02706 UTC
 
 interface Scheduler-0.1.0.0-2KhWUDBbeU0Ht4qZIHl35W:Algorithms 8002
-  interface hash: 3fa982168bf368255df1d8f14410f8d1
-  ABI hash: fd51dc8dca0a1957d50e9053ecfec1a7
-  export-list hash: 5828570685f6be47bfbf9897b4ba8d48
+  interface hash: 893c63bd5e7dc9856f1874a643e649f7
+  ABI hash: ea10996384b2321cd7f890bcb5002003
+  export-list hash: f066ecfdedeb5f80d83e6f17e025aa26
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 9c7ca48fa2ed9dec3b5da8a23dfd3e5d
   sig of: Nothing
   used TH splices: False
   where
 exports:
-  Algorithms.conflict
-  Algorithms.conflicts
   Algorithms.total
 module dependencies: Datatypes
 package dependencies: Win32-2.3.1.1@Win32-2.3.1.1
@@ -91,13 +89,13 @@ family instance modules: Scheduler-0.1.0.0-2KhWUDBbeU0Ht4qZIHl35W:Datatypes
                          vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Storable
                          vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed
                          vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed.Base
-import  -/  Datatypes c69bec3dacf7ed7a73953f0aa218ef3c
-  exports: db5f894380e240b6295255e84947198c
-  FullCourse 92e5d5667c768813f6f0ed155b423992
-  Section 6ef6d63ad0397e072050a8ca6f86ddd1
-  day 7da7691070b305722235aeada7aea863
-  schedules 518d9fb4085c2152d6760c183f8ce39c
-  sections 6df12b65a3008d532d5b4b7ced29cd8f
+import  -/  Datatypes 3fec1a903f1907a710c3eac026fc2900
+  exports: a1c08236f424cbef9f6c616ef47a8584
+  FullCourse 62370a5bcfac5435810582c02d9e53d6
+  Section f5601a0c6596b8ae5f6c33dfb48d9fbc
+  day 4b4a1184863b69635d8dd6e7a7521de7
+  schedules c05bbde6f6b62bea2ebbd77b561994b6
+  sections c0f571d952fdc9fbd1d83cbc3f6e1594
 import  -/  base-4.9.1.0:Data.Foldable 254e836c2d813d34e47feb29bb8d40ed
 import  -/  base-4.9.1.0:Data.Functor 682cc832c233b71cec70179490a08631
 import  -/  base-4.9.1.0:GHC.Base 4caea1123ecf4b46e27cbccd6d279377
@@ -119,133 +117,7 @@ d622f52471fbc293ca4c86c38fd0fcdf
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
                    "Scheduler-0.1.0.0-2KhWUDBbeU0Ht4qZIHl35W"#) -}
-21d3065001eaf4cfe81c9dcdbc2c829b
-  $wconflict ::
-    [Datatypes.Day] -> Datatypes.Section -> GHC.Types.Bool
-  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,1*U(A,A,1*U)>,
-     Inline: [0],
-     Unfolding: (\ (ww :: [Datatypes.Day]) (w :: Datatypes.Section) ->
-                 let {
-                   lvl :: [Datatypes.Day]
-                   = case w of wild { Datatypes.Section ds1 ds2 ds3 -> ds3 }
-                 } in
-                 letrec {
-                   go :: [Datatypes.Day] -> Data.Monoid.All
-                     {- Arity: 1, Strictness: <S,1*U> -}
-                   = \ (ds :: [Datatypes.Day]) ->
-                     case ds of wild {
-                       [] -> GHC.Types.True `cast` (Sym (Data.Monoid.N:All[0]))
-                       : y ys
-                       -> let {
-                            z :: Data.Monoid.All = go ys
-                          } in
-                          letrec {
-                            go1 :: [Datatypes.Day] -> Data.Monoid.All
-                              {- Arity: 1, Strictness: <S,1*U> -}
-                            = \ (ds1 :: [Datatypes.Day]) ->
-                              case ds1 of wild1 {
-                                [] -> z
-                                : y1 ys1
-                                -> case y of ww1 { Datatypes.Day ww2 ww3 ww4 ->
-                                   case y1 of ww5 { Datatypes.Day ww6 ww7 ww8 ->
-                                   case Datatypes.$w$c== ww2 ww3 ww4 ww6 ww7 ww8 of wild2 {
-                                     GHC.Types.False -> go1 ys1
-                                     GHC.Types.True
-                                     -> case ww2 of wild3 {
-                                          Datatypes.Mo
-                                          -> case ww6 of wild4 {
-                                               DEFAULT -> go1 ys1
-                                               Datatypes.Mo
-                                               -> GHC.Types.False
-                                                    `cast`
-                                                  (Sym (Data.Monoid.N:All[0])) }
-                                          Datatypes.Tu
-                                          -> case ww6 of wild4 {
-                                               DEFAULT -> go1 ys1
-                                               Datatypes.Tu
-                                               -> GHC.Types.False
-                                                    `cast`
-                                                  (Sym (Data.Monoid.N:All[0])) }
-                                          Datatypes.We
-                                          -> case ww6 of wild4 {
-                                               DEFAULT -> go1 ys1
-                                               Datatypes.We
-                                               -> GHC.Types.False
-                                                    `cast`
-                                                  (Sym (Data.Monoid.N:All[0])) }
-                                          Datatypes.Th
-                                          -> case ww6 of wild4 {
-                                               DEFAULT -> go1 ys1
-                                               Datatypes.Th
-                                               -> GHC.Types.False
-                                                    `cast`
-                                                  (Sym (Data.Monoid.N:All[0])) }
-                                          Datatypes.Fr
-                                          -> case ww6 of wild4 {
-                                               DEFAULT -> go1 ys1
-                                               Datatypes.Fr
-                                               -> GHC.Types.False
-                                                    `cast`
-                                                  (Sym (Data.Monoid.N:All[0])) }
-                                          Datatypes.Sa
-                                          -> case ww6 of wild4 {
-                                               DEFAULT -> go1 ys1
-                                               Datatypes.Sa
-                                               -> GHC.Types.False
-                                                    `cast`
-                                                  (Sym (Data.Monoid.N:All[0])) }
-                                          Datatypes.Su
-                                          -> case ww6 of wild4 {
-                                               DEFAULT -> go1 ys1
-                                               Datatypes.Su
-                                               -> GHC.Types.False
-                                                    `cast`
-                                                  (Sym (Data.Monoid.N:All[0])) } } } } } }
-                          } in
-                          go1 lvl }
-                 } in
-                 (go ww) `cast` (Data.Monoid.N:All[0])) -}
-506310afcfe0a7822b71186052153ddb
-  conflict ::
-    Datatypes.Section -> Datatypes.Section -> GHC.Types.Bool
-  {- Arity: 2, HasNoCafRefs,
-     Strictness: <S(LLS),1*U(A,A,1*U)><L,1*U(A,A,1*U)>,
-     Inline: INLINE[0],
-     Unfolding: InlineRule (2, True, False)
-                (\ (w :: Datatypes.Section) (w1 :: Datatypes.Section) ->
-                 case w of ww { Datatypes.Section ww1 ww2 ww3 ->
-                 Algorithms.$wconflict ww3 w1 }) -}
-b806e13fd0b2b3548ef3e732367814ab
-  conflicts ::
-    [Datatypes.Section] -> Datatypes.Section -> GHC.Types.Bool
-  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,U(A,A,U)>,
-     Unfolding: InlineRule (0, True, True)
-                Algorithms.conflicts1
-                  `cast`
-                (<[Datatypes.Section]>_R
-                 ->_R <Datatypes.Section>_R
-                 ->_R Data.Monoid.N:All[0]) -}
-2b714e1b20613dd8d03ebb7eef727fe1
-  conflicts1 ::
-    [Datatypes.Section] -> Datatypes.Section -> Data.Monoid.All
-  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,U(A,A,U)>,
-     Unfolding: (\ (ss :: [Datatypes.Section])
-                   (s :: Datatypes.Section) ->
-                 letrec {
-                   go :: [Datatypes.Section] -> Data.Monoid.All
-                     {- Arity: 1, Strictness: <S,1*U> -}
-                   = \ (ds :: [Datatypes.Section]) ->
-                     case ds of wild {
-                       [] -> GHC.Types.True `cast` (Sym (Data.Monoid.N:All[0]))
-                       : y ys
-                       -> case s of ww { Datatypes.Section ww1 ww2 ww3 ->
-                          case Algorithms.$wconflict ww3 y of wild1 {
-                            GHC.Types.False
-                            -> GHC.Types.False `cast` (Sym (Data.Monoid.N:All[0]))
-                            GHC.Types.True -> go ys } } }
-                 } in
-                 go ss) -}
-b63be77fd8aea6a10e2371a5973a75b8
+7baa8380331c20877d460d60b282a278
   total ::
     [Datatypes.FullCourse]
     -> [Datatypes.Section] -> [[Datatypes.Section]]
