@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2017-11-08 07:23:41.02706 UTC
+2017-11-08 16:02:16.1826774 UTC
 
 interface Scheduler-0.1.0.0-2KhWUDBbeU0Ht4qZIHl35W:Algorithms 8002
-  interface hash: 893c63bd5e7dc9856f1874a643e649f7
+  interface hash: 2c02d588aa6d61bc4c296b58854873ae
   ABI hash: ea10996384b2321cd7f890bcb5002003
   export-list hash: f066ecfdedeb5f80d83e6f17e025aa26
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
@@ -89,8 +89,8 @@ family instance modules: Scheduler-0.1.0.0-2KhWUDBbeU0Ht4qZIHl35W:Datatypes
                          vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Storable
                          vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed
                          vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed.Base
-import  -/  Datatypes 3fec1a903f1907a710c3eac026fc2900
-  exports: a1c08236f424cbef9f6c616ef47a8584
+import  -/  Datatypes f2ce36ba822d252a4e17d0348325b7de
+  exports: 869b9497853c52f099b91c4d84d3031a
   FullCourse 62370a5bcfac5435810582c02d9e53d6
   Section f5601a0c6596b8ae5f6c33dfb48d9fbc
   day 4b4a1184863b69635d8dd6e7a7521de7

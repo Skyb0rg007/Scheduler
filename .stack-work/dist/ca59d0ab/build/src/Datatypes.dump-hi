@@ -1,17 +1,18 @@
 
 ==================== FINAL INTERFACE ====================
-2017-11-08 07:23:38.9003611 UTC
+2017-11-08 16:02:15.1134861 UTC
 
 interface Scheduler-0.1.0.0-2KhWUDBbeU0Ht4qZIHl35W:Datatypes [family instance module] 8002
-  interface hash: 9198b72623efb25cdac01941a072a181
-  ABI hash: 3fec1a903f1907a710c3eac026fc2900
-  export-list hash: a1c08236f424cbef9f6c616ef47a8584
+  interface hash: 011f32f93e6bb251dcff2ffc7aa175b0
+  ABI hash: f2ce36ba822d252a4e17d0348325b7de
+  export-list hash: 869b9497853c52f099b91c4d84d3031a
   orphan hash: 2cb9324e462b850e6e9e3d053e9717d3
   flag hash: 9a18a574072c9b7aff9acf9d95f38f67
   sig of: Nothing
   used TH splices: False
   where
 exports:
+  Datatypes.emptyClass
   Datatypes.Day{Datatypes.Day day end start}
   Datatypes.FullCourse{Datatypes.FullCourse courseNum courseTitle sections}
   Datatypes.Section{Datatypes.Section instructor schedules sectionNum}
@@ -13457,6 +13458,13 @@ f5601a0c6596b8ae5f6c33dfb48d9fbc
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: Datatypes.Day) ->
                  case ds of wild { Datatypes.Day ds1 ds2 ds3 -> ds1 }) -}
+251e296c3bf56602c423f0d887c2a33a
+  emptyClass :: Datatypes.FullCourse
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Datatypes.FullCourse
+                   (GHC.Types.[] @ GHC.Types.Char)
+                   (GHC.Types.[] @ GHC.Types.Char)
+                   (GHC.Types.[] @ Datatypes.Section)) -}
 d9aacfaae4731f95970febdf72514317
   end :: Datatypes.Day -> GHC.Types.Int
   RecSel Left Datatypes.Day

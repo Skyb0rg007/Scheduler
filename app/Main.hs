@@ -5,4 +5,4 @@ import           Datatypes
 import           Helpers
 
 main :: IO ()
-main = findCourse >> return ()
+main = return ()
