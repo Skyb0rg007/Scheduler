@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-11-08 16:02:45.5116928 UTC
+2017-11-11 00:30:49.2873108 UTC
 
 interface main@main:Main 8002
-  interface hash: d201568f6a1ebf6d7176f07a3df0a5c8
-  ABI hash: 92499258d159d35e1f757644ec6b7f86
-  export-list hash: 3aec024e2c6ad02c7711996dbb344b22
+  interface hash: 49bb1246f892abf5e67a45b94bd80a63
+  ABI hash: e761bc9b64189afcbaa04b285996b34c
+  export-list hash: 6d63a1441c79d4a2bc6a8aaf33ce2509
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 2e49f32c6bad683a7cb230ed04a33215
   sig of: Nothing
@@ -13,8 +13,9 @@ interface main@main:Main 8002
   where
 exports:
   Main.main
+  Main.repeatFilter
 module dependencies:
-package dependencies: Scheduler-0.1.0.0@Scheduler-0.1.0.0-2KhWUDBbeU0Ht4qZIHl35W
+package dependencies: Scheduler-0.1.0.0@Scheduler-0.1.0.0-HDIETyyWZZGEJKCbthJjpc
                       Win32-2.3.1.1@Win32-2.3.1.1
                       aeson-1.1.2.0@aeson-1.1.2.0-IYYaF432Hu8HQKp7no3ap1
                       array-0.5.1.1@array-0.5.1.1
@@ -57,7 +58,7 @@ orphans: attoparsec-0.13.1.0@attoparsec-0.13.1.0-3ql4hcH9pGfBAlE21oqFTQ:Data.Att
          transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
          vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Fusion.Bundle
          vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed
-family instance modules: Scheduler-0.1.0.0@Scheduler-0.1.0.0-2KhWUDBbeU0Ht4qZIHl35W:Datatypes
+family instance modules: Scheduler-0.1.0.0@Scheduler-0.1.0.0-HDIETyyWZZGEJKCbthJjpc:Datatypes
                          attoparsec-0.13.1.0@attoparsec-0.13.1.0-3ql4hcH9pGfBAlE21oqFTQ:Data.Attoparsec.Internal.Types
                          base-4.9.1.0:Control.Applicative base-4.9.1.0:Data.Complex
                          base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Compose
@@ -90,12 +91,28 @@ family instance modules: Scheduler-0.1.0.0@Scheduler-0.1.0.0-2KhWUDBbeU0Ht4qZIHl
                          vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Storable
                          vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed
                          vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed.Base
-import  -/  Scheduler-0.1.0.0@Scheduler-0.1.0.0-2KhWUDBbeU0Ht4qZIHl35W:Algorithms ea10996384b2321cd7f890bcb5002003
-import  -/  Scheduler-0.1.0.0@Scheduler-0.1.0.0-2KhWUDBbeU0Ht4qZIHl35W:Datatypes f2ce36ba822d252a4e17d0348325b7de
-import  -/  Scheduler-0.1.0.0@Scheduler-0.1.0.0-2KhWUDBbeU0Ht4qZIHl35W:Helpers 4bd5d313b4ab9af1cb7b80a651a640dd
+import  -/  Scheduler-0.1.0.0@Scheduler-0.1.0.0-HDIETyyWZZGEJKCbthJjpc:Algorithms 31a65a9af633694fd8c59fec20b32c01
+import  -/  Scheduler-0.1.0.0@Scheduler-0.1.0.0-HDIETyyWZZGEJKCbthJjpc:Datatypes ba1425a7ef0ca971fd654e305be48216
+import  -/  Scheduler-0.1.0.0@Scheduler-0.1.0.0-HDIETyyWZZGEJKCbthJjpc:Helpers 28623c6d1fd94970fd9e86aa15b9ff57
+import  -/  base-4.9.1.0:Data.Foldable 254e836c2d813d34e47feb29bb8d40ed
 import  -/  base-4.9.1.0:GHC.Base 4caea1123ecf4b46e27cbccd6d279377
+import  -/  base-4.9.1.0:GHC.IO.Handle cb8bbcf28331624bf008e1abd21fcddd
+import  -/  base-4.9.1.0:GHC.IO.Handle.FD 13bd8641d665b1ca96fbeeb8bdfa3638
+import  -/  base-4.9.1.0:GHC.IO.Handle.Types 638c6e55b150de2630213031097f67d4
+import  -/  base-4.9.1.0:GHC.Show eca5834daba3b6a2bbbe64ab52056707
 import  -/  base-4.9.1.0:Prelude 74b3e204395920329f6de9d97206abe9
+import  -/  base-4.9.1.0:System.IO 5daf3f384209c11d9566e3409af8ec5d
 import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
+edcf9749740b6a2a898be6acce5f24ed
+  $s$fShow[]1 :: [[Datatypes.Section]] -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: [[Datatypes.Section]]) ->
+                 GHC.Show.showList__
+                   @ [Datatypes.Section]
+                   Datatypes.$fShowSection_$cshowList
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
 d6831ef04cb9301b090dfae6f7bb7ec7
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
@@ -108,27 +125,57 @@ d6831ef04cb9301b090dfae6f7bb7ec7
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "main"#) -}
-739fac1c07fa089bdc3c42a0cad03048
+12efea401e9adf31a5b8e0fd9d3cc0ab
   main :: GHC.Types.IO ()
-  {- Arity: 1, HasNoCafRefs, Strictness: <S,U>,
+  {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-7db6cd8cfc6f1ed6808bf2e24ad53a97
+4c90dc71b4b7f4ec54ef09eff3b5e10a
   main1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-  {- Arity: 1, HasNoCafRefs, Strictness: <S,U>,
-     Unfolding: InlineRule (1, True, False)
-                (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                 (# s, GHC.Tuple.() #)) -}
-65b293a1d13a90a1613ee9eda729120e
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.IO.Handle.hSetBuffering1
+                        GHC.IO.Handle.FD.stdin
+                        GHC.IO.Handle.Types.NoBuffering
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case Helpers.findCourses1 ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 case Main.main2
+                        (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                         (# s1, Algorithms.total ipv3 #))
+                          `cast`
+                        (Sym (GHC.Types.N:IO[0] <[[Datatypes.Section]]>_R))
+                        ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                 GHC.IO.Handle.Text.hPutStr2
+                   GHC.IO.Handle.FD.stdout
+                   (Main.$s$fShow[]1 ipv5)
+                   GHC.Types.True
+                   ipv4 } } }) -}
+af3436a1fa1bd8ed3f0b956a344b46be
   main2 ::
+    GHC.Types.IO [[Datatypes.Section]]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, [[Datatypes.Section]] #)
+  {- Arity: 2, Strictness: <C(S(SL)),C(U(U,U))><S,U> -}
+3dca4819842d3b60bbe037b396a58d69
+  main3 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
   {- Arity: 1,
      Unfolding: (GHC.TopHandler.runMainIO1
                    @ ()
                    Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+3a7239a8c777910536cbbc454338af64
+  repeatFilter ::
+    GHC.Types.IO [[Datatypes.Section]]
+    -> GHC.Types.IO [[Datatypes.Section]]
+  {- Arity: 2, Strictness: <C(S(SL)),C(U(U,U))><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main2
+                  `cast`
+                (<GHC.Types.IO [[Datatypes.Section]]>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <[[Datatypes.Section]]>_R)) -}
 vectorised variables:
 vectorised tycons:
 vectorised reused tycons:

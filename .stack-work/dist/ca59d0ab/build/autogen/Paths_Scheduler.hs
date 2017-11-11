@@ -30,7 +30,7 @@ version = Version [0,1,0,0] []
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
 
 bindir     = "C:\\Users\\skyle\\Documents\\Haskell\\Scheduler\\.stack-work\\install\\34070b1b\\bin"
-libdir     = "C:\\Users\\skyle\\Documents\\Haskell\\Scheduler\\.stack-work\\install\\34070b1b\\lib\\x86_64-windows-ghc-8.0.2\\Scheduler-0.1.0.0-2KhWUDBbeU0Ht4qZIHl35W"
+libdir     = "C:\\Users\\skyle\\Documents\\Haskell\\Scheduler\\.stack-work\\install\\34070b1b\\lib\\x86_64-windows-ghc-8.0.2\\Scheduler-0.1.0.0-HDIETyyWZZGEJKCbthJjpc"
 dynlibdir  = "C:\\Users\\skyle\\Documents\\Haskell\\Scheduler\\.stack-work\\install\\34070b1b\\lib\\x86_64-windows-ghc-8.0.2"
 datadir    = "C:\\Users\\skyle\\Documents\\Haskell\\Scheduler\\.stack-work\\install\\34070b1b\\share\\x86_64-windows-ghc-8.0.2\\Scheduler-0.1.0.0"
 libexecdir = "C:\\Users\\skyle\\Documents\\Haskell\\Scheduler\\.stack-work\\install\\34070b1b\\libexec"

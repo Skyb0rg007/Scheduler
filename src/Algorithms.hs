@@ -16,15 +16,18 @@ conflicts ss s = and $ conflict s <$> ss
 
 --Culmination of everything that needs to be done
 --   To Choose From | Already chosen | Final working combos
-total :: [FullCourse] -> [Section] -> [[Section]]
-total [] d      = [d]
+total' :: [FullCourse] -> [Section] -> [[Section]]
+total' [] d      = [d]
   --If no more to choose from, then you're done
-total (x:xs) [] = concat $ total xs . return <$> sections x
+total' (x:xs) [] = concat $ total' xs . return <$> sections x
   --How to start out if nothing is chosen yet
   --(call total for each Section in the first class)
-total (x:xs) used = do
+total' (x:xs) used = do
   let sects = sections x :: [Section]
       works = filter (conflicts used) sects :: [Section]
-  concat $ (\n -> total xs (n:used)) <$> works
+  concat $ (\n -> total' xs (n:used)) <$> works
   --Find every section that fits every pre-chosen section
   --Call total on each, adding the working section to 'used'
+
+total :: [FullCourse] -> [[Section]]
+total cs = total' cs []

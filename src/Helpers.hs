@@ -1,69 +1,114 @@
---Where formulas for finding classes to begin with are located
-module Helpers (findCourse, findCourses, allClasses) where
+--Where formulas for finding and filtering classes are located
+module Helpers (allClasses,
+                findCourse, findCourses,
+                filterSchedules, filterTeach, filterEarly, filterLate)
+                where
 
+import           Control.Monad              (replicateM)
 import           Data.Aeson                 (decode)
 import qualified Data.ByteString.Lazy.Char8 as B (readFile)
-import           Data.List                  (find, isInfixOf)
+import           Data.List                  (isInfixOf, nub)
 import           Data.Maybe                 (fromJust)
-import           Datatypes                  (FullCourse (courseTitle),
-                                             emptyClass)
+import           Datatypes                  (Day (..), DayOfWeek,
+                                             FullCourse (courseTitle),
+                                             Section (instructor, schedules))
 
---Function to help find a specific course
-findCourse' :: IO FullCourse
-findCourse' = do
-  inp <- getLine
-  results <- filter (isInfixOf inp . courseTitle) <$> allClasses :: IO [FullCourse]
-  case length results of
-    0 -> print "No results" >> return emptyClass
-    1 -> print (courseTitle $ head results) >> return (head results)
-    _ -> do
-          print $ courseTitle <$> results
-          inp' <- getLine
-          let results' = filter (isInfixOf inp . courseTitle) results
-          case length results' of
-            0 -> print "Too limiting: no results" >> return emptyClass
-            1 -> return $ head results'
-            _ -> print "More than one result! Using first listed"
-                  >> return (head results')
-
+--Makes a list out of your classes
 findCourses :: IO [FullCourse]
 findCourses = do
-  putStrLn "Enter a phrase to search for a class"
+  cs <- allClasses
+  putStrLn "How many classes do you want to choose?"
+  n <- read <$> getLine :: IO Int
+  replicateM n (findCourse cs)
+
+--Recursively narrows down searches until you find your desired class
+findCourse :: [FullCourse] -> IO FullCourse
+findCourse classes = do
+  putStr $ "There are " ++ (show . length) classes ++ " classes.\nEnter a filter: "
+  results <- findCourse' classes
+  case results of
+    Nothing -> putStrLn "No results!"
+                >> findCourse classes
+    Just cs@(a:b:c) -> print (courseTitle <$> cs)
+                >> findCourse cs
+    Just c -> putStrLn ("Class selected: " ++ courseTitle (head c))
+                >> return (head c)
+
+--Function to help find a specific course
+findCourse' :: [FullCourse] -> IO (Maybe [FullCourse])
+findCourse' cs = do
   inp <- getLine
-  classes <- findCourse inp
-  case length classes of
-    0 -> putStrLn "Too specific, no results."
-          >> findCourses
-    1 -> do
-      print $ courseTitle $ head classes
-      putStrLn "Is this the right choice? (y/n)"
-      ans <- getChar
-      case ans of
-        'y' -> putStrLn "Another? (y/n)" >> getChar >>= \inp2 ->
-              if inp2 == 'y'
-                then (\xs -> head classes:xs) <$> findCourses
-                else return classes
-        'n' -> findCourses
-    _ -> do
-      putStrLn "More than one result:"
-      putStrLn $ unlines $ courseTitle <$> classes
-      inp3 <- getLine
-      let classes' = filter (isInfixOf inp3 . courseTitle) classes
-      print $ unlines $ courseTitle <$> classes'
-      putStrLn "Choose the number of the result"
-      inp4 <- getLine
-      putStrLn "more?"
-      inp5 <- getChar
-      if inp5 == 'y'
-        then ((classes' !! read inp4):) <$> findCourses
-        else return . return $ classes' !! read inp4
+  let filtered = modify inp cs
+  case length filtered of
+    0 -> return Nothing
+    _ -> return $ Just filtered
 
+--The filter function, uses courseTitle
+modify :: String -> [FullCourse] -> [FullCourse]
+modify s = filter (\c -> s `isInfixOf` courseTitle c)
 
+--After figuring out your final schedules, can throw out finished schedules
+--based on teacher or time of classes
+filterSchedules :: [[Section]] -> IO [[Section]]
+filterSchedules ss = do
+  let l = length ss
+  putStrLn $ "You have " ++ show l ++ " schedules.\n\
+    \Would you like to filter by: \n\
+    \1. instructor\n\
+    \2. start time\n\
+    \3. end time"
+  i <- getLine
+  case i of
+    "1" -> filterTeach ss
+    "2" -> filterEarly ss
+    "3" -> filterLate ss
+    _   -> error "Invalid Choice"
 
-findCourse :: String -> IO [FullCourse]
-findCourse inp = filter (isInfixOf inp . courseTitle) <$> allClasses
+filterTeach :: [[Section]] -> IO [[Section]]
+filterTeach ss = do
+  putStrLn "Enter the instructor's name.\n\
+    \Try to state the full name if possible."
+  n <- getLine
+  print $ nub $ filter (isInfixOf n) (instructor <$> concat ss)
+  putStrLn "Are these the teachers you want to filter out?"
+  r <- getLine
+  case r of
+    "y" -> return $ filter (not . hasTeach n) ss
+    "n" -> return ss
+  where hasTeach :: String -> [Section] -> Bool
+        hasTeach n ss = or $ (isInfixOf n . instructor) <$> ss
 
---Moved this to the Helper module
+filterEarly :: [[Section]] -> IO [[Section]]
+filterEarly ss = do
+  putStrLn "Enter the earliest time (in hours) for a class to start\n\
+    \Ex. 8 -> 8 AM, 13 -> 1 PM"
+  strt <- (*60) . read <$> getLine :: IO Int
+  let filtered = filter (not . isEarly strt) ss
+  filterConfirm ss filtered
+  where isEarly :: Int -> [Section] -> Bool
+        isEarly t ss = or $ (<t) <$> (start <$> concatMap schedules ss)
+
+filterLate :: [[Section]] -> IO [[Section]]
+filterLate ss = do
+  putStrLn "Enter the latest time (in hours) for a class to end\n\
+    \Ex. 20 -> 8 PM, 18 -> 6 PM"
+  e <- (*60) . read <$> getLine :: IO Int
+  let filtered = filter (not. isLate e) ss
+  filterConfirm ss filtered
+  where isLate :: Int -> [Section] -> Bool
+        isLate t ss = or $ (>t) <$> (end <$> concatMap schedules ss)
+
+filterConfirm :: [[Section]] -> [[Section]] -> IO [[Section]]
+filterConfirm ss filtered = do
+  putStrLn $ "There are " ++ show (length ss - length filtered) ++
+    " classes excluded.\n\
+    \Are you sure you want to filter them?"
+  r <- getLine
+  case r of
+    "y" -> return filtered
+    "n" -> return ss
+
+--All of the courses as the Haskell datatype defined in Datatypes.hs
 allClasses :: IO [FullCourse]
 allClasses =
   fromJust . decode

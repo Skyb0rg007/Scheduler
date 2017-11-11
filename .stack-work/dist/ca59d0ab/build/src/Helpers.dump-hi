@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-11-08 16:02:16.0549044 UTC
+2017-11-11 00:30:48.532293 UTC
 
-interface Scheduler-0.1.0.0-2KhWUDBbeU0Ht4qZIHl35W:Helpers 8002
-  interface hash: c88f44b0c753d0d16b3f868995b286d0
-  ABI hash: 4bd5d313b4ab9af1cb7b80a651a640dd
-  export-list hash: 823b6151a71a673975560b7a7bff52f0
+interface Scheduler-0.1.0.0-HDIETyyWZZGEJKCbthJjpc:Helpers 8002
+  interface hash: 88043352c5313b4f5d5783bbeb2824bd
+  ABI hash: 28623c6d1fd94970fd9e86aa15b9ff57
+  export-list hash: 2af408b95f8b953877282f9dcb2d2e70
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 9c7ca48fa2ed9dec3b5da8a23dfd3e5d
   sig of: Nothing
@@ -13,7 +13,12 @@ interface Scheduler-0.1.0.0-2KhWUDBbeU0Ht4qZIHl35W:Helpers 8002
   where
 exports:
   Helpers.allClasses
+  Helpers.filterEarly
+  Helpers.filterLate
+  Helpers.filterSchedules
+  Helpers.filterTeach
   Helpers.findCourse
+  Helpers.findCourses
 module dependencies: Datatypes
 package dependencies: Win32-2.3.1.1@Win32-2.3.1.1
                       aeson-1.1.2.0@aeson-1.1.2.0-IYYaF432Hu8HQKp7no3ap1
@@ -57,7 +62,7 @@ orphans: attoparsec-0.13.1.0@attoparsec-0.13.1.0-3ql4hcH9pGfBAlE21oqFTQ:Data.Att
          transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
          vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Fusion.Bundle
          vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed
-family instance modules: Scheduler-0.1.0.0-2KhWUDBbeU0Ht4qZIHl35W:Datatypes
+family instance modules: Scheduler-0.1.0.0-HDIETyyWZZGEJKCbthJjpc:Datatypes
                          attoparsec-0.13.1.0@attoparsec-0.13.1.0-3ql4hcH9pGfBAlE21oqFTQ:Data.Attoparsec.Internal.Types
                          base-4.9.1.0:Control.Applicative base-4.9.1.0:Data.Complex
                          base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Compose
@@ -90,48 +95,61 @@ family instance modules: Scheduler-0.1.0.0-2KhWUDBbeU0Ht4qZIHl35W:Datatypes
                          vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Storable
                          vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed
                          vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed.Base
-import  -/  Datatypes f2ce36ba822d252a4e17d0348325b7de
-  exports: 869b9497853c52f099b91c4d84d3031a
-  FullCourse 62370a5bcfac5435810582c02d9e53d6
-  courseTitle 4978cb0fb9f01b9b4d006bedc351d7ca
-  emptyClass 251e296c3bf56602c423f0d887c2a33a
+import  -/  Datatypes ba1425a7ef0ca971fd654e305be48216
+  exports: eafde6cfee108eaa1aa7f5233cee6019
+  FullCourse aaf1059e2d373f43050c8972888aca93
+  Section dd0324e95ecc7fd6f7a6845be654c1d5
+  courseTitle 743bdad09c3d2a61e34170f85015a6c9
+  end f3bf3b65047b3967f0a773ee3937365b
+  instructor 87b705941723712395c30c60fd9d265d
+  schedules eca4eaa2d03ef2507fe0887bdb300a3f
+  start a5afa9e627d2c74fffeb344ff00f20dd
 import  -/  aeson-1.1.2.0@aeson-1.1.2.0-IYYaF432Hu8HQKp7no3ap1:Data.Aeson 2c2ea416ea3f3f7ead4fbc7d22c60646
+import  -/  base-4.9.1.0:Control.Monad f915f187cea611986ebb12dbc69279ab
 import  -/  base-4.9.1.0:Data.Foldable 254e836c2d813d34e47feb29bb8d40ed
 import  -/  base-4.9.1.0:Data.Functor 682cc832c233b71cec70179490a08631
 import  -/  base-4.9.1.0:Data.List 7349774f430841349c90dfd1144aea97
 import  -/  base-4.9.1.0:Data.Maybe ecf0c6f81372d9b58b142d5e758ea51b
 import  -/  base-4.9.1.0:Data.OldList c9282ee91951bdcbd918d2960562c007
 import  -/  base-4.9.1.0:GHC.Base 4caea1123ecf4b46e27cbccd6d279377
+import  -/  base-4.9.1.0:GHC.Err 20faef8829fd13c027d0ee2213637534
 import  -/  base-4.9.1.0:GHC.List d11eb227c1c6fbfd89bb781d72eaea0d
+import  -/  base-4.9.1.0:GHC.Num 38b8aac8807c096c7f3ca3c1eff02939
+import  -/  base-4.9.1.0:GHC.Show eca5834daba3b6a2bbbe64ab52056707
 import  -/  base-4.9.1.0:Prelude 74b3e204395920329f6de9d97206abe9
 import  -/  base-4.9.1.0:System.IO 5daf3f384209c11d9566e3409af8ec5d
 import  -/  base-4.9.1.0:Text.Read 3cc85705eeac93ec93da7f5edfd7bc15
 import  -/  bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Lazy.Char8 9dc8b6278321ad88a4601372f94916b0
 import  -/  ghc-prim-0.5.0.0:GHC.Classes 16d48e012d23eaef9bca91ccdd572c02
 import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
-6a3cf7d5700351d43f1b0ac1c401fc6d
+6a26a9f8008221da243c3381c97271b9
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.Module
                    Helpers.$trModule2
                    Helpers.$trModule1) -}
-96f75d8918f0bc546b0529dcfaf9761c
+4864a28efb5b94de450b6377acde8c3a
   $trModule1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "Helpers"#) -}
-54e31a26aa3eb598bd7c8f8f92346edb
+0938654a309b18d6cf2c9bc8e22c0fc7
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
-                   "Scheduler-0.1.0.0-2KhWUDBbeU0Ht4qZIHl35W"#) -}
-92d8f51cc2e062f45821bcb146c14ba9
+                   "Scheduler-0.1.0.0-HDIETyyWZZGEJKCbthJjpc"#) -}
+cda77a613bcb41c4a886dda15a115492
+  $wfail ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, [[Datatypes.Section]] #)
+  {- Arity: 1, Strictness: <B,A>b, Inline: [0] -}
+52189f16d3c83632b6446779c10ca056
   allClasses :: GHC.Types.IO [Datatypes.FullCourse]
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Helpers.allClasses1
                   `cast`
                 (Sym (GHC.Types.N:IO[0] <[Datatypes.FullCourse]>_R)) -}
-f8afc827edcbe36065b0355cf92e31ff
+6f3487129389f516e4c6e9fcabc2465a
   allClasses1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, [Datatypes.FullCourse] #)
@@ -216,7 +234,7 @@ f8afc827edcbe36065b0355cf92e31ff
                                 Data.Aeson.Types.Internal.Error ipv4
                                 -> Data.Maybe.fromJust1 @ [Datatypes.FullCourse]
                                 Data.Aeson.Types.Internal.Success a1 -> a1 } } } #) } }) -}
-fa07eb62601fa7161a388b2cd0b30b93
+94778d92c9e8788499828b19f6071850
   allClasses2 ::
     Data.Aeson.Types.Internal.JSONPath
     -> GHC.Base.String
@@ -225,14 +243,14 @@ fa07eb62601fa7161a388b2cd0b30b93
      Unfolding: (\ (ds :: Data.Aeson.Types.Internal.JSONPath)
                    (eta :: GHC.Base.String) ->
                  Data.Aeson.Types.Internal.Error @ [Datatypes.FullCourse] eta) -}
-e9919b354137efb188918c58fab74c1a
+6536efb57630cdfda37a9499ee7b68ac
   allClasses3 ::
     Data.Attoparsec.ByteString.Lazy.Result
       Data.Aeson.Types.Internal.Value
   {- Unfolding: (Data.Attoparsec.ByteString.Lazy.parse_$sgo
                    @ Data.Aeson.Types.Internal.Value
                    Helpers.allClasses4) -}
-c2844de7ac3bab6f248f2f3092468c07
+1bc29cdf522acec29eb9736f5a64615f
   allClasses4 ::
     Data.Attoparsec.Internal.Types.IResult
       Data.ByteString.Internal.ByteString Data.Aeson.Types.Internal.Value
@@ -267,38 +285,465 @@ c2844de7ac3bab6f248f2f3092468c07
                           -> Data.Attoparsec.Internal.Types.IResult
                                Data.ByteString.Internal.ByteString
                                Data.Aeson.Types.Internal.Value>_R)) -}
-22ce3353154cff0d97f884946ae001d4
+1405115780aef86072f7bfed6ba38354
   allClasses5 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
                    "src\\MutatedClasses.json"#) -}
-11a22939e2bfce48f844a927280b166e
+d8e11f437726aa9168cb14fa10043d4a
+  filterEarly ::
+    [[Datatypes.Section]] -> GHC.Types.IO [[Datatypes.Section]]
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Helpers.filterEarly1
+                  `cast`
+                (<[[Datatypes.Section]]>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <[[Datatypes.Section]]>_R)) -}
+f657e65930588028ab707673e47b9bf5
+  filterEarly1 ::
+    [[Datatypes.Section]]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, [[Datatypes.Section]] #)
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: (\ (ss :: [[Datatypes.Section]])
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Helpers.filterEarly7
+                        GHC.Types.True
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.IO.Handle.Internals.wantReadableHandle_1
+                        @ GHC.Base.String
+                        GHC.IO.Handle.Text.hGetLine4
+                        GHC.IO.Handle.FD.stdin
+                        GHC.IO.Handle.Text.hGetLine2
+                          `cast`
+                        (<GHC.IO.Handle.Types.Handle__>_R
+                         ->_R Sym (GHC.Types.N:IO[0] <GHC.Base.String>_R))
+                        ipv of ds { (#,#) ipv2 ipv3 ->
+                 Helpers.filterEarly5
+                   ss
+                   (let {
+                      ipv4 :: GHC.Types.Int
+                      = case Text.Read.readEither6
+                               @ GHC.Types.Int
+                               (Text.ParserCombinators.ReadP.run
+                                  @ GHC.Types.Int
+                                  Helpers.filterEarly4
+                                  ipv3) of wild {
+                          [] -> Helpers.filterEarly3
+                          : x ds2
+                          -> case ds2 of wild1 {
+                               []
+                               -> case x of wild2 { GHC.Types.I# x1 ->
+                                  GHC.Types.I# (GHC.Prim.*# x1 60#) }
+                               : ipv5 ipv6 -> Helpers.filterEarly2 } }
+                    } in
+                    GHC.List.filter
+                      @ [Datatypes.Section]
+                      (\ (x :: [Datatypes.Section]) ->
+                       letrec {
+                         go :: [Datatypes.Section] -> Data.Monoid.Any
+                           {- Arity: 1, Strictness: <S,1*U> -}
+                         = \ (ds2 :: [Datatypes.Section]) ->
+                           case ds2 of wild {
+                             [] -> GHC.Types.False `cast` (Sym (Data.Monoid.N:Any[0]))
+                             : y ys
+                             -> case y of wild1 { Datatypes.Section ds3 ds4 ds5 ->
+                                let {
+                                  z :: Data.Monoid.Any = go ys
+                                } in
+                                letrec {
+                                  go1 :: [Datatypes.Day] -> Data.Monoid.Any
+                                    {- Arity: 1, Strictness: <S,1*U> -}
+                                  = \ (ds6 :: [Datatypes.Day]) ->
+                                    case ds6 of wild2 {
+                                      [] -> z
+                                      : y1 ys1
+                                      -> case y1 of wild3 { Datatypes.Day ds7 ds8 ds9 ->
+                                         case ds8 of wild4 { GHC.Types.I# x1 ->
+                                         case ipv4 of wild5 { GHC.Types.I# y2 ->
+                                         case GHC.Prim.tagToEnum#
+                                                @ GHC.Types.Bool
+                                                (GHC.Prim.<# x1 y2) of wild6 {
+                                           GHC.Types.False -> go1 ys1
+                                           GHC.Types.True
+                                           -> GHC.Types.True
+                                                `cast`
+                                              (Sym (Data.Monoid.N:Any[0])) } } } } }
+                                } in
+                                go1 ds5 } }
+                       } in
+                       case (go x) `cast` (Data.Monoid.N:Any[0]) of wild {
+                         GHC.Types.False -> GHC.Types.True
+                         GHC.Types.True -> GHC.Types.False })
+                      ss)
+                   ipv2 } }) -}
+93e2767eacb18979cf7d6edf4b5e2c9c
+  filterEarly2 :: GHC.Types.Int
+  {- Strictness: x -}
+14e375bb91361602c5af7fda37cd3405
+  filterEarly3 :: GHC.Types.Int
+  {- Strictness: x -}
+6f255a8fb084a1c2327362dec2729f11
+  filterEarly4 :: Text.ParserCombinators.ReadP.P GHC.Types.Int
+  {- Unfolding: (GHC.Read.$fReadInt3
+                   GHC.Read.$fReadInt_$sconvertInt
+                   Text.ParserCombinators.ReadPrec.minPrec
+                   @ GHC.Types.Int
+                   (Text.Read.readEither5 @ GHC.Types.Int)) -}
+ae64b4718e9fa09c90e5495dd84ed02b
+  filterEarly5 ::
+    [[Datatypes.Section]]
+    -> [[Datatypes.Section]]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, [[Datatypes.Section]] #)
+  {- Arity: 3, Strictness: <L,U><L,U><S,U>,
+     Unfolding: (\ (ss :: [[Datatypes.Section]])
+                   (filtered :: [[Datatypes.Section]])
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        (GHC.CString.unpackAppendCString#
+                           "There are "#
+                           (case GHC.List.$wlenAcc
+                                   @ [Datatypes.Section]
+                                   ss
+                                   0# of ww2 { DEFAULT ->
+                            case GHC.List.$wlenAcc
+                                   @ [Datatypes.Section]
+                                   filtered
+                                   0# of ww1 { DEFAULT ->
+                            case GHC.Show.$wshowSignedInt
+                                   0#
+                                   (GHC.Prim.-# ww2 ww1)
+                                   (GHC.Types.[] @ GHC.Types.Char) of ww4 { (#,#) ww5 ww6 ->
+                            GHC.Base.++
+                              @ GHC.Types.Char
+                              (GHC.Types.: @ GHC.Types.Char ww5 ww6)
+                              Helpers.filterEarly6 } } }))
+                        GHC.Types.True
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.IO.Handle.Internals.wantReadableHandle_1
+                        @ GHC.Base.String
+                        GHC.IO.Handle.Text.hGetLine4
+                        GHC.IO.Handle.FD.stdin
+                        GHC.IO.Handle.Text.hGetLine2
+                          `cast`
+                        (<GHC.IO.Handle.Types.Handle__>_R
+                         ->_R Sym (GHC.Types.N:IO[0] <GHC.Base.String>_R))
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 case ipv3 of wild {
+                   [] -> Helpers.$wfail ipv2
+                   : ds ds3
+                   -> case ds of wild1 { GHC.Types.C# ds4 ->
+                      case ds4 of ds5 {
+                        DEFAULT -> Helpers.$wfail ipv2
+                        'n'#
+                        -> case ds3 of wild2 {
+                             [] -> (# ipv2, ss #) : ipv4 ipv5 -> Helpers.$wfail ipv2 }
+                        'y'#
+                        -> case ds3 of wild2 {
+                             [] -> (# ipv2, filtered #)
+                             : ipv4 ipv5 -> Helpers.$wfail ipv2 } } } } } }) -}
+9b6918db625127bb4a8394143c650533
+  filterEarly6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   " classes excluded.\n\
+                   \Are you sure you want to filter them?"#) -}
+fa2f422a801a3e9994d7558b9aed1dab
+  filterEarly7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "Enter the earliest time (in hours) for a class to start\n\
+                   \Ex. 8 -> 8 AM, 13 -> 1 PM"#) -}
+1badb706cc180875881770452ffb37d4
+  filterLate ::
+    [[Datatypes.Section]] -> GHC.Types.IO [[Datatypes.Section]]
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Helpers.filterLate1
+                  `cast`
+                (<[[Datatypes.Section]]>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <[[Datatypes.Section]]>_R)) -}
+228abdd76901083b9fcf6e86b0ea9aa0
+  filterLate1 ::
+    [[Datatypes.Section]]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, [[Datatypes.Section]] #)
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: (\ (ss :: [[Datatypes.Section]])
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Helpers.filterLate2
+                        GHC.Types.True
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.IO.Handle.Internals.wantReadableHandle_1
+                        @ GHC.Base.String
+                        GHC.IO.Handle.Text.hGetLine4
+                        GHC.IO.Handle.FD.stdin
+                        GHC.IO.Handle.Text.hGetLine2
+                          `cast`
+                        (<GHC.IO.Handle.Types.Handle__>_R
+                         ->_R Sym (GHC.Types.N:IO[0] <GHC.Base.String>_R))
+                        ipv of ds { (#,#) ipv2 ipv3 ->
+                 Helpers.filterEarly5
+                   ss
+                   (let {
+                      ipv4 :: GHC.Types.Int
+                      = case Text.Read.readEither6
+                               @ GHC.Types.Int
+                               (Text.ParserCombinators.ReadP.run
+                                  @ GHC.Types.Int
+                                  Helpers.filterEarly4
+                                  ipv3) of wild {
+                          [] -> Helpers.filterEarly3
+                          : x ds2
+                          -> case ds2 of wild1 {
+                               []
+                               -> case x of wild2 { GHC.Types.I# x1 ->
+                                  GHC.Types.I# (GHC.Prim.*# x1 60#) }
+                               : ipv5 ipv6 -> Helpers.filterEarly2 } }
+                    } in
+                    GHC.List.filter
+                      @ [Datatypes.Section]
+                      (\ (x :: [Datatypes.Section]) ->
+                       letrec {
+                         go :: [Datatypes.Section] -> Data.Monoid.Any
+                           {- Arity: 1, Strictness: <S,1*U> -}
+                         = \ (ds2 :: [Datatypes.Section]) ->
+                           case ds2 of wild {
+                             [] -> GHC.Types.False `cast` (Sym (Data.Monoid.N:Any[0]))
+                             : y ys
+                             -> case y of wild1 { Datatypes.Section ds3 ds4 ds5 ->
+                                let {
+                                  z :: Data.Monoid.Any = go ys
+                                } in
+                                letrec {
+                                  go1 :: [Datatypes.Day] -> Data.Monoid.Any
+                                    {- Arity: 1, Strictness: <S,1*U> -}
+                                  = \ (ds6 :: [Datatypes.Day]) ->
+                                    case ds6 of wild2 {
+                                      [] -> z
+                                      : y1 ys1
+                                      -> case y1 of wild3 { Datatypes.Day ds7 ds8 ds9 ->
+                                         case ds9 of wild4 { GHC.Types.I# x1 ->
+                                         case ipv4 of wild5 { GHC.Types.I# y2 ->
+                                         case GHC.Prim.tagToEnum#
+                                                @ GHC.Types.Bool
+                                                (GHC.Prim.># x1 y2) of wild6 {
+                                           GHC.Types.False -> go1 ys1
+                                           GHC.Types.True
+                                           -> GHC.Types.True
+                                                `cast`
+                                              (Sym (Data.Monoid.N:Any[0])) } } } } }
+                                } in
+                                go1 ds5 } }
+                       } in
+                       case (go x) `cast` (Data.Monoid.N:Any[0]) of wild {
+                         GHC.Types.False -> GHC.Types.True
+                         GHC.Types.True -> GHC.Types.False })
+                      ss)
+                   ipv2 } }) -}
+dc20db17941c284d09b22b4637c629f5
+  filterLate2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "Enter the latest time (in hours) for a class to end\n\
+                   \Ex. 20 -> 8 PM, 18 -> 6 PM"#) -}
+68f129260dd32d24b7668a1230daf889
+  filterSchedules ::
+    [[Datatypes.Section]] -> GHC.Types.IO [[Datatypes.Section]]
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Helpers.filterSchedules1
+                  `cast`
+                (<[[Datatypes.Section]]>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <[[Datatypes.Section]]>_R)) -}
+e973b052cab2298e92cf12b2c87e525f
+  filterSchedules1 ::
+    [[Datatypes.Section]]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, [[Datatypes.Section]] #)
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: (\ (ss :: [[Datatypes.Section]])
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        (GHC.CString.unpackAppendCString#
+                           "You have "#
+                           (case GHC.List.$wlenAcc
+                                   @ [Datatypes.Section]
+                                   ss
+                                   0# of ww2 { DEFAULT ->
+                            case GHC.Show.$wshowSignedInt
+                                   0#
+                                   ww2
+                                   (GHC.Types.[] @ GHC.Types.Char) of ww4 { (#,#) ww5 ww6 ->
+                            GHC.Base.++
+                              @ GHC.Types.Char
+                              (GHC.Types.: @ GHC.Types.Char ww5 ww6)
+                              Helpers.filterSchedules4 } }))
+                        GHC.Types.True
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.IO.Handle.Internals.wantReadableHandle_1
+                        @ GHC.Base.String
+                        GHC.IO.Handle.Text.hGetLine4
+                        GHC.IO.Handle.FD.stdin
+                        GHC.IO.Handle.Text.hGetLine2
+                          `cast`
+                        (<GHC.IO.Handle.Types.Handle__>_R
+                         ->_R Sym (GHC.Types.N:IO[0] <GHC.Base.String>_R))
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 case ipv3 of wild {
+                   []
+                   -> case Helpers.filterSchedules3
+                      ret_ty (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                [[Datatypes.Section]] #)
+                      of {}
+                   : ds ds3
+                   -> case ds of wild1 { GHC.Types.C# ds4 ->
+                      case ds4 of ds5 {
+                        DEFAULT
+                        -> case Helpers.filterSchedules3
+                           ret_ty (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                     [[Datatypes.Section]] #)
+                           of {}
+                        '1'#
+                        -> case ds3 of wild2 {
+                             [] -> Helpers.filterSchedules2 ss ipv2
+                             : ipv4 ipv5
+                             -> case Helpers.filterSchedules3
+                                ret_ty (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                          [[Datatypes.Section]] #)
+                                of {} }
+                        '2'#
+                        -> case ds3 of wild2 {
+                             [] -> Helpers.filterEarly1 ss ipv2
+                             : ipv4 ipv5
+                             -> case Helpers.filterSchedules3
+                                ret_ty (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                          [[Datatypes.Section]] #)
+                                of {} }
+                        '3'#
+                        -> case ds3 of wild2 {
+                             [] -> Helpers.filterLate1 ss ipv2
+                             : ipv4 ipv5
+                             -> case Helpers.filterSchedules3
+                                ret_ty (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                          [[Datatypes.Section]] #)
+                                of {} } } } } } }) -}
+b1334c404ac59ce50cc1fdb10f998454
+  filterSchedules2 ::
+    [[Datatypes.Section]]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, [[Datatypes.Section]] #)
+  {- Arity: 2, Strictness: <L,U><S,U> -}
+43d6be84d62b3b960b7ec0cd8a19fd1c
+  filterSchedules3 :: GHC.Types.IO [[Datatypes.Section]]
+  {- Strictness: x -}
+fe63ad889f6172d400c0f4c0f6c60ea1
+  filterSchedules4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   " schedules.\n\
+                   \Would you like to filter by: \n\
+                   \1. instructor\n\
+                   \2. start time\n\
+                   \3. end time"#) -}
+afbc5c1de70b276e7c441718eb11301d
+  filterTeach ::
+    [[Datatypes.Section]] -> GHC.Types.IO [[Datatypes.Section]]
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Helpers.filterSchedules2
+                  `cast`
+                (<[[Datatypes.Section]]>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <[[Datatypes.Section]]>_R)) -}
+a2809cd495009bb12a452bbfee317065
   findCourse ::
-    GHC.Base.String -> GHC.Types.IO [Datatypes.FullCourse]
+    [Datatypes.FullCourse] -> GHC.Types.IO Datatypes.FullCourse
   {- Arity: 2, Strictness: <L,U><S,U>,
      Unfolding: InlineRule (0, True, True)
                 Helpers.findCourse1
                   `cast`
-                (<GHC.Base.String>_R
-                 ->_R Sym (GHC.Types.N:IO[0] <[Datatypes.FullCourse]>_R)) -}
-117f3118359774a5ee94d29b0abba735
+                (<[Datatypes.FullCourse]>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <Datatypes.FullCourse>_R)) -}
+bac71af868bd7c23545ef3a8e7604067
   findCourse1 ::
-    GHC.Base.String
+    [Datatypes.FullCourse]
     -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, Datatypes.FullCourse #)
+  {- Arity: 2, Strictness: <L,U><S,U> -}
+85f4bd2befbee319c46a43e0bbfddc39
+  findCourses :: GHC.Types.IO [Datatypes.FullCourse]
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Helpers.findCourses1
+                  `cast`
+                (Sym (GHC.Types.N:IO[0] <[Datatypes.FullCourse]>_R)) -}
+afa6a294649a2a476b39e021edc758d5
+  findCourses1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, [Datatypes.FullCourse] #)
-  {- Arity: 2, Strictness: <L,U><S,U>,
-     Unfolding: (\ (inp :: GHC.Base.String)
-                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                 case Helpers.allClasses1 eta of ds { (#,#) ipv ipv1 ->
-                 (# ipv,
-                    GHC.List.filter
-                      @ Datatypes.FullCourse
-                      (\ (x :: Datatypes.FullCourse) ->
-                       Data.OldList.isInfixOf
-                         @ GHC.Types.Char
-                         GHC.Classes.$fEqChar
-                         inp
-                         (Datatypes.courseTitle x))
-                      ipv1 #) }) -}
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case Helpers.allClasses1 s of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Helpers.findCourses2
+                        GHC.Types.True
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 case GHC.IO.Handle.Internals.wantReadableHandle_1
+                        @ GHC.Base.String
+                        GHC.IO.Handle.Text.hGetLine4
+                        GHC.IO.Handle.FD.stdin
+                        GHC.IO.Handle.Text.hGetLine2
+                          `cast`
+                        (<GHC.IO.Handle.Types.Handle__>_R
+                         ->_R Sym (GHC.Types.N:IO[0] <GHC.Base.String>_R))
+                        ipv2 of ds { (#,#) ipv4 ipv5 ->
+                 case Text.Read.readEither6
+                        @ GHC.Types.Int
+                        (Text.ParserCombinators.ReadP.run
+                           @ GHC.Types.Int
+                           Helpers.filterEarly4
+                           ipv5) of wild {
+                   []
+                   -> case Helpers.filterEarly3
+                      ret_ty (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                [Datatypes.FullCourse] #)
+                      of {}
+                   : x ds3
+                   -> case ds3 of wild1 {
+                        []
+                        -> case x of ww { GHC.Types.I# ww1 ->
+                           letrec {
+                             $wloop :: GHC.Prim.Int#
+                                       -> GHC.Prim.State# GHC.Prim.RealWorld
+                                       -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                             [Datatypes.FullCourse] #)
+                               {- Arity: 2, Strictness: <S,U><S,U>, Inline: [0] -}
+                             = \ (ww2 :: GHC.Prim.Int#)
+                                 (w2 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                               case GHC.Prim.tagToEnum#
+                                      @ GHC.Types.Bool
+                                      (GHC.Prim.<=# ww2 0#) of wild2 {
+                                 GHC.Types.False
+                                 -> case Helpers.findCourse1 ipv1 w2 of ds4 { (#,#) ipv6 ipv7 ->
+                                    case $wloop
+                                           (GHC.Prim.-# ww2 1#)
+                                           ipv6 of ds5 { (#,#) ipv8 ipv9 ->
+                                    (# ipv8, GHC.Types.: @ Datatypes.FullCourse ipv7 ipv9 #) } }
+                                 GHC.Types.True -> (# w2, GHC.Types.[] @ Datatypes.FullCourse #) }
+                           } in
+                           $wloop ww1 ipv4 }
+                        : ipv6 ipv7
+                        -> case Helpers.filterEarly2
+                           ret_ty (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                     [Datatypes.FullCourse] #)
+                           of {} } } } } }) -}
+ee7108770c00b751b692b800276e64bb
+  findCourses2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "How many classes do you want to choose?"#) -}
 vectorised variables:
 vectorised tycons:
 vectorised reused tycons:

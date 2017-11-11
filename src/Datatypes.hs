@@ -3,7 +3,7 @@
 
 --Where the underlying datatypes are located
 --Includes their compare and show definitions
-module Datatypes (FullCourse (..), Section (..), Day (..), emptyClass) where
+module Datatypes (FullCourse (..), Section (..), Day (..), DayOfWeek) where
 
 import           Data.Aeson   (FromJSON, ToJSON)
 import           GHC.Generics (Generic)
@@ -62,12 +62,10 @@ data FullCourse = FullCourse
         , sections    :: [Section]
         } deriving (Generic, Eq, FromJSON, ToJSON)
 instance Show FullCourse where
-  show (FullCourse t n ss) = t {- ++ "\n" ++ n -} ++ "\n"
-                             ++ unlines (show <$> ss)
+  show (FullCourse t n ss) = "\n" ++ t ++ "\n"
+                             ++ unlines (show <$> ss) ++ "\n"
 
---Usefull to export so that it can be a placeholder for a failed operation
-emptyClass :: FullCourse
-emptyClass = FullCourse "" "" []
+
 
 {-
 everything: [

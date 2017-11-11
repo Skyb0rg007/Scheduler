@@ -28,13 +28,6 @@
   (major1) == 0 && (major2) <  10 || \
   (major1) == 0 && (major2) == 10 && (minor) <= 8)
 
-/* package text-1.2.2.2 */
-#define VERSION_text "1.2.2.2"
-#define MIN_VERSION_text(major1,major2,minor) (\
-  (major1) <  1 || \
-  (major1) == 1 && (major2) <  2 || \
-  (major1) == 1 && (major2) == 2 && (minor) <= 2)
-
 /* tool alex-3.2.1 */
 #define TOOL_VERSION_alex "3.2.1"
 #define MIN_TOOL_VERSION_alex(major1,major2,minor) (\
@@ -112,7 +105,7 @@
   (major1) == 2 && (major2) <  25 || \
   (major1) == 2 && (major2) == 25 && (minor) <= 0)
 
-#define CURRENT_COMPONENT_ID "Scheduler-0.1.0.0-2KhWUDBbeU0Ht4qZIHl35W"
+#define CURRENT_COMPONENT_ID "Scheduler-0.1.0.0-HDIETyyWZZGEJKCbthJjpc"
 
-#define CURRENT_PACKAGE_KEY "Scheduler-0.1.0.0-2KhWUDBbeU0Ht4qZIHl35W"
+#define CURRENT_PACKAGE_KEY "Scheduler-0.1.0.0-HDIETyyWZZGEJKCbthJjpc"
 

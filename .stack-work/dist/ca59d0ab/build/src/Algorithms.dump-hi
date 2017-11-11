@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-11-08 16:02:16.1826774 UTC
+2017-11-11 00:00:31.8175236 UTC
 
-interface Scheduler-0.1.0.0-2KhWUDBbeU0Ht4qZIHl35W:Algorithms 8002
-  interface hash: 2c02d588aa6d61bc4c296b58854873ae
-  ABI hash: ea10996384b2321cd7f890bcb5002003
-  export-list hash: f066ecfdedeb5f80d83e6f17e025aa26
+interface Scheduler-0.1.0.0-HDIETyyWZZGEJKCbthJjpc:Algorithms 8002
+  interface hash: 9d0614e89be859f05aaf78d7eff6dbff
+  ABI hash: 31a65a9af633694fd8c59fec20b32c01
+  export-list hash: ea715e3e70706fabb86280a55aa93ee7
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 9c7ca48fa2ed9dec3b5da8a23dfd3e5d
   sig of: Nothing
@@ -56,7 +56,7 @@ orphans: attoparsec-0.13.1.0@attoparsec-0.13.1.0-3ql4hcH9pGfBAlE21oqFTQ:Data.Att
          transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
          vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Fusion.Bundle
          vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed
-family instance modules: Scheduler-0.1.0.0-2KhWUDBbeU0Ht4qZIHl35W:Datatypes
+family instance modules: Scheduler-0.1.0.0-HDIETyyWZZGEJKCbthJjpc:Datatypes
                          attoparsec-0.13.1.0@attoparsec-0.13.1.0-3ql4hcH9pGfBAlE21oqFTQ:Data.Attoparsec.Internal.Types
                          base-4.9.1.0:Control.Applicative base-4.9.1.0:Data.Complex
                          base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Compose
@@ -89,36 +89,42 @@ family instance modules: Scheduler-0.1.0.0-2KhWUDBbeU0Ht4qZIHl35W:Datatypes
                          vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Storable
                          vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed
                          vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed.Base
-import  -/  Datatypes f2ce36ba822d252a4e17d0348325b7de
-  exports: 869b9497853c52f099b91c4d84d3031a
-  FullCourse 62370a5bcfac5435810582c02d9e53d6
-  Section f5601a0c6596b8ae5f6c33dfb48d9fbc
-  day 4b4a1184863b69635d8dd6e7a7521de7
-  schedules c05bbde6f6b62bea2ebbd77b561994b6
-  sections c0f571d952fdc9fbd1d83cbc3f6e1594
+import  -/  Datatypes ba1425a7ef0ca971fd654e305be48216
+  exports: eafde6cfee108eaa1aa7f5233cee6019
+  FullCourse aaf1059e2d373f43050c8972888aca93
+  Section dd0324e95ecc7fd6f7a6845be654c1d5
+  day c985b8cd8bf80907bb5c5fa0cd42fb26
+  schedules eca4eaa2d03ef2507fe0887bdb300a3f
+  sections ecd048bb19dac251be51c33b5a9bb66b
 import  -/  base-4.9.1.0:Data.Foldable 254e836c2d813d34e47feb29bb8d40ed
 import  -/  base-4.9.1.0:Data.Functor 682cc832c233b71cec70179490a08631
 import  -/  base-4.9.1.0:GHC.Base 4caea1123ecf4b46e27cbccd6d279377
 import  -/  base-4.9.1.0:GHC.List d11eb227c1c6fbfd89bb781d72eaea0d
 import  -/  base-4.9.1.0:Prelude 74b3e204395920329f6de9d97206abe9
 import  -/  ghc-prim-0.5.0.0:GHC.Classes 16d48e012d23eaef9bca91ccdd572c02
-bb43dff7ebfe9be4b744ae7856031807
+8a3bdd1653256001e437e1c2ed1bbd0f
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.Module
                    Algorithms.$trModule2
                    Algorithms.$trModule1) -}
-d622f52471fbc293ca4c86c38fd0fcdf
+17473df1f9eeab3f7105ca4d3d30772e
   $trModule1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "Algorithms"#) -}
-0eb6bcd9498908cf8702f7d5bbe3902d
+5e27ba825e016817aa1f9d4d1de0a510
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
-                   "Scheduler-0.1.0.0-2KhWUDBbeU0Ht4qZIHl35W"#) -}
-7baa8380331c20877d460d60b282a278
-  total ::
+                   "Scheduler-0.1.0.0-HDIETyyWZZGEJKCbthJjpc"#) -}
+16d816e65acb59eba15e0f3b763e4aa9
+  total :: [Datatypes.FullCourse] -> [[Datatypes.Section]]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (cs :: [Datatypes.FullCourse]) ->
+                 Algorithms.total' cs (GHC.Types.[] @ Datatypes.Section)) -}
+ecc566ae346b83a25cdb6ebe58096fa3
+  total' ::
     [Datatypes.FullCourse]
     -> [Datatypes.Section] -> [[Datatypes.Section]]
   {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,U> -}
